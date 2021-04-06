@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
+<style type="text/css">
+.w1 {width:38%}
+#layer{display:none}
+</style>
+<script type="text/JavaScript" src="../../function.js"></script>
+<script type="text/JavaScript" src="../../jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+var ID = "";
+function idValue(n) {ID = n;}
+</script>
+</head>
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
+<div class="post_ct " id="viewTypeSelector">
+<p><span id="snum"></span><span id="tag"></span></p>
+<p><b>
+다음 부동산 투자안에 관한 단순회수기간법의 회수기간은?
+</b> <span class="qrs">(단, 주어진 조건에 한함)</span></p>
+<br>
+<table class="tb f16" cellspacing="0" style="text-align:center">
+<tr><td class="td bc">기간</td><td class="td bc w1">초기투자액<br><span class="rs">1억원 (유출)</span></td><td class="td bc w1">순현금흐름<br><span class="rs">(단위: 만원)</span></td></tr>
+<tr><td class="td">1기</td><td class="td">&nbsp;</td><td class="td">3천</td></tr>
+<tr><td class="td">2기</td><td class="td">&nbsp;</td><td class="td">2천</td></tr>
+<tr><td class="td">3기</td><td class="td">&nbsp;</td><td class="td">2천</td></tr>
+<tr><td class="td">4기</td><td class="td">&nbsp;</td><td class="td">6천</td></tr>
+<tr><td class="td">5기</td><td class="td">&nbsp;</td><td class="td">1천</td></tr>
+</table>
+<br>
+<p class="mb10">
+<p class="mb15 f15"><span class="sb1 dp">●</span><span class="dp1">기간은 연간 기준이며, 회수기간은 월단위로 계산함</span>
+</p>
+<p>
+<p class="mb15 f15"><span class="sb1 dp">●</span><span class="dp1">초기투자액은 최초시점에 전액 투입하고, 이후 각 기간 내 현금흐름은 매월말 균등하게 발생</span>
+</p>
+<br>
+<br>
+<p id="ip1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span> 
+2년 6개월
+<span onMouseDown="memoEdit();" id="mi1"></span></p>
+<br>
+<p id="ip2"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span> 
+3년
+<span onMouseDown="memoEdit();" id="mi2"></span></p>
+<br>
+<p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span> 
+3년 6개월
+<span onMouseDown="memoEdit();" id="mi3"></span></p>
+<br>
+<p id="ip4"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span> 
+4년
+<span onMouseDown="memoEdit();" id="mi4"></span></p>
+<br>
+<p id="ip5"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span> 
+4년 6개월
+<span onMouseDown="memoEdit();" id="mi5"></span></p>
+<br>
+</div>
+<div id="layer" onClick="PopLayer.Close();">
+<table class="tb" cellspacing="0" style="background-color:#fffddd; font-size:18px">
+<tr><td class="td" onMouseDown="marking(ID,'Ｏ');">&nbsp;Ｏ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｘ');">&nbsp;Ｘ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｖ');">&nbsp;Ｖ&nbsp;</td><td class="td" style="color:#339900" onMouseDown="marking(ID,'？');">&nbsp;？&nbsp;</td><td class="td" style="color:#0099FF"  onMouseDown="marking(ID,'☆');">&nbsp;☆&nbsp;</td><td class="td" onMouseDown="marking(ID,'');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="td" style="color:#6c54d5" onMouseDown="memoBox(ID);">&nbsp;Ｔ&nbsp;</td></tr>
+</table>
+</div>
+<iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
+</body>
+
+</html>

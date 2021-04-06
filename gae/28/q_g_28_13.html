@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
+<style type="text/css">
+#layer{display:none}
+</style>
+<script type="text/JavaScript" src="../../function.js"></script>
+<script type="text/JavaScript" src="../../jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+var ID = "";
+function idValue(n) {ID = n;}
+</script>
+</head>
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
+<div class="post_ct " id="viewTypeSelector">
+<p><span id="snum"></span><span id="tag"></span></p>
+<p><b>
+허프 모형을 활용하여, X지역의 주민이 할인점 A를 방문할 확률과 할인점 A의 월 추정매출액을 순서대로 나열한 것은?
+</b> <span class="qrs">
+(단, 주어진 조건에 한함)
+</span></p>
+<br>
+<table class="tb f15" cellspacing="0">
+<tr><td width="auto" class="td obg">X지역의 현재 주민</td><td class="td" align="center">4,000명</td></tr>
+<tr><td class="td obg">1인당 월 할인점 소비액</td><td class="td" align="center">35만원</td></tr>
+<tr><td class="td obg">공간마찰계수</td><td class="td" align="center">2</td></tr>
+<tr><td class="td" colspan="2">X지역의 주민은 모두 구매자이고, A, B, C 할인점에서만 구매한다고 가정</td></tr>
+</table>
+<br>
+<table class="tb f15" cellspacing="0" style="text-align:center">
+<tr><td class="td ebg">구분</td><td class="td ebg">A</td><td class="td ebg">B</td><td class="td ebg">C</td></tr>
+<tr><td class="td">면적</td><td class="td">500㎡</td><td class="td">300㎡</td><td class="td w1">450㎡</td></tr>
+<tr><td class="td w2">X<span class="f14">로부터의</span> 거리</td><td class="td">5㎞</td><td class="td">10㎞</td><td class="td">15㎞</td></tr>
+</table>
+<br>
+<br>
+<p id="ip1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span>&nbsp; 
+80%,&nbsp;&nbsp;&nbsp;&nbsp; 10억 9,200만원
+<span onMouseDown="memoEdit();" id="mi1"></span></p>
+<br>
+<p id="ip2"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span>&nbsp; 
+80%,&nbsp;&nbsp;&nbsp;&nbsp; 11억 2,000만원
+<span onMouseDown="memoEdit();" id="mi2"></span></p>
+<br>
+<p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span>&nbsp; 
+82%,&nbsp;&nbsp;&nbsp;&nbsp; 11억 4,800만원
+<span onMouseDown="memoEdit();" id="mi3"></span></p>
+<br>
+<p id="ip4"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span>&nbsp; 
+82%,&nbsp;&nbsp;&nbsp;&nbsp; 11억 7,600만원
+<span onMouseDown="memoEdit();" id="mi4"></span></p>
+<br>
+<p id="ip5"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span>&nbsp; 
+82%,&nbsp;&nbsp;&nbsp;&nbsp; 12억 400만원
+<span onMouseDown="memoEdit();" id="mi5"></span></p>
+<br>
+</div>
+<div id="layer" onClick="PopLayer.Close();">
+<table class="tb" cellspacing="0" style="background-color:#fffddd; font-size:18px">
+<tr><td class="td" onMouseDown="marking(ID,'Ｏ');">&nbsp;Ｏ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｘ');">&nbsp;Ｘ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｖ');">&nbsp;Ｖ&nbsp;</td><td class="td" style="color:#339900" onMouseDown="marking(ID,'？');">&nbsp;？&nbsp;</td><td class="td" style="color:#0099FF"  onMouseDown="marking(ID,'☆');">&nbsp;☆&nbsp;</td><td class="td" onMouseDown="marking(ID,'');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="td" style="color:#6c54d5" onMouseDown="memoBox(ID);">&nbsp;Ｔ&nbsp;</td></tr>
+</table>
+</div>
+<iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
+</body>
+
+</html>
