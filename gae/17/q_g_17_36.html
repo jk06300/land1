@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
+<style type="text/css">
+.w1 {width:33%}
+#layer{display:none}
+</style>
+<script type="text/JavaScript" src="../../function.js"></script>
+<script type="text/JavaScript" src="../../jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+var ID = "";
+function idValue(n) {ID = n;}
+</script>
+</head>
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
+<div class="post_ct " id="viewTypeSelector"><p><span id="snum"></span><span id="tag"></span></p>
+<p><b>1,000억원의 부동산펀드가 빌딩 A, B, C로 구성되어 있다. 다음 설명 중 옳은 것은?</b></p>
+<br>
+<p class="mb15"><span class="sb">■</span> 매입가격</p>
+<table class="tb f15" cellspacing="0" style="text-align:center">
+<tr><td class="td obg w1">빌딩 A</td><td class="td obg w1">빌딩 B</td><td class="td obg w1">빌딩 C</td></tr>
+<tr><td class="td">100억</td><td class="td">300억</td><td class="td">600억</td></tr>
+</table>
+<br>
+<p class="mb15"><span class="sb">■</span> 기대수익률</p>
+<table class="tb f15" cellspacing="0" style="text-align:center">
+<tr><td class="td obg w1">빌딩 A</td><td class="td obg w1">빌딩 B</td><td class="td obg w1">빌딩 C</td></tr>
+<tr><td class="td">연 6%</td><td class="td">연 10%</td><td class="td">연 12%</td></tr>
+</table>
+<br>
+<p class="mb15"><span class="sb">■</span> 위험 <span class="rs">(수익률의 표준편차)</span></p>
+<table class="tb f15" cellspacing="0" style="text-align:center">
+<tr><td class="td obg w1">빌딩 A</td><td class="td obg w1">빌딩 B</td><td class="td obg w1">빌딩 C</td></tr>
+<tr><td class="td">4%</td><td class="td">7%</td><td class="td">10%</td></tr>
+</table>
+<br>
+<br>
+<p id="ip1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span> 부동산펀드의 기대수익률은 연 10.5% 이다.<span onMouseDown="memoEdit();" id="mi1"></span></p>
+<br>
+<p id="ip2"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span> 빌딩 A는 빌딩 C보다 고위험ㆍ고수익의 투자 부동산이다.<span onMouseDown="memoEdit();" id="mi2"></span></p>
+<br>
+<p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span> 투자자의 요구수익률이 연 10%일 경우, 이 투자자는 부동산 펀드에 투자하지 않을 것이다.<span onMouseDown="memoEdit();" id="mi3"></span></p>
+<br>
+<p id="ip4"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span> 부동산펀드에 빌딩을 추가로 편입시킬 경우 이 펀드의 체계적 위험이 줄어들 것이다.<span onMouseDown="memoEdit();" id="mi4"></span></p>
+<br>
+<p id="ip5"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span> 빌딩 A, B, C 중에서 위험 1단위당 기대수익률이 가장 높은 것은 빌딩 A다.</p>
+<br>
+              <p _foo="font-family: 돋움; text-align: justify;" style="margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: AppleSDGothicNeo-Light; font-size: 16.0020008087158px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 23.2028999328613px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;"><br><span onMouseDown="memoEdit();" id="mi5"></span></p>
+<br></div>
+<div id="layer" onClick="PopLayer.Close();">
+<table class="tb" cellspacing="0" style="background-color:#fffddd; font-size:18px">
+<tr><td class="td" onMouseDown="marking(ID,'Ｏ');">&nbsp;Ｏ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｘ');">&nbsp;Ｘ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｖ');">&nbsp;Ｖ&nbsp;</td><td class="td" style="color:#339900" onMouseDown="marking(ID,'？');">&nbsp;？&nbsp;</td><td class="td" style="color:#0099FF"  onMouseDown="marking(ID,'☆');">&nbsp;☆&nbsp;</td><td class="td" onMouseDown="marking(ID,'');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="td" style="color:#6c54d5" onMouseDown="memoBox(ID);">&nbsp;Ｔ&nbsp;</td></tr>
+</table>
+</div>
+<iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
+</body>
+
+</html>
