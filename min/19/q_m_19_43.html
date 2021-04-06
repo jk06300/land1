@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
+<style type="text/css">
+#layer{display:none}
+</style>
+<script type="text/JavaScript" src="../../function.js"></script>
+<script type="text/JavaScript" src="../../jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+var ID = "";
+function idValue(n) {ID = n;}
+</script>
+</head>
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
+<div class="post_ct " id="viewTypeSelector"><p><span id="snum"></span><span id="tag"></span></p>
+<p><b>약관</b><span class="mrs">(約款)</span><b>에 관한 설명으로 틀린 것은?</b> <span class="qrs">(다툼이 있으면 판례에 의함)</span></p>
+<br>
+<p id="ip1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span> 고객에게 부당하게 불리한 약관조항은 공정을 잃은 것으로 추정한다.<span onMouseDown="memoEdit();" id="mi1"></span></p>
+<br>
+<p id="ip2"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span> 약관의 구속력의 근거는 그 자체가 법규범이거나 법규범적 성질을 가지기 때문이다.<span onMouseDown="memoEdit();" id="mi2"></span></p>
+<br>
+<p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span> 사업자가 상당한 이유 없이 자신이 부담하여야 할 위험을 고객에게 이전하는 내용의 약관조항은 무효이다.<span onMouseDown="memoEdit();" id="mi3"></span></p>
+<br>
+<p id="ip4"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span> 설명의무가 있는 약관내용이 설명되었다는 점은 그 약관내용을 계약의 내용으로 주장하는 자가 증명하여야 한다.<span onMouseDown="memoEdit();" id="mi4"></span></p>
+<br>
+<p id="ip5"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span> 골프장 운영회사가 불특정다수의 회원에게 적용하기 위하여 만든 골프클럽운영회칙 중 당사자의 권리ㆍ의무에 관한 규정은 약관의 성질을 갖는다.<span onMouseDown="memoEdit();" id="mi5"></span></p>
+<br></div>
+<div id="layer" onClick="PopLayer.Close();">
+<table class="tb" cellspacing="0" style="background-color:#fffddd; font-size:18px">
+<tr><td class="td" onMouseDown="marking(ID,'Ｏ');">&nbsp;Ｏ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｘ');">&nbsp;Ｘ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｖ');">&nbsp;Ｖ&nbsp;</td><td class="td" style="color:#339900" onMouseDown="marking(ID,'？');">&nbsp;？&nbsp;</td><td class="td" style="color:#0099FF"  onMouseDown="marking(ID,'☆');">&nbsp;☆&nbsp;</td><td class="td" onMouseDown="marking(ID,'');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="td" style="color:#6c54d5" onMouseDown="memoBox(ID);">&nbsp;Ｔ&nbsp;</td></tr>
+</table>
+</div>
+<iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
+</body>
+
+</html>
