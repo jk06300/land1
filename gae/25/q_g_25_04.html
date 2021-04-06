@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
+<style type="text/css">
+#layer{display:none}
+</style>
+<script type="text/JavaScript" src="../../function.js"></script>
+<script type="text/JavaScript" src="../../jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+var ID = "";
+function idValue(n) {ID = n;}
+</script>
+</head>
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
+<div class="post_ct " id="viewTypeSelector"><p><span id="snum"></span><span id="tag"></span></p>
+<p><b>주택의 유형에 관한 설명으로 옳은 것은?</b></p><br><p id="ip1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span> 연립주택은 주택으로 쓰는 1개 동의 바닥면적 합계가 660㎡ 이하이고, 층수가 4개 층 이하인 주택이다.<span onMouseDown="memoEdit();" id="mi1"></span></p><br><p id="ip2"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span> 다가구주택은 주택으로 쓰는 층수<span class="mrs">(지하층은 제외)</span>가 3개층 이하이며, 1개 동의 바닥면적<span class="mrs">(부설주차장 면적 제외)</span>이 330㎡ 이하인 공동주택이다.<span onMouseDown="memoEdit();" id="mi2"></span></p><br><p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span> 다세대주택은 주택으로 쓰는 1개 동의 바닥면적 합계가 330㎡ 이하이고, 층수가 5개 층 이하인 주택이다.<span onMouseDown="memoEdit();" id="mi3"></span></p><br><p id="ip4"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span> 다중주택은 학생 또는 직장인 등 다수인이 장기간 거주할 수 있는 구조로서, 독립된 주거형태가 아니며 연면적이 660㎡ 이하, 층수가 3층 이하인 주택이다.<span onMouseDown="memoEdit();" id="mi4"></span></p><br><p id="ip5"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span> 도시형생활주택은 350세대 미만의 국민주택규모로 대통령령으로 정하는 주택으로 단지형 연립주택, 단지형 다세대주택, 원룸형 주택 등이 있다.<span onMouseDown="memoEdit();" id="mi5"></span></p><br></div>
+<div id="layer" onClick="PopLayer.Close();">
+<table class="tb" cellspacing="0" style="background-color:#fffddd; font-size:18px">
+<tr><td class="td" onMouseDown="marking(ID,'Ｏ');">&nbsp;Ｏ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｘ');">&nbsp;Ｘ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｖ');">&nbsp;Ｖ&nbsp;</td><td class="td" style="color:#339900" onMouseDown="marking(ID,'？');">&nbsp;？&nbsp;</td><td class="td" style="color:#0099FF"  onMouseDown="marking(ID,'☆');">&nbsp;☆&nbsp;</td><td class="td" onMouseDown="marking(ID,'');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="td" style="color:#6c54d5" onMouseDown="memoBox(ID);">&nbsp;Ｔ&nbsp;</td></tr>
+</table>
+</div>
+<iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
+</body>
+
+</html>
