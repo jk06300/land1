@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
+<style type="text/css">
+#layer{display:none}
+</style>
+<script type="text/JavaScript" src="../../function.js"></script>
+<script type="text/JavaScript" src="../../jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+var ID = "";
+function idValue(n) {ID = n;}
+</script>
+</head>
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
+<div class="post_ct " id="viewTypeSelector"><p><span id="snum"></span><span id="tag"></span></p>
+<p><b>부동산시장에 관한 설명으로 틀린 것은?</b></p><br><p id="ip1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span> 부동산시장에서는 어떤 특정한 지역에 국한되는 시장의 지역성 혹은 지역시장성이 존재한다.<span onMouseDown="memoEdit();" id="mi1"></span></p><br><p id="ip2"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span> 부동산시장에서는 정보의 비대칭성으로 인해 부동산 가격의 왜곡현상이 나타나기도 한다.<span onMouseDown="memoEdit();" id="mi2"></span></p><br><p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span> 할당효율적시장에서는 부동산 거래의 은밀성으로 인해 부동산가격의 과소평가 또는 과대평가 등 왜곡가능성이 높아진다.<span onMouseDown="memoEdit();" id="mi3"></span></p><br><p id="ip4"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span> 부동산 거래비용의 증가는 부동산 수요자와 공급자의 시장 진출입에 제약을 줄 수 있어 불완전경쟁시장의 요인이 될 수 있다.<span onMouseDown="memoEdit();" id="mi4"></span></p><br><p id="ip5"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span> 개별성의 특성은 부동산상품의 표준화를 어렵게 할 뿐만 아니라 부동산시장을 복잡하고 다양하게 한다.<span onMouseDown="memoEdit();" id="mi5"></span></p><br></div>
+<div id="layer" onClick="PopLayer.Close();">
+<table class="tb" cellspacing="0" style="background-color:#fffddd; font-size:18px">
+<tr><td class="td" onMouseDown="marking(ID,'Ｏ');">&nbsp;Ｏ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｘ');">&nbsp;Ｘ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｖ');">&nbsp;Ｖ&nbsp;</td><td class="td" style="color:#339900" onMouseDown="marking(ID,'？');">&nbsp;？&nbsp;</td><td class="td" style="color:#0099FF"  onMouseDown="marking(ID,'☆');">&nbsp;☆&nbsp;</td><td class="td" onMouseDown="marking(ID,'');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="td" style="color:#6c54d5" onMouseDown="memoBox(ID);">&nbsp;Ｔ&nbsp;</td></tr>
+</table>
+</div>
+<iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
+</body>
+
+</html>
