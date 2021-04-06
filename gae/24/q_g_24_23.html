@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
+<style type="text/css">
+.w4 {width:38%}
+.w {width:100%}
+.w1 {padding-right:5px;padding-top:19px;vertical-align:top}
+.w2 {padding-left:5px;padding-top:20px;width:45%;vertical-align:top;text-align:center}
+.w3 {padding-left:5px;padding-top:20px;width:40%;vertical-align:top;text-align:center}
+.pb {padding-bottom:10px;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#464646}
+#layer{display:none}
+</style>
+<script type="text/JavaScript" src="../../function.js"></script>
+<script type="text/JavaScript" src="../../jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+var ID = "";
+function idValue(n) {ID = n;}
+</script>
+</head>
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
+<div class="post_ct " id="viewTypeSelector"><p><span id="snum"></span><span id="tag"></span></p>
+<p><b>다음과 같은 현금흐름을 갖는 투자안 A의 순현가</b><span class="rs">(NPV)</span><b>와 내부수익률</b><span class="rs">(IRR)</span><b>은?</b> <span class="qrs">[단, 할인율은 연 20%, 사업기간은 1년이며, 사업 초기(1월 1일)에 현금지출만 발생하고 사업 말기(12월 31일)에 현금유입만 발생함]</span></p>
+<br>
+<table class="tb f15" cellspacing="0" style="text-align:center">
+<tr><td class="td bc">투자안</td><td class="td bc w4">초기<br>현금지출</td><td class="td bc w4">말기<br>현금유입</td></tr>
+<tr><td class="td">A</td><td class="td">5,000원</td><td class="td">6,000원</td></tr>
+</table>
+<br>
+<table class="w f16" cellspacing="0">
+<tr>
+  <td class="w1">&nbsp;</td>
+  <td class="w2 pb">NPV</td>
+  <td class="w1">&nbsp;&nbsp;</td>
+  <td class="w3 pb">IRR</td>
+</tr>
+<tr id="ip1">
+  <td class="w1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span></td>
+  <td class="w2">0원</td>
+  <td class="w1">&nbsp;&nbsp;</td>
+  <td class="w3">20%</td>
+</tr>
+<tr><td colspan="4"><span onMouseDown="memoEdit();" id="mi1"></span></td></tr>
+<tr id="ip2">
+  <td class="w1"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span></td>
+  <td class="w2">0원</td>
+  <td class="w1">&nbsp;&nbsp;</td>
+  <td class="w3">25%</td>
+</tr>
+<tr><td colspan="4"><span onMouseDown="memoEdit();" id="mi2"></span></td></tr>
+<tr id="ip3">
+  <td class="w1"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span></td>
+  <td class="w2">0원</td>
+  <td class="w1">&nbsp;&nbsp;</td>
+  <td class="w3">30%</td>
+</tr>
+<tr><td colspan="4"><span onMouseDown="memoEdit();" id="mi3"></span></td></tr>
+<tr id="ip4">
+  <td class="w1"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span></td>
+  <td class="w2">1000원</td>
+  <td class="w1">&nbsp;&nbsp;</td>
+  <td class="w3">20%</td>
+</tr>
+<tr><td colspan="4"><span onMouseDown="memoEdit();" id="mi4"></span></td></tr>
+<tr id="ip5">
+<td class="w1"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span></td>
+<td class="w2">1000원</td>
+<td class="w1">&nbsp;</td>
+<td class="w3">25%</td>
+</tr>
+<tr><td colspan="4"><span onMouseDown="memoEdit();" id="mi5"></span></td></tr>
+</table>
+<br>
+<br></div>
+<div id="layer" onClick="PopLayer.Close();">
+<table class="tb" cellspacing="0" style="background-color:#fffddd; font-size:18px">
+<tr><td class="td" onMouseDown="marking(ID,'Ｏ');">&nbsp;Ｏ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｘ');">&nbsp;Ｘ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｖ');">&nbsp;Ｖ&nbsp;</td><td class="td" style="color:#339900" onMouseDown="marking(ID,'？');">&nbsp;？&nbsp;</td><td class="td" style="color:#0099FF"  onMouseDown="marking(ID,'☆');">&nbsp;☆&nbsp;</td><td class="td" onMouseDown="marking(ID,'');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="td" style="color:#6c54d5" onMouseDown="memoBox(ID);">&nbsp;Ｔ&nbsp;</td></tr>
+</table>
+</div>
+<iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
+</body>
+
+</html>
