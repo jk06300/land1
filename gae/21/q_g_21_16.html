@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
+<style type="text/css">
+.bc {background-color:#F3F7F8;text-align:center}
+.w1 {width:22%}
+.w2 {width:26%}
+#layer{display:none}
+</style>
+<script type="text/JavaScript" src="../../function.js"></script>
+<script type="text/JavaScript" src="../../jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+var ID = "";
+function idValue(n) {ID = n;}
+</script>
+</head>
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
+<div class="post_ct " id="viewTypeSelector"><p><span id="snum"></span><span id="tag"></span></p>
+<p><b>다음은 각 도시별, 산업별 고용자 수를 나타낸 표이다. 섬유산업의 입지계수가 높은 도시 순으로 나열된 것은?</b> <span class="qrs">(다만, 전국에 세 개의 도시와 두 개의 산업만이 존재한다고 가정함)</span></p>
+<br>
+<table class="tb f15" cellspacing="0" style="text-align:center">
+<tr><td class="td bc w1">구분</td><td class="td bc w2">섬유산업</td><td class="td bc w2">전자산업</td><td class="td bc w2">전체산업</td></tr>
+<tr><td class="td w1">A 도시</td><td class="td w2">250</td><td class="td w2">150</td><td class="td w2">400</td></tr>
+<tr><td class="td w1">B 도시</td><td class="td w2">250</td><td class="td w2">250</td><td class="td w2">500</td></tr>
+<tr><td class="td w1">C 도시</td><td class="td w2">500</td><td class="td w2">600</td><td class="td w2">1,100</td></tr>
+<tr><td class="td w1">전국</td><td class="td w2">1,000</td><td class="td w2">1,000</td><td class="td w2">2,000</td></tr>
+</table>
+<br>
+<br>
+<p id="ip1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span>&nbsp;&nbsp; A &nbsp;>&nbsp; B &nbsp;>&nbsp; C<span onMouseDown="memoEdit();" id="mi1"></span></p>
+<br>
+<p id="ip2"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span>&nbsp;&nbsp; A &nbsp;>&nbsp; C &nbsp;>&nbsp; B<span onMouseDown="memoEdit();" id="mi2"></span></p>
+<br>
+<p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span>&nbsp;&nbsp; B &nbsp;>&nbsp; C &nbsp;>&nbsp; A<span onMouseDown="memoEdit();" id="mi3"></span></p>
+<br>
+<p id="ip4"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span>&nbsp;&nbsp; C &nbsp;>&nbsp; A &nbsp;>&nbsp; B<span onMouseDown="memoEdit();" id="mi4"></span></p>
+<br>
+<p id="ip5"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span>&nbsp;&nbsp; C &nbsp;>&nbsp; B &nbsp;>&nbsp; A<span onMouseDown="memoEdit();" id="mi5"></span></p>
+<br></div>
+<div id="layer" onClick="PopLayer.Close();">
+<table class="tb" cellspacing="0" style="background-color:#fffddd; font-size:18px">
+<tr><td class="td" onMouseDown="marking(ID,'Ｏ');">&nbsp;Ｏ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｘ');">&nbsp;Ｘ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｖ');">&nbsp;Ｖ&nbsp;</td><td class="td" style="color:#339900" onMouseDown="marking(ID,'？');">&nbsp;？&nbsp;</td><td class="td" style="color:#0099FF"  onMouseDown="marking(ID,'☆');">&nbsp;☆&nbsp;</td><td class="td" onMouseDown="marking(ID,'');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="td" style="color:#6c54d5" onMouseDown="memoBox(ID);">&nbsp;Ｔ&nbsp;</td></tr>
+</table>
+</div>
+<iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
+</body>
+
+</html>

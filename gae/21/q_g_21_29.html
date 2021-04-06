@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
+<style type="text/css">
+.bc {background-color:#F3F7F8;}
+.w1 {width:33%}
+.w2 {width:18%}
+#layer{display:none}
+</style>
+<script type="text/JavaScript" src="../../function.js"></script>
+<script type="text/JavaScript" src="../../jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+var ID = "";
+function idValue(n) {ID = n;}
+</script>
+</head>
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
+<div class="post_ct " id="viewTypeSelector"><p><span id="snum"></span><span id="tag"></span></p>
+<p><b>A,B,C 3개의 부동산자산으로 이루어진 포트폴리오가 있다. 이 포트폴리오의 자산비중 및 경제상황별 예상 수익률 분포가 다음 표와 같을 때 전체 포트폴리오의 기대수익률은?</b> <span class="qrs">(다만, 호황과 불황의 확률은 각각 50%임)</span></p>
+<br>
+<table class="tb f15" cellspacing="0" style="text-align:center">
+<tr>
+  <td rowspan="2" class="td bc">구분</td>
+<td rowspan="2" class="td bc w1"><p>포트폴리오</p>비중</td>
+<td colspan="2" class="td bc"><p>경제상황별</p>예상수익률</td>
+</tr>
+<tr>
+  <td class="td bc w2">호황</td>
+  <td class="td bc w2">불황</td>
+</tr>
+<tr>
+  <td class="td">A 부동산</td>
+<td class="td">20%</td>
+<td class="td">6%</td>
+<td class="td">4%</td>
+</tr>
+<tr>
+  <td class="td">B 부동산</td>
+<td class="td">30%</td>
+<td class="td">8%</td>
+<td class="td">4%</td>
+</tr>
+<tr>
+  <td class="td">C 부동산</td>
+<td class="td">50%</td>
+<td class="td">10%</td>
+<td class="td">2%</td>
+</tr>
+</table>
+<br>
+<br>
+<p id="ip1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span> 5<span onMouseDown="memoEdit();" id="mi1"></span></p>
+<br>
+<p id="ip2"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span> 5.2<span onMouseDown="memoEdit();" id="mi2"></span></p>
+<br>
+<p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span> 5.4<span onMouseDown="memoEdit();" id="mi3"></span></p>
+<br>
+<p id="ip4"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span> 5.6<span onMouseDown="memoEdit();" id="mi4"></span></p>
+<br>
+<p id="ip5"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span> 5.8<span onMouseDown="memoEdit();" id="mi5"></span></p>
+<br></div>
+<div id="layer" onClick="PopLayer.Close();">
+<table class="tb" cellspacing="0" style="background-color:#fffddd; font-size:18px">
+<tr><td class="td" onMouseDown="marking(ID,'Ｏ');">&nbsp;Ｏ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｘ');">&nbsp;Ｘ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｖ');">&nbsp;Ｖ&nbsp;</td><td class="td" style="color:#339900" onMouseDown="marking(ID,'？');">&nbsp;？&nbsp;</td><td class="td" style="color:#0099FF"  onMouseDown="marking(ID,'☆');">&nbsp;☆&nbsp;</td><td class="td" onMouseDown="marking(ID,'');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="td" style="color:#6c54d5" onMouseDown="memoBox(ID);">&nbsp;Ｔ&nbsp;</td></tr>
+</table>
+</div>
+<iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
+</body>
+
+</html>
