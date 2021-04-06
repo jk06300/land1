@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
+<style type="text/css">
+#layer, #layer1{display:none}
+.lpd {padding:5px}
+</style>
+<script type="text/JavaScript" src="../../function.js"></script>
+<script type="text/JavaScript" src="../../jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+var ID = "";
+var t1, t2, t3, t4, t5, t6, m;
+function idValue(n) {ID = n;}
+function txt(n1, n2, n3, n4, n5, n6, n7) {
+t1 = n1; t2 = n2; t3 = n3; t4 = n4; t5 = n5; t6 = n6; m = n7;
+}
+</script>
+</head>
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
+<div class="post_ct " id="viewTypeSelector">
+<p><span id="snum"></span><span id="tag"></span></p>
+<p><b>다음 빈칸에 공통으로 알맞은 것은?</b></p>
+<br>
+<table class="tb f16 mb15" cellspacing="0">
+<tr><td class="td">
+<p>집합건물의 소유 및 관리에 관한 법률상 재건축을 하기 위해서는 구분소유자의 <span class="ei trs" onMouseDown="PopLayer.Action(this,'layer1'); idValue('e1'); txt('2분의 1','3분의 1','3분의 2','4분의 3','5분의 4',' ? ','&nbsp;'); example(t1, t2, t3, t4, t5, t6, ID);">(&nbsp;<span class="ei" id="e1">&nbsp;</span>&nbsp;)</span> 이상 및 의결권의 <span class="ei trs" onMouseDown="PopLayer.Action(this,'layer1'); idValue('e2'); txt('2분의 1','3분의 1','3분의 2','4분의 3','5분의 4',' ? ','&nbsp;'); example(t1, t2, t3, t4, t5, t6, ID);">(&nbsp;<span class="ei" id="e2">&nbsp;</span>&nbsp;)</span> 이상의 결의가 있어야 한다.</p>
+</td></tr>
+</table>
+<p class="mb10"><span onMouseDown="memoEdit();" id="me1"></span></p>
+<p><span onMouseDown="memoEdit();" id="me2"></span>
+<p class="mb10"></p>
+<br>
+<p id="ip1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span> 2분의 1<span onMouseDown="memoEdit();" id="mi1"></span></p>
+<br>
+<p id="ip2"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span> 3분의 1<span onMouseDown="memoEdit();" id="mi2"></span></p>
+<br>
+<p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span> 3분의 2<span onMouseDown="memoEdit();" id="mi3"></span></p>
+<br>
+<p id="ip4"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span> 4분의 3<span onMouseDown="memoEdit();" id="mi4"></span></p>
+<br>
+<p id="ip5"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span> 5분의 4<span onMouseDown="memoEdit();" id="mi5"></span></p>
+<br></div>
+<div id="layer" onClick="PopLayer.Close();">
+<table class="tb" cellspacing="0" style="background-color:#fffddd; font-size:18px">
+<tr><td class="td" onMouseDown="marking(ID,'Ｏ');">&nbsp;Ｏ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｘ');">&nbsp;Ｘ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｖ');">&nbsp;Ｖ&nbsp;</td><td class="td" style="color:#339900" onMouseDown="marking(ID,'？');">&nbsp;？&nbsp;</td><td class="td" style="color:#0099FF"  onMouseDown="marking(ID,'☆');">&nbsp;☆&nbsp;</td><td class="td" onMouseDown="marking(ID,'');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="td" style="color:#6c54d5" onMouseDown="memoBox(ID);">&nbsp;Ｔ&nbsp;</td></tr>
+</table>
+</div>
+<div id="layer1" onClick="PopLayer.Close();">
+<table class="tb" cellspacing="0" style="background-color:#fffddd; font-size:16px; text-align:center">
+<tr><td id="td1" class="td lpd" onMouseDown="setMessage(ID, t1, m);">&nbsp;</td></tr>
+<tr><td id="td2" class="td lpd" onMouseDown="setMessage(ID, t2, m);">&nbsp;</td></tr>
+<tr><td id="td3" class="td lpd" onMouseDown="setMessage(ID, t3, m);">&nbsp;</td></tr>
+<tr><td id="td4" class="td lpd" onMouseDown="setMessage(ID, t4, m);">&nbsp;</td></tr>
+<tr><td id="td5" class="td lpd" onMouseDown="setMessage(ID, t5, m);">&nbsp;</td></tr>
+<tr><td id="td6" class="td lpd" onMouseDown="setMessage(ID, t6, m);">&nbsp;</td></tr>
+<tr><td class="td lpd" onMouseDown="setMessage(ID, '', m);">&nbsp;</td></tr>
+<tr><td id="td8" class="td lpd" style="color:#6c54d5" onMouseDown="memoBox(ID);">&nbsp;<b>Ｔ</b>&nbsp;</td></tr>
+</table>
+</div>
+<iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
+</body>
+
+</html>
