@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
+<style type="text/css">
+#layer{display:none}
+</style>
+<script type="text/JavaScript" src="../../function.js"></script>
+<script type="text/JavaScript" src="../../jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+var ID = "";
+function idValue(n) {ID = n;}
+</script>
+</head>
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
+<div class="post_ct " id="viewTypeSelector">
+<p><span id="snum"></span><span id="tag"></span></p>
+<p><b>다음 자료를 활용하여 공시지가기준법으로 평가한 대상 토지의 가액</b><span class="mrs">(원/㎡)</span><b>은?</b> <span class="qrs">(단, 주어진 조건에 한함)</span></p>
+<br>
+<p class="mb15"><span class="sb">■</span> 소재지 등</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">A시 B구 C동 100, 일반상업지역, 상업용</td></tr>
+</table>
+<br>
+<p><span class="sb">■</span> 기준시점 :&nbsp; 2019. 10. 26</p>
+<br>
+<p class="mb15"><span class="sb">■</span> 표준지공시지가</p>
+<table class="tb_2" cellspacing="0"><tr><td class="td_2 mrs">(A시 B구 C동, 2019.01.01 기준)</td></tr></table>
+<table class="tb f15" cellspacing="0" style="text-align:center">
+<tr class="bc f16"><td class="td">구분</td><td width="37%" class="td">기호 1</td><td width="37%" class="td">기호 2</td></tr>
+<tr><td class="td obg">용도지역</td><td class="td">일반공업지역</td><td class="td">일반상업지역</td></tr>
+<tr><td class="td obg">이용상황</td><td class="td">상업용</td><td class="td">상업용</td></tr>
+<tr><td class="td obg">공시지가</td><td class="td">1백만원/㎡</td><td class="td">2백만원/㎡</td></tr>
+<tr><td class="td obg">소재지</td><td class="td">C동 90</td><td class="td">C동 110</td></tr>
+</table>
+<br>
+<p class="mb15"><span class="sb">■</span> 지가변동률</p>
+<table class="tb_2" cellspacing="0"><tr><td class="td_2 mrs">(A시 B구, 2019.01.01 ~ 2019.10.26)</td></tr></table>
+<table class="tb f16" cellspacing="0" style="text-align:center">
+<tr><td width="50%" class="td obg">공업지역</td><td class="td">4% 상승</td></tr>
+<tr><td class="td obg">상업지역</td><td class="td">5% 상승</td></tr>
+</table>
+<br>
+<p class="mb15"><span class="sb">■</span> 지역요인</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">표준지와 대상토지는 인근지역에 위치하여 지역요인은 동일함</td></tr>
+</table>
+<br>
+<p class="mb15"><span class="sb">■</span> 개별요인</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg"><p>대상토지는 표준지 기호 1, 2에 비해 각각 가로조건에서 10% 우세하고 다른 조건은 동일함</p><span class="trs">(상승식으로 계산할 것)</span></td></tr>
+</table>
+<br>
+<p><span class="sb">■</span> 그 밖의 요인으로 보정할 사항 없음</p>
+<br>
+<br>
+<p id="ip1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span> 1,144,000<span onMouseDown="memoEdit();" id="mi1"></span></p>
+<br>
+<p id="ip2"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span> 1,155,000<span onMouseDown="memoEdit();" id="mi2"></span></p>
+<br>
+<p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span> 2,100,000<span onMouseDown="memoEdit();" id="mi3"></span></p>
+<br>
+<p id="ip4"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span> 2,288,000<span onMouseDown="memoEdit();" id="mi4"></span></p>
+<br>
+<p id="ip5"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span> 2,310,000<span onMouseDown="memoEdit();" id="mi5"></span></p>
+<br>
+</div>
+<div id="layer" onClick="PopLayer.Close();">
+<table class="tb" cellspacing="0" style="background-color:#fffddd; font-size:18px">
+<tr><td class="td" onMouseDown="marking(ID,'Ｏ');">&nbsp;Ｏ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｘ');">&nbsp;Ｘ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｖ');">&nbsp;Ｖ&nbsp;</td><td class="td" style="color:#339900" onMouseDown="marking(ID,'？');">&nbsp;？&nbsp;</td><td class="td" style="color:#0099FF"  onMouseDown="marking(ID,'☆');">&nbsp;☆&nbsp;</td><td class="td" onMouseDown="marking(ID,'');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="td" style="color:#6c54d5" onMouseDown="memoBox(ID);">&nbsp;Ｔ&nbsp;</td></tr>
+</table>
+</div>
+<iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
+</body>
+
+</html>
