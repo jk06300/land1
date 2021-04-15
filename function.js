@@ -516,7 +516,23 @@ function marking(i, n)	{
 	if (bcm == "dark") {
 		document.getElementById(i).style.color="#FFBBBB";
 	} else {
-		document.getElementById(i).style.color="#FF0000";
+		switch (n) {
+			case "Ｏ":
+				document.getElementById(i).style.color="#FF0000";
+				break;
+			case "Ｘ":
+				document.getElementById(i).style.color="#FF0000";
+				break;
+			case "Ｖ":
+				document.getElementById(i).style.color="#FF0000";
+				break;
+			case "？":
+				document.getElementById(i).style.color="#339900";
+				break;
+			case "☆":
+				document.getElementById(i).style.color="#0099FF";
+				break;
+		}
 	}
 	window.android.setMessage(i, n, '');
 }
