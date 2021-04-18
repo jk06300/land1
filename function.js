@@ -655,7 +655,13 @@ function setMessage(i, t, m) {
 			document.getElementById("markType").innerHTML = t;
 		}
 	} else {
-		document.getElementById("layer").innerHTML = document.getElementById("layer").innerHTML + "<span style='color:#FFFFFF;opacity:0'><span id='markName'>" + i + "</span>" + "<span id='markType'>" + n + "</span></span>";
+		var mType
+		if (t == '') {
+			mType = m
+		} else {
+			mType = t
+		}
+		document.getElementById("layer").innerHTML = document.getElementById("layer").innerHTML + "<span style='color:#FFFFFF;opacity:0'><span id='markName'>" + i + "</span>" + "<span id='markType'>" + mType + "</span></span>";
 	}
 	window.android.setMessage(i, t, '');
 }
