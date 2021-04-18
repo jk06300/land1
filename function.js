@@ -481,8 +481,8 @@ var PopLayer = {
 	},
 	Open : function(e){
 		if(documen){
-			this.Xpos = e.clientX + (document.documentElement.scrollLeft?document.documentElement.scrollLeft:document.body.scrollLeft);
-			this.Ypos = e.clientY + (document.documentElement.scrollTop?document.documentElement.scrollTop:document.body.scrollTop);
+			this.Xpos = clientX + (document.documentElement.scrollLeft?document.documentElement.scrollLeft:document.body.scrollLeft);
+			this.Ypos = clientY + (document.documentElement.scrollTop?document.documentElement.scrollTop:document.body.scrollTop);
 		} else {
 			this.Xpos = e.clientX + (document.documentElement.scrollLeft?document.documentElement.scrollLeft:document.body.scrollLeft);
 			this.Ypos = e.clientY + (document.documentElement.scrollTop?document.documentElement.scrollTop:document.body.scrollTop);
