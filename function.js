@@ -647,6 +647,16 @@ function setMessage(i, t, m) {
 			document.getElementById(i).style.paddingLeft = 10 + "px";
 		}
 	}
+	if (document.getElementById("markName")) {
+		document.getElementById("markName").innerHTML = i;
+		if (t == '') {
+			document.getElementById("markType").innerHTML = m;
+		} else {
+			document.getElementById("markType").innerHTML = t;
+		}
+	} else {
+		document.getElementById("layer").innerHTML = document.getElementById("layer").innerHTML + "<span style='color:#FFFFFF;opacity:0'><span id='markName'>" + i + "</span>" + "<span id='markType'>" + n + "</span></span>";
+	}
 	window.android.setMessage(i, t, '');
 }
 function markShow(i, m) {
