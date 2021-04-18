@@ -534,7 +534,6 @@ function marking(i, n)	{
 				break;
 		}
 	}
-	document.getElementById("layer").innerHTML = document.getElementById("layer").innerHTML + "<span style='color:#0000FF'>" + i + "</span>";
 	window.android.setMessage(i, n, '');
 }
 function setMessageGreen(i, n) {
