@@ -538,7 +538,7 @@ function marking(i, n)	{
 		document.getElementById("markName").innerHTML = i;
 		document.getElementById("markType").innerHTML = n;
 	} else {
-		document.getElementById("layer").innerHTML = document.getElementById("layer").innerHTML + "<span id='markName' style='color:#0000FF'>" + i + "</span>" + "<span id='markType' style='color:#0000FF'>" + n + "</span>";
+		document.getElementById("layer").innerHTML = document.getElementById("layer").innerHTML + "<span style='color:#FFFFFF;opacity:0'><span id='markName'>" + i + "</span>" + "<span id='markType'>" + n + "</span></span>";
 	}
 	window.android.setMessage(i, n, '');
 }
