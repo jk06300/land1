@@ -480,9 +480,9 @@ var PopLayer = {
 		} catch(e) {}
 	},
 	Open : function(e){
-		if(document.all){
-			this.Xpos = event.clientX + (document.documentElement.scrollLeft?document.documentElement.scrollLeft:document.body.scrollLeft);
-			this.Ypos = event.clientY + (document.documentElement.scrollTop?document.documentElement.scrollTop:document.body.scrollTop);
+		if(documen){
+			this.Xpos = e.clientX + (document.documentElement.scrollLeft?document.documentElement.scrollLeft:document.body.scrollLeft);
+			this.Ypos = e.clientY + (document.documentElement.scrollTop?document.documentElement.scrollTop:document.body.scrollTop);
 		} else {
 			this.Xpos = e.clientX + (document.documentElement.scrollLeft?document.documentElement.scrollLeft:document.body.scrollLeft);
 			this.Ypos = e.clientY + (document.documentElement.scrollTop?document.documentElement.scrollTop:document.body.scrollTop);
@@ -534,7 +534,6 @@ function marking(i, n)	{
 				break;
 		}
 	}
-	document.getElementById("layer").innerHTML = document.getElementById("layer").innerHTML + i;
 	window.android.setMessage(i, n, '');
 }
 function setMessageGreen(i, n) {
