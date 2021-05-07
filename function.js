@@ -112,7 +112,7 @@ function MM_showHideLayers() {
 }
 function autoResize(i) {
 	var iframeHeight =	(i).contentWindow.document.body.scrollHeight;
-	if ((i).contentWindow.document.getElementById('br').style.display=="none") {
+	if ((i).contentWindow.document.getElementById('br') && (i).contentWindow.document.getElementById('br').style.display=="none") {
 		(i).height = iframeHeight;
 	} else {
 		(i).height = iframeHeight + 23 + "px";
