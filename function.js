@@ -2,6 +2,7 @@
 var qNum = "";
 var objVisible = 0;
 var preName = "";
+
 function setReSize() { 
 var width = document.body.clientWidth;
 var height = document.body.clientHeight;
@@ -60,11 +61,6 @@ function MM_showHideLayers() {
 			document.documentElement.style.overflowX = 'hidden';
 			document.documentElement.style.overflowY = 'hidden';
 			document.body.scroll = "no";
-			if (dHeight == null && pValue == "" && fName.indexOf('layer') >=0) {
-				var frameName=window.frames[fName];
-				frameName.document.body.style.paddingRight ="20px";
-				document.getElementById(fName).width = document.body.clientWidth -40;
-			}
 			break;
 		case "hide":
 			objVisible--;
@@ -130,7 +126,7 @@ try{
 var frameName=window.frames[i];
 frameName.document.getElementById(t).style.backgroundColor="#FFFCF6";
 frameName.document.getElementById(t).style.color="#000000";
-frameName.document.getElementById(t).style.paddingRight="1px";
+frameName.document.getElementById(t).style.marginRight="2px";
 } catch(e) {}
 }
 function obg(i, t)
@@ -153,7 +149,7 @@ try{
 	var frameName=window.frames[i];
 	frameName.document.getElementById(t).style.backgroundColor="#FFFADB";
 	frameName.document.getElementById(t).style.color="#000000";
-	frameName.document.getElementById(t).style.paddingRight="1px";
+	frameName.document.getElementById(t).style.marginRight="2px";
 } catch(e) {}
 }
 function gbg(i, t)
@@ -162,7 +158,7 @@ try{
 	var frameName=window.frames[i];
 	frameName.document.getElementById(t).style.backgroundColor="#EFFFDB";
 	frameName.document.getElementById(t).style.color="#000000";
-	frameName.document.getElementById(t).style.paddingRight="1px";
+	frameName.document.getElementById(t).style.marginRight="2px";
 } catch(e) {}
 }
 function bbg(i, t)
@@ -171,7 +167,7 @@ try{
 	var frameName=window.frames[i];
 	frameName.document.getElementById(t).style.backgroundColor="#E6FFFC";
 	frameName.document.getElementById(t).style.color="#000000";
-	frameName.document.getElementById(t).style.paddingRight="1px";
+	frameName.document.getElementById(t).style.marginRight="2px";
 } catch(e) {}
 }
 function ybg(i, t)
@@ -180,7 +176,7 @@ try{
 	var frameName=window.frames[i];
 	frameName.document.getElementById(t).style.backgroundColor="#FFFCCC";
 	frameName.document.getElementById(t).style.color="#000000";
-	frameName.document.getElementById(t).style.paddingRight="1px";
+	frameName.document.getElementById(t).style.marginRight="2px";
 } catch(e) {}
 }
 function rgbg(i, t)
@@ -189,7 +185,7 @@ try{
 	var frameName=window.frames[i];
 	frameName.document.getElementById(t).style.backgroundColor="#FAFFF1";
 	frameName.document.getElementById(t).style.color="#CF0000";
-	frameName.document.getElementById(t).style.paddingRight="1px";
+	frameName.document.getElementById(t).style.marginRight="2px";
 } catch(e) {}
 }
 function bgbg(i, t)
@@ -198,7 +194,7 @@ try{
 var frameName=window.frames[i];
 frameName.document.getElementById(t).style.backgroundColor="#FFFFFF";
 frameName.document.getElementById(t).style.color="#0022FF";
-frameName.document.getElementById(t).style.paddingRight="1px";
+frameName.document.getElementById(t).style.marginRight="2px";
 } catch(e) {}
 }
 function grbg(i, t)
@@ -207,7 +203,7 @@ try{
 var frameName=window.frames[i];
 frameName.document.getElementById(t).style.backgroundColor="#EFFFDB";
 frameName.document.getElementById(t).style.color="#BF0000";
-frameName.document.getElementById(t).style.paddingRight="1px";
+frameName.document.getElementById(t).style.marginRight="2px";
 } catch(e) {}
 }
 function bbbg(i, t)
@@ -216,7 +212,7 @@ try{
 var frameName=window.frames[i];
 frameName.document.getElementById(t).style.backgroundColor="#F2FFFD";
 frameName.document.getElementById(t).style.color="#0000FF";
-frameName.document.getElementById(t).style.paddingRight="1px";
+frameName.document.getElementById(t).style.marginRight="2px";
 } catch(e) {}
 }
 function bybg(i, t)
@@ -225,7 +221,7 @@ try{
 var frameName=window.frames[i];
 frameName.document.getElementById(t).style.backgroundColor="#FFFDDD";
 frameName.document.getElementById(t).style.color="#0022FF";
-frameName.document.getElementById(t).style.paddingRight="1px";
+frameName.document.getElementById(t).style.marginRight="2px";
 } catch(e) {}
 }
 function line(i, t)
@@ -268,7 +264,7 @@ function acolor(i, t)
 try{
 var frameName=window.frames[i];
 frameName.document.getElementById(t).style.color="#BB00BB";
-frameName.document.getElementById(t).style.paddingRight="1px";
+frameName.document.getElementById(t).style.marginRight="2px";
 } catch(e) {}
 }
 function bcolor(i, t)
@@ -276,7 +272,7 @@ function bcolor(i, t)
 try{
 var frameName=window.frames[i];
 frameName.document.getElementById(t).style.color="#0022FF";
-frameName.document.getElementById(t).style.paddingRight="1px";
+frameName.document.getElementById(t).style.marginRight="2px";
 } catch(e) {}
 }
 function dcolor(i, t)
@@ -284,7 +280,7 @@ function dcolor(i, t)
 try{
 var frameName=window.frames[i];
 frameName.document.getElementById(t).style.color="#7200FF";
-frameName.document.getElementById(t).style.paddingRight="1px";
+frameName.document.getElementById(t).style.marginRight="2px";
 } catch(e) {}
 }
 function gcolor(i, t)
@@ -292,7 +288,7 @@ function gcolor(i, t)
 try{
 var frameName=window.frames[i];
 frameName.document.getElementById(t).style.color="#00574E";
-frameName.document.getElementById(t).style.paddingRight="1px";
+frameName.document.getElementById(t).style.marginRight="2px";
 } catch(e) {}
 }
 function hcolor(i, t)
@@ -300,7 +296,7 @@ function hcolor(i, t)
 try{
 var frameName=window.frames[i];
 frameName.document.getElementById(t).style.color="#005A84";
-frameName.document.getElementById(t).style.paddingRight="1px";
+frameName.document.getElementById(t).style.marginRight="2px";
 } catch(e) {}
 }
 function pcolor(i, t)
@@ -308,7 +304,7 @@ function pcolor(i, t)
 try{
 var frameName=window.frames[i];
 frameName.document.getElementById(t).style.color="#BF0000";
-frameName.document.getElementById(t).style.paddingRight="1px";
+frameName.document.getElementById(t).style.marginRight="2px";
 } catch(e) {}
 }
 function scolor(i, t)
@@ -350,11 +346,6 @@ function ins(i, t, n)
 		fName = i;
 		frameName.document.getElementById(t).innerHTML = n + " " + frameName.document.getElementById(t).innerHTML;
 		if (n.indexOf('span') < 0 && n != "") {qNum = " " + n;}
-		if (dHeight == null && pValue != "" && fName.indexOf('layer') >=0) {
-			var frameName=window.frames[fName];
-			frameName.document.body.style.paddingRight ="20px";
-			document.getElementById(fName).width = document.body.clientWidth -40;
-		}
 	} catch(e) {}
 }
 function tag(i, t, n)
@@ -538,12 +529,6 @@ function marking(i, n)	{
 				break;
 		}
 	}
-	if (document.getElementById("markName")) {
-		document.getElementById("markName").innerHTML = i;
-		document.getElementById("markType").innerHTML = n;
-	} else {
-		document.getElementById("layer").innerHTML = document.getElementById("layer").innerHTML + "<span style='color:#FFFFFF;opacity:0'><span id='markName'>" + i + "</span>" + "<span id='markType'>" + n + "</span></span>";
-	}
 	window.android.setMessage(i, n, '');
 }
 function setMessageGreen(i, n) {
@@ -650,22 +635,6 @@ function setMessage(i, t, m) {
 			document.getElementById(i).style.display="compact";
 			document.getElementById(i).style.paddingLeft = 10 + "px";
 		}
-	}
-	if (document.getElementById("markName")) {
-		document.getElementById("markName").innerHTML = i;
-		if (t == '') {
-			document.getElementById("markType").innerHTML = m;
-		} else {
-			document.getElementById("markType").innerHTML = t;
-		}
-	} else {
-		var mType
-		if (t == '') {
-			mType = m
-		} else {
-			mType = t
-		}
-		document.getElementById("layer").innerHTML = document.getElementById("layer").innerHTML + "<span style='color:#FFFFFF;opacity:0'><span id='markName'>" + i + "</span>" + "<span id='markType'>" + mType + "</span></span>";
 	}
 	window.android.setMessage(i, t, '');
 }
@@ -827,7 +796,7 @@ function backgroundColorMode() {
 			document.body.style.backgroundColor="#575757";
 			var p = document.getElementsByTagName('p');
 			for (var i=0; i<p.length; i++) {
-				if (p[i].classList.contains('gbg') || p[i].classList.contains('bbg') || p[i].classList.contains('mbg') || p[i].classList.contains('ybg') || p[i].classList.contains('green')) {
+				if (p[i].classList.contains('gbg') || p[i].classList.contains('abg') || p[i].classList.contains('bbg') || p[i].classList.contains('mbg') || p[i].classList.contains('ybg') || p[i].classList.contains('green')) {
 					p[i].style.color="#D5EBCC";
 				} else {
 					p[i].style.color="#FFFFFF";
@@ -855,7 +824,7 @@ function backgroundColorMode() {
 				} else if (s[i].classList.contains('blue') || s[i].classList.contains('bbbg')) {
 					s[i].style.color="#C5C7FE";
 					s[i].style.backgroundColor="transparent";
-				} else if (s[i].classList.contains('gbg') || s[i].classList.contains('bbg') || s[i].classList.contains('mbg') || s[i].classList.contains('ybg') || s[i].classList.contains('green')) {
+				} else if (s[i].classList.contains('gbg') || s[i].classList.contains('abg') || s[i].classList.contains('bbg') || s[i].classList.contains('mbg') || s[i].classList.contains('ybg') || s[i].classList.contains('green')) {
 					s[i].style.color="#D5EBCC";
 					s[i].style.backgroundColor="transparent";
 				} else if (s[i].classList.contains('ncolor')) {
@@ -916,7 +885,7 @@ function backgroundColorMode() {
 						} else if (td[j].style.backgroundColor == "rgb(248, 255, 237)" || td[j].classList.contains("ebg") || td[j].classList.contains("xcolor")) {
 							td[j].style.backgroundColor="#A3AA9F";
 							tdColor = "o";
-						} else if (td[j].style.backgroundColor == "rgb(230, 255, 252)" || td[j].classList.contains("bbg")) {
+						} else if (td[j].style.backgroundColor == "rgb(230, 255, 252)" || td[j].classList.contains("abg") || td[j].classList.contains("bbg")) {
 							td[j].style.backgroundColor="#A1A5AF";
 							tdColor = "o";
 						} else if (td[j].style.backgroundColor == "rgb(255, 250, 219)" || td[j].classList.contains("mbg")) {
@@ -969,7 +938,7 @@ function backgroundColorMode() {
 										s[k].style.color="#0000BF"
 									} else if (s[k].style.color == "rgb(255, 216, 255)" || s[k].classList.contains('c88') || s[k].classList.contains('pink')) {
 										s[k].style.color="#AA00AA"
-									} else if (s[k].style.color == "rgb(213, 235, 204)" || s[k].classList.contains('gbg') || s[k].classList.contains('bbg') || s[k].classList.contains('mbg') || s[k].classList.contains('ybg')) {
+									} else if (s[k].style.color == "rgb(213, 235, 204)" || s[k].classList.contains('gbg') || s[k].classList.contains('abg') || s[k].classList.contains('bbg') || s[k].classList.contains('mbg') || s[k].classList.contains('ybg')) {
 										s[k].style.color="#1C6000";
 									} else if (s[k].style.color == "rgb(221, 213, 174)" || s[k].style.color == "rgb(64, 64, 0)" || s[k].classList.contains('trs') || s[k].classList.contains('mrs') || s[k].classList.contains('rs')) {
 										s[k].style.color="#606000";
@@ -1041,7 +1010,7 @@ function backgroundColorMode() {
 					for (var j=0; j<p.length; j++) {
 						if (p[j].classList.contains('trs') || p[j].classList.contains('mrs') || p[j].classList.contains('rs') ) {
 							p[j].style.color="#DDD5AE";
-						} else if (p[j].classList.contains('gbg') || p[j].classList.contains('bbg') || p[j].classList.contains('mbg') || p[j].classList.contains('ybg') || p[j].classList.contains('green')) {
+						} else if (p[j].classList.contains('gbg') || p[j].classList.contains('abg') || p[j].classList.contains('bbg') || p[j].classList.contains('mbg') || p[j].classList.contains('ybg') || p[j].classList.contains('green')) {
 							p[j].style.color="#D5EBCC";
 						}
 						p[j].style.backgroundColor = "transparent";
@@ -1062,7 +1031,7 @@ function backgroundColorMode() {
 							s[j].style.color="#FFBBBB";
 						} else if (s[j].style.color == "rgb(0, 0, 255)" || s[j].style.color == "rgb(0, 34, 255)" || s[j].classList.contains('blue') || s[j].classList.contains('bbbg')) {
 							s[j].style.color="#C5C7FE"
-						} else if (s[j].style.backgroundColor == "rgb(239, 255, 219)" || s[j].style.backgroundColor == "rgb(230, 255, 252)" || s[j].style.backgroundColor == "rgb(255, 252, 204)" || s[j].style.backgroundColor == "rgb(255, 250, 219)" || s[j].classList.contains('gbg') || s[j].classList.contains('bbg') || s[j].classList.contains('mbg') || s[j].classList.contains('ybg') || s[j].classList.contains('green')) {
+						} else if (s[j].style.backgroundColor == "rgb(239, 255, 219)" || s[j].style.backgroundColor == "rgb(230, 255, 252)" || s[j].style.backgroundColor == "rgb(255, 252, 204)" || s[j].style.backgroundColor == "rgb(255, 250, 219)" || s[j].classList.contains('gbg') || s[j].classList.contains('abg') || s[j].classList.contains('bbg') || s[j].classList.contains('mbg') || s[j].classList.contains('ybg') || s[j].classList.contains('green')) {
 							s[j].style.color="#D5EBCC"
 						}
 						s[j].style.backgroundColor = "transparent";
@@ -1084,7 +1053,7 @@ function backgroundColorMode() {
 							d[j].style.color="#000000"
 							var s = d[j].getElementsByTagName('span');
 							for (var k=0; k<s.length; k++) {
-								if (s[k].classList.contains('gbg') || s[k].classList.contains('bbg') || s[k].classList.contains('mbg') || s[k].classList.contains('ybg')) {
+								if (s[k].classList.contains('gbg') || s[k].classList.contains('abg') || s[k].classList.contains('bbg') || s[k].classList.contains('mbg') || s[k].classList.contains('ybg')) {
 									s[k].style.color="#000000";
 									s[k].style.backgroundColor="transparent";
 								} else if (s[k].classList.contains('trs') || s[k].classList.contains('mrs') || s[k].classList.contains('rs')) {
@@ -1171,7 +1140,7 @@ function backgroundColorMode() {
 									default:
 										td[k].style.backgroundColor="#A3AA9F";
 								}
-							} else if (td[k].style.backgroundColor == "rgb(230, 255, 252)" || td[k].style.backgroundColor == "rgb(243, 247, 248)" || td[k].classList.contains("bbg") || td[k].classList.contains("bc")) {
+							} else if (td[k].style.backgroundColor == "rgb(230, 255, 252)" || td[k].style.backgroundColor == "rgb(243, 247, 248)" || td[k].classList.contains("abg") || td[k].classList.contains("bbg") || td[k].classList.contains("bc")) {
 								switch (td[k].style.backgroundColor) {
 									case "rgb(255, 253, 221)": //tcolor
 									case "rgb(255, 250, 219)": //mbg
@@ -1221,7 +1190,7 @@ function backgroundColorMode() {
 											s[l].style.color="#AF0000";
 										} else if (s[l].style.color == "rgb(197, 199, 254)" || s[l].classList.contains('blue') || s[l].classList.contains('bbbg')) {
 											s[l].style.color="#0000BF"
-										} else if (s[l].style.color == "rgb(213, 235, 204)" || s[l].classList.contains('gbg') || s[l].classList.contains('bbg') || s[l].classList.contains('mbg') || s[l].classList.contains('ybg')) {
+										} else if (s[l].style.color == "rgb(213, 235, 204)" || s[l].classList.contains('gbg') || s[l].classList.contains('abg') || s[l].classList.contains('bbg') || s[l].classList.contains('mbg') || s[l].classList.contains('ybg')) {
 											s[l].style.color="#000000";
 										} else if (s[l].style.color == "rgb(221, 213, 174)" || s[l].style.color == "rgb(64, 64, 0)" || s[l].classList.contains('trs') || s[l].classList.contains('mrs') || s[l].classList.contains('rs')) {
 											s[l].style.color="#606000";
@@ -1279,7 +1248,7 @@ function backgroundColorMode() {
 						for (var k=0; k<p.length; k++) {
 							if (p[k].classList.contains('trs') || p[k].classList.contains('mrs') || p[k].classList.contains('rs') ) {
 								p[k].style.color="#DDD5AE";
-							} else if (p[k].classList.contains('gbg') || p[k].classList.contains('bbg') || p[k].classList.contains('mbg') || p[k].classList.contains('ybg') || p[k].classList.contains('green')) {
+							} else if (p[k].classList.contains('gbg') || p[k].classList.contains('abg') || p[k].classList.contains('bbg') || p[k].classList.contains('mbg') || p[k].classList.contains('ybg') || p[k].classList.contains('green')) {
 								p[k].style.color="#D5EBCC";
 							}
 							p[k].style.backgroundColor = "transparent";
@@ -1314,7 +1283,7 @@ function backgroundColorMode() {
 								d[k].style.color="#000000"
 								var s = d[k].getElementsByTagName('span');
 								for (var l=0; l<s.length; l++) {
-									if (s[l].classList.contains('gbg') || s[l].classList.contains('bbg') || s[l].classList.contains('mbg') || s[l].classList.contains('ybg')) {
+									if (s[l].classList.contains('gbg') || s[l].classList.contains('abg') || s[l].classList.contains('bbg') || s[l].classList.contains('mbg') || s[l].classList.contains('ybg')) {
 										s[l].style.color="#000000";
 										s[l].style.backgroundColor="transparent";
 									} else if (s[l].classList.contains('trs') || s[l].classList.contains('mrs') || s[l].classList.contains('rs')) {
@@ -1360,7 +1329,7 @@ function backgroundColorMode() {
 								} else if (td[l].style.backgroundColor == "rgb(248, 255, 237)" || td[l].classList.contains('ebg') || td[l].classList.contains('xcolor')) {
 									td[l].style.backgroundColor="#A3AA9F";
 									tdColor = "o";
-								} else if (td[l].style.backgroundColor == "rgb(230, 255, 252)" || td[l].classList.contains("bbg")) {
+								} else if (td[l].style.backgroundColor == "rgb(230, 255, 252)" || td[l].classList.contains("abg") || td[l].classList.contains("bbg")) {
 									td[l].style.backgroundColor="#A1A5AF";
 									tdColor = "o";
 								} else if (td[l].style.backgroundColor == "rgb(255, 250, 219)" || td[l].classList.contains("mbg")) {
@@ -1404,7 +1373,7 @@ function backgroundColorMode() {
 												s[m].style.color="#AF0000";
 											} else if (s[m].style.color == "rgb(197, 199, 254)" || s[m].classList.contains('blue') || s[m].classList.contains('bbbg')) {
 												s[m].style.color="#0000BF"
-											} else if (s[m].style.color == "rgb(213, 235, 204)" || s[m].classList.contains('gbg') || s[m].classList.contains('bbg') || s[m].classList.contains('mbg') || s[m].classList.contains('ybg')) {
+											} else if (s[m].style.color == "rgb(213, 235, 204)" || s[m].classList.contains('gbg') || s[m].classList.contains('abg') || s[m].classList.contains('bbg') || s[m].classList.contains('mbg') || s[m].classList.contains('ybg')) {
 												s[m].style.color="#000000";
 											} else if (s[m].style.color == "rgb(221, 213, 174)" || s[m].style.color == "rgb(64, 64, 0)" || s[m].classList.contains('trs') || s[m].classList.contains('mrs') || s[m].classList.contains('rs')) {
 												s[m].style.color="#606000";
@@ -1468,7 +1437,7 @@ function bcMode()
 			frameName.document.body.style.backgroundColor="#575757";
 			var p = frameName.document.getElementsByTagName('p');
 			for (var i=0; i<p.length; i++) {
-				if (p[i].classList.contains('gbg') || p[i].classList.contains('bbg') || p[i].classList.contains('mbg') || p[i].classList.contains('ybg') || p[i].classList.contains('green')) {
+				if (p[i].classList.contains('gbg') || p[i].classList.contains('abg') || p[i].classList.contains('bbg') || p[i].classList.contains('mbg') || p[i].classList.contains('ybg') || p[i].classList.contains('green')) {
 				p[i].style.color="#D5EBCC";
 			} else {
 				p[i].style.color="#FFFFFF";
@@ -1483,7 +1452,7 @@ function bcMode()
 					s[i].style.color="#95C5DB";
 				} else if (s[i].classList.contains('trs') || s[i].classList.contains('mrs') || s[i].classList.contains('rs') ) {
 					s[i].style.color="#DDD5AE";
-				} else if (s[i].style.backgroundColor == "rgb(239, 255, 219)" || s[i].style.backgroundColor == "rgb(230, 255, 252)" || s[i].style.backgroundColor == "rgb(255, 250, 219)" || s[i].style.backgroundColor == "rgb(255, 252, 204)" || s[i].classList.contains('gbg') || s[i].classList.contains('bbg') || s[i].classList.contains('mbg') || s[i].classList.contains('ybg') || s[i].classList.contains('green')) {
+				} else if (s[i].style.backgroundColor == "rgb(239, 255, 219)" || s[i].style.backgroundColor == "rgb(230, 255, 252)" || s[i].style.backgroundColor == "rgb(255, 250, 219)" || s[i].style.backgroundColor == "rgb(255, 252, 204)" || s[i].classList.contains('gbg') || s[i].classList.contains('abg') || s[i].classList.contains('bbg') || s[i].classList.contains('mbg') || s[i].classList.contains('ybg') || s[i].classList.contains('green')) {
 					s[i].style.color="#D5EBCC";
 				} else if (s[i].style.color == "rgb(191, 0, 0)" || s[i].style.color == "rgb(207, 0, 0)" || s[i].classList.contains('c99') || s[i].classList.contains('rgbg')) {
 					s[i].style.color="#FFBBBB";
@@ -1546,7 +1515,7 @@ function bcMode()
 					} else if (td[j].style.backgroundColor == "rgb(248, 255, 237)" || td[j].classList.contains("ebg") || td[j].classList.contains("xcolor")) {
 						td[j].style.backgroundColor="#A3AA9F";
 						tdColor = "o";
-					} else if (td[j].style.backgroundColor == "rgb(230, 255, 252)" || td[j].classList.contains("bbg")) {
+					} else if (td[j].style.backgroundColor == "rgb(230, 255, 252)" || td[j].classList.contains("abg") || td[j].classList.contains("bbg")) {
 						td[j].style.backgroundColor="#A1A5AF";
 						tdColor = "o";
 					} else if (td[j].style.backgroundColor == "rgb(255, 250, 219)" || td[j].classList.contains("mbg")) {
@@ -1594,7 +1563,7 @@ function bcMode()
 									s[k].style.color="#AF0000";
 								} else if (s[k].style.color == "rgb(197, 199, 254)" || s[k].classList.contains('blue')) {
 									s[k].style.color="#0000BF";
-								} else if (s[k].style.color == "rgb(213, 235, 204)" || s[k].classList.contains('gbg') || s[k].classList.contains('bbg') || s[k].classList.contains('mbg') || s[k].classList.contains('ybg')) {
+								} else if (s[k].style.color == "rgb(213, 235, 204)" || s[k].classList.contains('gbg') || s[k].classList.contains('abg') || s[k].classList.contains('bbg') || s[k].classList.contains('mbg') || s[k].classList.contains('ybg')) {
 									s[k].style.color="#1C6000";
 								} else if (s[k].style.color == "rgb(221, 213, 174)" || s[k].style.color == "rgb(64, 64, 0)" || s[k].classList.contains('trs') || s[k].classList.contains('mrs') || s[k].classList.contains('rs')) {
 									s[k].style.color="#606000";
@@ -1645,7 +1614,7 @@ function bcMode()
 				for (var j=0; j<p.length; j++) {
 					if (p[j].classList.contains('trs') || p[j].classList.contains('mrs') || p[j].classList.contains('rs') ) {
 						p[j].style.color="#DDD5AE";
-					} else	if (p[j].classList.contains('gbg') || p[j].classList.contains('bbg') || p[j].classList.contains('mbg') || p[j].classList.contains('ybg') || p[j].classList.contains('green')) {
+					} else	if (p[j].classList.contains('gbg') || p[j].classList.contains('abg') || p[j].classList.contains('bbg') || p[j].classList.contains('mbg') || p[j].classList.contains('ybg') || p[j].classList.contains('green')) {
 						p[j].style.color="#D5EBCC";
 				}
 					p[j].style.backgroundColor = "transparent";
@@ -1748,7 +1717,7 @@ function bcMode()
 									}
 								}
 								for (var l=0; l<s.length; l++) {
-									if (s[l].style.backgroundColor == "rgb(239, 255, 219)" || s[l].style.backgroundColor == "rgb(230, 255, 252)" || s[l].style.backgroundColor == "rgb(255, 250, 219)" || s[l].style.backgroundColor == "rgb(255, 252, 204)" || s[l].classList.contains('gbg') || s[l].classList.contains('bbg') || s[l].classList.contains('mbg') || s[l].classList.contains('ybg')) {
+									if (s[l].style.backgroundColor == "rgb(239, 255, 219)" || s[l].style.backgroundColor == "rgb(230, 255, 252)" || s[l].style.backgroundColor == "rgb(255, 250, 219)" || s[l].style.backgroundColor == "rgb(255, 252, 204)" || s[l].classList.contains('gbg') || s[l].classList.contains('abg') || s[l].classList.contains('bbg') || s[l].classList.contains('mbg') || s[l].classList.contains('ybg')) {
 										s[l].style.color="#000000";
 									} else if (s[l].style.color == "rgb(64, 64, 0)" || s[l].classList.contains('trs') || s[l].classList.contains('mrs') || s[l].classList.contains('rs')) {
 										s[l].style.color="#606000";
@@ -1805,7 +1774,7 @@ function bcMode()
 					for (var k=0; k<p.length; k++) {
 						if (p[k].classList.contains('trs') || p[k].classList.contains('mrs') || p[k].classList.contains('rs') ) {
 							p[k].style.color="#DDD5AE";
-						} else if (p[k].classList.contains('gbg') || p[k].classList.contains('bbg') || p[k].classList.contains('mbg') || p[k].classList.contains('ybg') || p[k].classList.contains('green')) {
+						} else if (p[k].classList.contains('gbg') || p[k].classList.contains('abg') || p[k].classList.contains('bbg') || p[k].classList.contains('mbg') || p[k].classList.contains('ybg') || p[k].classList.contains('green')) {
 							p[k].style.color="#D5EBCC";
 						}
 						p[k].style.backgroundColor = "transparent";
@@ -1840,7 +1809,7 @@ function bcMode()
 							d[k].style.color="#000000"
 							var s = d[k].getElementsByTagName('span');
 							for (var l=0; l<s.length; l++) {
-								if (s[l].classList.contains('gbg') || s[l].classList.contains('bbg') || s[l].classList.contains('mbg') || s[l].classList.contains('ybg')) {
+								if (s[l].classList.contains('gbg') || s[l].classList.contains('abg') || s[l].classList.contains('bbg') || s[l].classList.contains('mbg') || s[l].classList.contains('ybg')) {
 									s[l].style.color="#000000";
 									s[l].style.backgroundColor="transparent";
 								} else if (s[l].classList.contains('trs') || s[l].classList.contains('mrs') || s[l].classList.contains('rs')) {
@@ -1886,7 +1855,7 @@ function bcMode()
 							} else if (td[l].style.backgroundColor == "rgb(248, 255, 237)" || td[l].classList.contains('ebg') || td[l].classList.contains('xcolor')) {
 								td[l].style.backgroundColor="#A3AA9F";
 								tdColor = "o";
-							} else if (td[l].style.backgroundColor == "rgb(230, 255, 252)" || td[l].classList.contains("bbg")) {
+							} else if (td[l].style.backgroundColor == "rgb(230, 255, 252)" || td[l].classList.contains("abg") || td[l].classList.contains("bbg")) {
 								td[l].style.backgroundColor="#A1A5AF";
 								tdColor = "o";
 							} else if (td[l].style.backgroundColor == "rgb(255, 250, 219)" || td[l].classList.contains("mbg")) {
@@ -1930,7 +1899,7 @@ function bcMode()
 											s[m].style.color="#AF0000";
 										} else if (s[m].style.color == "rgb(197, 199, 254)" || s[m].classList.contains('blue') || s[m].classList.contains('bbbg')) {
 											s[m].style.color="#0000BF"
-										} else if (s[m].style.color == "rgb(213, 235, 204)" || s[m].classList.contains('gbg') || s[m].classList.contains('bbg') || s[m].classList.contains('mbg') || s[m].classList.contains('ybg')) {
+										} else if (s[m].style.color == "rgb(213, 235, 204)" || s[m].classList.contains('gbg') || s[m].classList.contains('abg') || s[m].classList.contains('bbg') || s[m].classList.contains('mbg') || s[m].classList.contains('ybg')) {
 											s[m].style.color="#000000";
 										} else if (s[m].style.color == "rgb(221, 213, 174)" || s[m].style.color == "rgb(64, 64, 0)" || s[m].classList.contains('trs') || s[m].classList.contains('mrs') || s[m].classList.contains('rs')) {
 											s[m].style.color="#606000";
