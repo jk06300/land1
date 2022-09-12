@@ -590,17 +590,26 @@ function memoAdd(i, n) {
 		document.getElementById(i).innerHTML = n;
 		if (i != 'memo') {
 			document.getElementById(i).style.fontSize= 16 + "px";
-			document.getElementById(i).style.display="block";
 			document.getElementById(i).style.position="relative";
-			document.getElementById(i).style.marginTop = 5 + "px";
+			document.getElementById(i).style.marginTop = 15 + "px";
 			document.getElementById(i).style.marginLeft = 15 + "px";
-			document.getElementById(i).style.paddingTop = 3 + "px";
-			document.getElementById(i).style.paddingBottom = 3 + "px";
-			document.getElementById(i).style.paddingLeft = 7 + "px";
-			document.getElementById(i).style.paddingRight = 7 + "px";
+				document.getElementById(i).style.paddingTop = 3 + "px";
+				document.getElementById(i).style.paddingBottom = 3 + "px";
 			document.getElementById(i).style.borderWidth = 1 + "px";
 			document.getElementById(i).style.borderStyle = "solid";
 			document.getElementById(i).style.borderRadius = 5 + "px";
+			if (n == "···") {
+				document.getElementById(i).style.display="inline-block";
+				document.getElementById(i).style.width = "auto";
+				document.getElementById(i).style.lineHeight = 0.8;
+				document.getElementById(i).style.paddingLeft = 3 + "px";
+				document.getElementById(i).style.paddingRight = 3 + "px";
+			} else {
+				document.getElementById(i).style.display="block";
+				document.getElementById(i).style.lineHeight = 1.6;
+				document.getElementById(i).style.paddingLeft = 7 + "px";
+				document.getElementById(i).style.paddingRight = 7 + "px";
+			}
 			if (bcm == "dark") {
 				document.getElementById(i).style.backgroundColor="#A3AA9F";
 				document.getElementById(i).style.color="#000000";
@@ -615,7 +624,11 @@ function memoAdd(i, n) {
 }
 function memoEdit() {
 	var ID = window.event.target.id;
-	window.android.setMessage(ID, 'memoEdit', '');
+	if (document.getElementById(ID).innerHTML == "···") {
+		window.android.setMessage(ID, 'memoShow', '');
+	} else {
+		window.android.setMessage(ID, 'memoEdit', '');
+	}
 }
 function setMessage(i, t, m) {
 	if (t == '') {
