@@ -7,25 +7,35 @@
 <link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
 </head>
 <body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
-<p class="mb15" id="t"></p>
+<p id="t">포트폴리오 상관계수</p>
+<br>
+<p class="mb15"><span id="st1" class="sb">■</span> 상관계수가 １일 경우</p>
 <table id="t1" class="tb f16" cellspacing="0">
-<tr id="tr1"><td class="td">
-<p class="mb10"><span id="pr1">상관계수가 １일 경우</span>,</p>
-<p>자산 A의 수익률이 10<span class="f14">%</span> 일 때</p>
-<p class="mb10">자산 B의 수익률도 10<span class="f14">%</span>,</p>
-<p>자산 A의 수익률이 -10<span class="f14">%</span>일 때</p>
-<p class="mb10">자산 B의 수익률도 -10<span class="f14">%</span>가 되기 때문에</p>
-<p class="mb15"><span id="pr6">분산투자효과가 없게 된다</span>.</p>
-</td></tr>
-<tr id="tr2"><td class="td">
-<p class="mb10">상관계수가  -１일 경우</p>
-<p">자산 A의 수익률이 10<span class="f14">%</span> 일 때</p>
-<p class="mb10">자산 B의 수익률은 -10<span class="f14">%</span>,</p>
-<p>자산 A의 수익률이 -10<span class="f14">%</span>일 때</p>
-<p class="mb10">자산 B의 수익률은 10<span class="f14">%</span>가 되기 때문에</p>
-<p>분산투자효과가 커지게 된다.</p>
+<tr><td id="tr1" class="td bc">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">자산 A의 수익률이 10% 일 때 자산 B의 수익률도 10%</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">자산 A의 수익률이 -10%일 때 자산 B의 수익률도 -10%가 되므로</span></p>
 </td></tr>
 </table>
 <br>
+<table class="tb f16" cellspacing="0">
+<tr><td id="tr2" class="td obg">
+분산투자효과가 없게 된다.
+</td></tr>
+</table>
+<br>
+<p class="mb15"><span id="st2" class="sb">■</span> 상관계수가 <span id="sb2p1">-１</span>일 경우</p>
+<table class="tb f16" cellspacing="0">
+<tr><td id="tr3" class="td bc">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">자산 A의 수익률이 10% 일 때 자산 B의 수익률은 -10%</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">자산 A의 수익률이 -10%일 때 자산 B의 수익률은 10%가 되므로</span></p>
+</td></tr>
+</table>
+<br>
+<table class="tb f16" cellspacing="0">
+<tr><td id="tr4" class="td obg">
+분산투자효과가 커지게 된다.
+</td></tr>
+</table>
+<span id="br"><br></span>
 </body>
 </html>

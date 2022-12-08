@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
+<style type="text/css">
+#layer{display:none}
+</style>
+<script type="text/JavaScript" src="../../function.js"></script>
+<script type="text/JavaScript" src="../../jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+var ID = "";
+function idValue(n) {ID = n;}
+</script>
+</head>
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
+<div class="post_ct " id="viewTypeSelector"><p><span id="snum"></span><span id="tag"></span></p>
+<p><b>감가수정에 관한 설명으로 옳은 것을 모두 고른 것은?</b></p>
+<br>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td">
+<p class="mb15"><font id="e1"></font><span class="ei dp" onMouseDown="PopLayer.Action(this,'layer'); idValue('e1');">㉠</span><span class="dp1">감가수정과 관련된 내용연수는 경제적 내용연수가 아닌 물리적 내용연수를 의미한다.</span><span onMouseDown="memoEdit();" id="me1"></span></p>
+<p class="mb15"><font id="e2"></font><span class="ei dp" onMouseDown="PopLayer.Action(this,'layer'); idValue('e2');">㉡</span><span class="dp1">대상물건에 대한 재조달원가를 감액할 요인이 있는 경우에는 물리적 감가, 기능적 감가, 경제적 감가 등을 고려한다.</span><span onMouseDown="memoEdit();" id="me2"></span></p>
+<p class="mb15"><font id="e3"></font><span class="ei dp" onMouseDown="PopLayer.Action(this,'layer'); idValue('e3');">㉢</span><span class="dp1">감가수정방법에는 내용연수법, 관찰감가법, 분해법 등이 있다.</span><span onMouseDown="memoEdit();" id="me3"></span></p>
+<p class="mb15"><font id="e4"></font><span class="ei dp" onMouseDown="PopLayer.Action(this,'layer'); idValue('e4');">㉣</span><span class="dp1">내용연수법으로는 정액법, 정률법, 상환기금법이 있다.</span><span onMouseDown="memoEdit();" id="me4"></span></p>
+<p><font id="e5"></font><span class="ei dp" onMouseDown="PopLayer.Action(this,'layer'); idValue('e5');">㉤</span><span class="dp1">정률법은 매년 일정한 감가율을 곱하여 감가액을 구하는 방법으로 매년 감가액이 일정하다.</span><span onMouseDown="memoEdit();" id="me5"></span></p>
+</td></tr>
+</table>
+<br>
+<br>
+<p id="ip1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span>&nbsp; <span class="trs">㉠, ㉡</span><span onMouseDown="memoEdit();" id="mi1"></span></p>
+<br>
+<p id="ip2"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span>&nbsp; <span class="trs">㉡, ㉢</span><span onMouseDown="memoEdit();" id="mi2"></span></p>
+<br>
+<p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span>&nbsp; <span class="trs">㉢, ㉣</span><span onMouseDown="memoEdit();" id="mi3"></span></p>
+<br>
+<p id="ip4"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span>&nbsp; <span class="trs">㉡, ㉢, ㉣</span><span onMouseDown="memoEdit();" id="mi4"></span></p>
+<br>
+<p id="ip5"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span>&nbsp; <span class="trs">㉢, ㉣, ㉤</span><span onMouseDown="memoEdit();" id="mi5"></span></p>
+<br></div>
+<div id="layer" onClick="PopLayer.Close();">
+<table class="tb" cellspacing="0" style="background-color:#fffddd; font-size:18px">
+<tr><td class="td" onMouseDown="marking(ID,'Ｏ');">&nbsp;Ｏ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｘ');">&nbsp;Ｘ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｖ');">&nbsp;Ｖ&nbsp;</td><td class="td" style="color:#339900" onMouseDown="marking(ID,'？');">&nbsp;？&nbsp;</td><td class="td" style="color:#0099FF"  onMouseDown="marking(ID,'☆');">&nbsp;☆&nbsp;</td><td class="td" onMouseDown="marking(ID,'');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="td" style="color:#6c54d5" onMouseDown="memoBox(ID);">&nbsp;Ｔ&nbsp;</td></tr>
+</table>
+</div>
+<iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
+</body>
+
+</html>

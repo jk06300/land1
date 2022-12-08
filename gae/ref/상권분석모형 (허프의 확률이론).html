@@ -13,24 +13,28 @@
 </style>
 </head>
 <body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
-<p id="t">허프의 확률이론 <span class="mrs">(상권분석모형)</span></p>
-<br>
+<p id="t" class="mb15">허프의 확률이론 <span class="mrs">(상권분석모형)</span></p>
 <table class="tb f16" cellspacing="0">
-<tr><td class="td obg">
-허프는 상권분석에서 소비자의 소비행태를 중시하였으며, 확률의 개념을 도입하여 상권의 규모<span class="mrs">(또는 매장의 매출액)</span>을 확률론적으로 파악하였다.
+<tr><td id="tr1" class="td obg">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">허프는 상권분석에서 소비자의 소비행태를 중시하였으며, 확률의 개념을 도입하여 상권의 규모<span class="mrs">(또는 매장의 매출액)</span>을 확률론적으로 파악하였다.</span></p>
+<p class="mb5"><span id="tr1n2" class="sb1 dp">●</span><span id="tr1b2" class="dp1">어떤 매장이 고객에게 주는 효용이 클수록 그 매장이 고객들에게 선택될 확률이 더 높아진다는 공리에 바탕을 두고 있다.</span></p>
+<p><span id="tr1n3" class="sb1 dp">●</span><span id="tr1b3" class="dp1">고정된 상권을 놓고 경쟁함으로써 제로섬<span class="mrs">(zero-sum)</span> 게임이 된다는 한계가 있다.</span></p>
 </td></tr>
 </table>
 <br>
 <table class="tb f16" cellspacing="0">
 <tr><td class="td">점포의 거래권에 영향을 주는 것은 근본적으로 행동자로서의 소비자로 파악</td></tr>
 <tr><td class="td">고밀도 시가지에 거주하는 소비자는 특정지역에서만 상품을 구입하지 않으므로 상가는 소비자의 기호ㆍ소득관계를 참작하여 상품<span class="mrs">(전문품 등)</span>을 판매하여야 함</td></tr>
-<tr><td id="tr3" class="td w1">상권 내 특정 점포의 시장 점유율을 상권 내 점포의 매력도<span id="tr3r1" class="trs">(효용, 고객유인력)</span>를 합계한 것에서 차지하는 당해 점포의 매력도의 비율로 산출</td></tr>
-<tr id="tr4"><td class="td w1">소비자가 특정 점포를 이용할 확률은 경쟁점포의 수, 점포와의 거리, 점포의 면적에 의해 결정</td></tr>
-<tr><td id="tr5" class="td">각 점포의 매력도는 소비자로부터의 거리<span class="mrs">(×마찰계수)</span>에 반비례 하고 상품면적에 비례</td></tr>
+<tr><td id="tr4" class="td w1">상권 내 특정 점포의 시장 점유율을 상권 내 점포의 매력도<span id="tr4r1" class="trs">(효용, 고객유인력)</span>를 합계한 것에서 차지하는 당해 점포의 매력도의 비율로 산출</td></tr>
+<tr id="tr5"><td class="td w1">소비자가 특정 점포를 이용할 확률은 경쟁점포의 수, 점포와의 거리, 점포의 면적에 의해 결정</td></tr>
+<tr><td id="tr6" class="td">
+일반적으로 소비자는 가장 가까운 곳에서 상품을 선택하려는 경향이 있다.
+</td></tr>
+<tr><td id="tr7" class="td">각 점포의 매력도는 소비자로부터의 거리<span class="mrs">(×마찰계수)</span>에 반비례 하고 상품면적에 비례</td></tr>
 </table>
 <p class="mb10"><br></p>
 <table class="tb" cellspacing="0" style="border-top:0px; text-align:center">
-<tr><td rowspan="4" class="td bt tcolor"><p class="f16">A</p>기존매장</td><td class="td bb">&nbsp;</td>
+<tr><td rowspan="4" class="td bt bc"><p class="f16">A</p>기존매장</td><td class="td bb">&nbsp;</td>
   <td colspan="2" rowspan="4" class="td bt">C 도시</td><td class="td bb">&nbsp;</td><td rowspan="4" class="td bt ebg"><p class="f16">B</p>신규매장</td></tr>
 <tr><td class="td"></td><td class="td"></td></tr>
 <tr><td class="td bb"></td><td class="td bb"></td></tr>
@@ -39,7 +43,7 @@
 </table>
 <p class="mb10"><br></p>
 <table class="tb f16" cellspacing="0">
-<tr><td class="td obg">
+<tr><td id="tr8" class="td obg">
 <p class="mb10">A의 시장점유율 &nbsp;<span class="rs">(n = 마찰계수)</span></p>
 <p>＝A의 고객유인력</p>
 <p class="mb15">　／(A + B)의 고객유인력</p>
@@ -49,12 +53,12 @@
 </td></tr>
 </table>
 <br>
-<p class="mb15"><span id="st1" class="sb">■</span> 공간<span class="mrs">(거리)</span>마찰계수</p>
+<p class="mb15"><span id="st" class="sb dp">■</span><span id="sb" class="dp1">공간<span class="mrs">(거리)</span>마찰계수</span></p>
 <table class="tb f16" cellspacing="0">
-<tr><td id="tr6" class="td">모형의 공간<span class="mrs">(거리)</span>마찰계수는 시장의 교통조건과 쇼핑물건의 특성에 따라 달라지는 값이다.</td></tr>
-<tr><td id="tr7" class="td">모형을 적용하기 전에 공간<span class="mrs">(거리)</span>마찰계수가 먼저 정해져야 한다.</td></tr>
-<tr><td id="tr8" class="td">교통조건이 나쁠 경우, 공간<span class="mrs">(거리)</span>마찰계수가 커지게 된다. </td></tr>
-<tr><td id="tr9" class="td">일상용품점의 경우는 전문품점보다 공간<span class="mrs">(거리)</span>마찰계수가 크다.</td></tr>
+<tr><td id="tr9" class="td">모형의 공간<span class="mrs">(거리)</span>마찰계수는 시장의 교통조건과 쇼핑물건의 특성에 따라 달라지는 값이다.</td></tr>
+<tr><td id="tr10" class="td">모형을 적용하기 전에 공간<span class="mrs">(거리)</span>마찰계수가 먼저 정해져야 한다.</td></tr>
+<tr><td id="tr11" class="td">교통조건이 나쁠 경우, 공간<span class="mrs">(거리)</span>마찰계수가 커지게 된다. </td></tr>
+<tr><td id="tr12" class="td">일상용품점의 경우는 전문품점보다 공간<span class="mrs">(거리)</span>마찰계수가 크다.</td></tr>
 </table>
 <br>
 </body>

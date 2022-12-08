@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
+<style type="text/css">
+.w1 {width:38%;text-align:center}
+.w2 {width:25%}
+.w3 {width:29%}
+#layer{display:none}
+</style>
+<script type="text/JavaScript" src="../../function.js"></script>
+<script type="text/JavaScript" src="../../jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+var ID = "";
+function idValue(n) {ID = n;}
+</script>
+</head>
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
+<div class="post_ct " id="viewTypeSelector">
+<p><span id="snum"></span><span id="tag"></span></p>
+<p><b>부동산투자에서 <span class="trs">( ㄱ )</span> 타인자본을 40% 활용하는 경우와 <span class="trs">( ㄴ )</span> 타인자본을 활용하지 않는 경우, 각각의 1년간 자기자본수익률<span class="mrs">(%)</span>은?</b> <span class="qrs">(단, 주어진 조건에 한함)</span></p>
+<br>
+<table class="tb f15" cellspacing="0">
+<tr><td class="td obg">부동산 매입가격</td><td class="td w1">20,000만원</td></tr>
+<tr><td class="td obg">순영업소득<span class="rs">(NOI)</span></td><td class="td w1"><p>연 700만원</p><span class="rs">(기간 말 발생)</span></td></tr>
+<tr><td class="td obg">보유기간 동안 부동산가격 상승률</td><td class="td w1">연 3%</td></tr>
+</table>
+<br>
+<p class="mb15"><span class="sb">■</span> 1년 후 부동산 처분</p>
+<p class="mb10"></p>
+<p class="mb15"><span class="sb">■</span> 대출조건</p>
+<table class="tb f15" cellspacing="0" style="text-align:center">
+<tr><td class="td obg w2">이자율</td><td class="td w2">연 5%</td><td class="td obg w3">대출기간</td><td class="td">1년</td></tr>
+<tr><td class="td obg w2">원리금</td><td class="td" colspan="3">만기일시상환</td></tr>
+</table>
+<br>
+<br>
+<p id="ip1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span>&nbsp; <span class="trs">㈀&nbsp;</span> 7.0, &nbsp;&nbsp; <span class="trs">㈁</span>&nbsp; 6.0<span onMouseDown="memoEdit();" id="mi1"></span></p>
+<br>
+<p id="ip2"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span>&nbsp; <span class="trs">㈀&nbsp;</span> 7.0, &nbsp;&nbsp; <span class="trs">㈁</span>&nbsp; 6.5<span onMouseDown="memoEdit();" id="mi2"></span></p>
+<br>
+<p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span>&nbsp; <span class="trs">㈀&nbsp;</span> 7.5, &nbsp;&nbsp; <span class="trs">㈁</span>&nbsp; 6.0<span onMouseDown="memoEdit();" id="mi3"></span></p>
+<br>
+<p id="ip4"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span>&nbsp; <span class="trs">㈀&nbsp;</span> 7.5, &nbsp;&nbsp; <span class="trs">㈁</span>&nbsp; 6.5<span onMouseDown="memoEdit();" id="mi4"></span></p>
+<br>
+<p id="ip5"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span>&nbsp; <span class="trs">㈀&nbsp;</span> 7.5, &nbsp;&nbsp; <span class="trs">㈁</span>&nbsp; 7.0<span onMouseDown="memoEdit();" id="mi5"></span></p>
+<br>
+</div>
+<div id="layer" onClick="PopLayer.Close();">
+<table class="tb" cellspacing="0" style="background-color:#fffddd; font-size:18px">
+<tr><td class="td" onMouseDown="marking(ID,'Ｏ');">&nbsp;Ｏ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｘ');">&nbsp;Ｘ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｖ');">&nbsp;Ｖ&nbsp;</td><td class="td" style="color:#339900" onMouseDown="marking(ID,'？');">&nbsp;？&nbsp;</td><td class="td" style="color:#0099FF"  onMouseDown="marking(ID,'☆');">&nbsp;☆&nbsp;</td><td class="td" onMouseDown="marking(ID,'');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="td" style="color:#6c54d5" onMouseDown="memoBox(ID);">&nbsp;Ｔ&nbsp;</td></tr>
+</table>
+</div>
+<iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
+</body>
+
+</html>
