@@ -587,14 +587,33 @@ function memoAdd(i, n) {
 		document.getElementById(i).innerHTML = '';
 		document.getElementById(i).style.display="none";
 	} else {
+		n = n.replaceAll('<1/>','<span style="color:red">');
+		n = n.replaceAll('&lt;1/&gt;','<span style="color:red">');
+		n = n.replaceAll('<2/>','<span style="color:blue">');
+		n = n.replaceAll('&lt;2/&gt;','<span style="color:blue">');
+		n = n.replaceAll('<3/>','<span style="color:green">');
+		n = n.replaceAll('&lt;3/&gt;','<span style="color:green">');
+		n = n.replaceAll('<4/>','<span style="color:purple">');
+		n = n.replaceAll('&lt;4/&gt;','<span style="color:purple">');
+		n = n.replaceAll('<0/>','<span style="font-weight:bold">');
+		n = n.replaceAll('&lt;0/&gt','<span style="font-weight:bold">');
+		n = n.replaceAll('<10/>','<span style="color:red; font-weight:bold">');
+		n = n.replaceAll('&lt;10/&gt;','<span style="color:red; font-weight:bold">');
+		n = n.replaceAll('<20/>','<span style="color:blue; font-weight:bold">');
+		n = n.replaceAll('&lt;20/&gt;','<span style="color:blue; font-weight:bold">');
+		n = n.replaceAll('<30/>','<span style="color:green; font-weight:bold">');
+		n = n.replaceAll('&lt;30/&gt;','<span style="color:green; font-weight:bold">');
+		n = n.replaceAll('<40/>','<span style="color:purple; font-weight:bold">');
+		n = n.replaceAll('&lt;40/&gt;','<span style="color:purple; font-weight:bold">');
+		n = n.replaceAll('</>','</span>');
+		n = n.replaceAll('&lt;/&gt;','</span>');
 		document.getElementById(i).innerHTML = n;
 		if (i != 'memo') {
 			document.getElementById(i).style.fontSize= 16 + "px";
 			document.getElementById(i).style.position="relative";
-			document.getElementById(i).style.marginTop = 15 + "px";
 			document.getElementById(i).style.marginLeft = 15 + "px";
-				document.getElementById(i).style.paddingTop = 3 + "px";
-				document.getElementById(i).style.paddingBottom = 3 + "px";
+			document.getElementById(i).style.paddingTop = 3 + "px";
+			document.getElementById(i).style.paddingBottom = 3 + "px";
 			document.getElementById(i).style.borderWidth = 1 + "px";
 			document.getElementById(i).style.borderStyle = "solid";
 			document.getElementById(i).style.borderRadius = 5 + "px";
@@ -602,11 +621,13 @@ function memoAdd(i, n) {
 				document.getElementById(i).style.display="inline-block";
 				document.getElementById(i).style.width = "auto";
 				document.getElementById(i).style.lineHeight = 0.8;
+				document.getElementById(i).style.marginTop = 0 + "px";
 				document.getElementById(i).style.paddingLeft = 3 + "px";
 				document.getElementById(i).style.paddingRight = 3 + "px";
 			} else {
 				document.getElementById(i).style.display="block";
 				document.getElementById(i).style.lineHeight = 1.6;
+				document.getElementById(i).style.marginTop = 15 + "px";
 				document.getElementById(i).style.paddingLeft = 7 + "px";
 				document.getElementById(i).style.paddingRight = 7 + "px";
 			}
