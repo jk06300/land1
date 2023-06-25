@@ -114,6 +114,22 @@ function autoResize(i) {
 		(i).height = iframeHeight + 23 + "px";
 	}
 }
+function lineSpaceReduce() {
+	if(document.body.innerHTML.indexOf('id="e1"') >= 0) {
+		document.body.innerHTML = document.body.innerHTML.replace(/<br>\n<p/g, "<p");
+		document.body.innerHTML = document.body.innerHTML.replace(/<br><p/g, "<p");
+		document.body.innerHTML = document.body.innerHTML.replace(/p>\n<br>/g, "p>");
+		document.body.innerHTML = document.body.innerHTML.replace(/p><br>/g, "p>");
+		document.body.innerHTML = document.body.innerHTML.replace(/mb15/g, "mb5");
+		document.body.innerHTML = document.body.innerHTML.replace(/<p><b>/g, "<p class='mb10'><b>");
+		document.body.innerHTML = document.body.innerHTML.replace(/<p id/g, "<p class='mb5' id");
+		document.getElementById("viewTypeSelector").style.lineHeight = 1;
+		var p = document.getElementsByTagName('p');
+		for (var i=0; i<p.length; i++) {
+			p[i].style.lineHeight = 1.5;
+		}
+	}
+}
 function bc(i, t) {
 	try{
 		var frameName=window.frames[i];
