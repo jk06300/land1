@@ -127,6 +127,7 @@ function lineSpaceReduce() {
 		document.body.innerHTML = document.body.innerHTML.replace(/<p><b>/g, "<p class='mb10'><b>");
 		document.body.innerHTML = document.body.innerHTML.replace(/<p id/g, "<p class='mb5' id");
 		document.body.innerHTML = document.body.innerHTML.replace(/<table class="tb f16 mb10"/g, '<table class="tb f16 mb10" style="margin-top:10px"');
+		document.body.innerHTML = document.body.innerHTML.replace(/class="mt"/g, "style='margin-top:-15px'");
 		document.getElementById("viewTypeSelector").style.lineHeight = 1;
 		var p = document.getElementsByTagName('p');
 		for (var i=0; i<p.length; i++) {
