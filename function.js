@@ -116,6 +116,9 @@ function autoResize(i) {
 }
 function lineSpaceReduce() {
 	if(document.body.innerHTML.indexOf('id="e1"') >= 0) {
+		document.body.innerHTML = document.body.innerHTML.replace(/<\/span><\/p>\n<br>\n<br>\n<p/g, "</span></p>\n<br>\n<br>\n<br>\n<p");
+		document.body.innerHTML = document.body.innerHTML.replace(/<\/span><\/p>\n<br><br>\n<p/g, "</span></p>\n<br>\n<br>\n<br>\n<p");
+		document.body.innerHTML = document.body.innerHTML.replace(/<\/span><\/p><br><br><p/g, "</span></p>\n<br>\n<br>\n<br>\n<p");
 		document.body.innerHTML = document.body.innerHTML.replace(/<br>\n<p/g, "<p");
 		document.body.innerHTML = document.body.innerHTML.replace(/<br><p/g, "<p");
 		document.body.innerHTML = document.body.innerHTML.replace(/p>\n<br>/g, "p>");
@@ -123,6 +126,7 @@ function lineSpaceReduce() {
 		document.body.innerHTML = document.body.innerHTML.replace(/mb15/g, "mb5");
 		document.body.innerHTML = document.body.innerHTML.replace(/<p><b>/g, "<p class='mb10'><b>");
 		document.body.innerHTML = document.body.innerHTML.replace(/<p id/g, "<p class='mb5' id");
+		document.body.innerHTML = document.body.innerHTML.replace(/<table class="tb f16 mb10"/g, '<table class="tb f16 mb10" style="margin-top:10px"');
 		document.getElementById("viewTypeSelector").style.lineHeight = 1;
 		var p = document.getElementsByTagName('p');
 		for (var i=0; i<p.length; i++) {
