@@ -721,15 +721,190 @@ function setMessage(i, t, m) {
 	window.android.setMessage(i, t, '');
 }
 function markShow(i, m) {
+	if (document.getElementById(i)) {
 	if (m == "v") {
 		if (bcm == "dark") {
 			document.getElementById(i).style.backgroundColor="#938E75";
 		} else {
 			document.getElementById(i).style.backgroundColor="#FFFDDD";
 		}
- } else {
+ 	} else {
 		document.getElementById(i).style.backgroundColor="transparent";
 	}
+	}
+}
+function rndNumShow(a, b, c, d, e) {
+	if (document.getElementById('ip1')) {
+	var i1 = document.getElementById('ip1').innerHTML;
+	}
+	if (document.getElementById('ip2')) {
+	var i2 = document.getElementById('ip2').innerHTML;
+	}
+	if (document.getElementById('ip3')) {
+	var i3 = document.getElementById('ip3').innerHTML;
+	}
+	if (document.getElementById('ip4')) {
+	var i4 = document.getElementById('ip4').innerHTML;
+	}
+	if (document.getElementById('ip5')) {
+	var i5 = document.getElementById('ip5').innerHTML;
+	}
+	var n1 = "⑪";
+	var n2 = "⑫";
+	var n3 = "⑬";
+	var n4 = "⑭";
+	var n5 = "⑮";
+	switch (a) {
+		case 1:
+			document.body.innerHTML = document.body.innerHTML.replaceAll('①', n1);
+			break;
+		case 2:
+			if (document.getElementById('ip1')) {
+				document.getElementById('ip1').innerHTML = i2;
+			}
+			document.body.innerHTML = document.body.innerHTML.replaceAll('②', n1);
+			break;
+		case 3:
+			if (document.getElementById('ip1')) {
+				document.getElementById('ip1').innerHTML = i3;
+			}
+			document.body.innerHTML = document.body.innerHTML.replaceAll('③', n1);
+			break;
+		case 4:
+			if (document.getElementById('ip1')) {
+				document.getElementById('ip1').innerHTML = i4;
+			}
+			document.body.innerHTML = document.body.innerHTML.replaceAll('④', n1);
+			break;
+		case 5:
+			if (document.getElementById('ip1')) {
+				document.getElementById('ip1').innerHTML = i5;
+			}
+			document.body.innerHTML = document.body.innerHTML.replaceAll('⑤', n1);
+			break;
+	}
+	switch (b) {
+		case 1:
+			if (document.getElementById('ip2')) {
+				document.getElementById('ip2').innerHTML = i1;
+			}
+			document.body.innerHTML = document.body.innerHTML.replaceAll('①', n2);
+			break;
+		case 2:
+			document.body.innerHTML = document.body.innerHTML.replaceAll('②', n2);
+			break;
+		case 3:
+			if (document.getElementById('ip2')) {
+				document.getElementById('ip2').innerHTML = i3;
+			}
+			document.body.innerHTML = document.body.innerHTML.replaceAll('③', n2);
+			break;
+		case 4:
+			if (document.getElementById('ip2')) {
+				document.getElementById('ip2').innerHTML = i4;
+			}
+			document.body.innerHTML = document.body.innerHTML.replaceAll('④', n2);
+			break;
+		case 5:
+			if (document.getElementById('ip2')) {
+				document.getElementById('ip2').innerHTML = i5;
+			}
+			document.body.innerHTML = document.body.innerHTML.replaceAll('⑤', n2);
+			break;
+	}
+	switch (c) {
+		case 1:
+			if (document.getElementById('ip3')) {
+				document.getElementById('ip3').innerHTML = i1;
+			}
+			document.body.innerHTML = document.body.innerHTML.replaceAll('①', n3);
+			break;
+		case 2:
+			if (document.getElementById('ip3')) {
+				document.getElementById('ip3').innerHTML = i2;
+			}
+			document.body.innerHTML = document.body.innerHTML.replaceAll('②', n3);
+			break;
+		case 3:
+			document.body.innerHTML = document.body.innerHTML.replaceAll('③', n3);
+			break;
+		case 4:
+			if (document.getElementById('ip3')) {
+				document.getElementById('ip3').innerHTML = i4;
+			}
+			document.body.innerHTML = document.body.innerHTML.replaceAll('④', n3);
+			break;
+		case 5:
+			if (document.getElementById('ip3')) {
+				document.getElementById('ip3').innerHTML = i5;
+			}
+			document.body.innerHTML = document.body.innerHTML.replaceAll('⑤', n3);
+			break;
+	}
+	switch (d) {
+		case 1:
+			if (document.getElementById('ip4')) {
+				document.getElementById('ip4').innerHTML = i1;
+			}
+			document.body.innerHTML = document.body.innerHTML.replaceAll('①', n4);
+			break;
+		case 2:
+			if (document.getElementById('ip4')) {
+				document.getElementById('ip4').innerHTML = i2;
+			}
+			document.body.innerHTML = document.body.innerHTML.replaceAll('②', n4);
+			break;
+		case 3:
+			if (document.getElementById('ip4')) {
+				document.getElementById('ip4').innerHTML = i3;
+			}
+			document.body.innerHTML = document.body.innerHTML.replaceAll('③', n4);
+			break;
+		case 4:
+			document.body.innerHTML = document.body.innerHTML.replaceAll('④', n4);
+			break;
+		case 5:
+			if (document.getElementById('ip4')) {
+				document.getElementById('ip4').innerHTML = i5;
+			}
+			document.body.innerHTML = document.body.innerHTML.replaceAll('⑤', n4);
+			break;
+	}
+	switch (e) {
+		case 1:
+			if (document.getElementById('ip5')) {
+				document.getElementById('ip5').innerHTML = i1;
+			}
+			document.body.innerHTML = document.body.innerHTML.replaceAll('①', n5);
+			break;
+		case 2:
+			if (document.getElementById('ip5')) {
+				document.getElementById('ip5').innerHTML = i2;
+			}
+			document.body.innerHTML = document.body.innerHTML.replaceAll('②', n5);
+			break;
+		case 3:
+			if (document.getElementById('ip5')) {
+				document.getElementById('ip5').innerHTML = i3;
+			}
+			document.body.innerHTML = document.body.innerHTML.replaceAll('③', n5);
+			break;
+		case 4:
+			if (document.getElementById('ip5')) {
+				document.getElementById('ip5').innerHTML = i4;
+			}
+			document.body.innerHTML = document.body.innerHTML.replaceAll('④', n5);
+			break;
+		case 5:
+			document.body.innerHTML = document.body.innerHTML.replaceAll('⑤', n5);
+			break;
+	}
+	document.body.innerHTML = document.body.innerHTML.replaceAll('⑪', '①');
+	document.body.innerHTML = document.body.innerHTML.replaceAll('⑫', '②');
+	document.body.innerHTML = document.body.innerHTML.replaceAll('⑬', '③');
+	document.body.innerHTML = document.body.innerHTML.replaceAll('⑭', '④');
+	document.body.innerHTML = document.body.innerHTML.replaceAll('⑮', '⑤');
+	if (bcm == "dark") {setTimeout(() => backgroundColorMode(), 300);}
 }
 function example(t1, t2, t3, t4, t5, t6, i) {
 	var ID = "m" + i;
@@ -1130,9 +1305,22 @@ function backgroundColorMode() {
 					}
 					var d = iframe[i].contentWindow.document.getElementsByTagName('div');
 					for (var j=0; j<d.length; j++) {
-						if (d[j].style.backgroundColor == "rgb(255, 253, 221)") {
+						if (d[j].style.backgroundColor == "rgb(255, 253, 221)" || d[j].classList.contains('gbg') || d[j].classList.contains('obg') || d[j].classList.contains('ebg') || d[j].classList.contains('mbg')) {
 							d[j].style.backgroundColor="#C3BC9A";
 							d[j].style.color="#000000"
+							var p = d[j].getElementsByTagName('p');
+							for (var k=0; k<p.length; k++) {
+								if (p[k].classList.contains('gbg') || p[k].classList.contains('abg') || p[k].classList.contains('bbg') || p[k].classList.contains('mbg') || p[k].classList.contains('ybg')) {
+									p[k].style.color="#000000";
+									p[k].style.backgroundColor="transparent";
+								} else if (p[k].classList.contains('trs') || p[k].classList.contains('mrs') || p[k].classList.contains('rs')) {
+									p[k].style.color="#606000";
+								} else if (p[k].style.color == "rgb(197, 199, 254)" || p[k].classList.contains('blue') || p[k].classList.contains('bbbg')) {
+									p[k].style.color="#0000BF"
+								} else if (p[k].classList.contains('lrs')) {
+									p[k].style.color="#7d7d7d";
+								}
+							}
 							var s = d[j].getElementsByTagName('span');
 							for (var k=0; k<s.length; k++) {
 								if (s[k].classList.contains('gbg') || s[k].classList.contains('abg') || s[k].classList.contains('bbg') || s[k].classList.contains('mbg') || s[k].classList.contains('ybg')) {
@@ -1144,6 +1332,8 @@ function backgroundColorMode() {
 									s[k].style.color="#0000BF"
 								} else if (s[k].classList.contains('lrs')) {
 									s[k].style.color="#7d7d7d";
+								} else if (s[k].style.color == "rgb(117, 134, 151)" || s[k].classList.contains('sb') || s[k].classList.contains('sb1') || s[k].classList.contains('sb2')) {
+									s[k].style.color="#505861";
 								}
 							}
 						}
@@ -1360,9 +1550,20 @@ function backgroundColorMode() {
 						}
 						var d = iframeChild[j].contentWindow.document.getElementsByTagName('div');
 						for (var k=0; k<d.length; k++) {
-							if (d[k].style.backgroundColor == "rgb(255, 253, 221)") {
+							if (d[k].style.backgroundColor == "rgb(255, 253, 221)" || d[j].classList.contains('gbg') || d[j].classList.contains('obg') || d[j].classList.contains('ebg') || d[j].classList.contains('mbg')) {
 								d[k].style.backgroundColor="#C3BC9A";
 								d[k].style.color="#000000"
+								var p = d[k].getElementsByTagName('p');
+								for (var l=0; l<p.length; l++) {
+									if (p[l].classList.contains('gbg') || p[l].classList.contains('abg') || p[l].classList.contains('bbg') || p[l].classList.contains('mbg') || p[l].classList.contains('ybg')) {
+										p[l].style.color="#000000";
+										p[l].style.backgroundColor="transparent";
+									} else if (p[l].classList.contains('trs') || p[l].classList.contains('mrs') || p[l].classList.contains('rs')) {
+										p[l].style.color="#606000";
+									} else if (p[l].classList.contains('lrs')) {
+										p[l].style.color="#7d7d7d";
+									}
+								}
 								var s = d[k].getElementsByTagName('span');
 								for (var l=0; l<s.length; l++) {
 									if (s[l].classList.contains('gbg') || s[l].classList.contains('abg') || s[l].classList.contains('bbg') || s[l].classList.contains('mbg') || s[l].classList.contains('ybg')) {
@@ -1372,6 +1573,8 @@ function backgroundColorMode() {
 										s[l].style.color="#606000";
 									} else if (s[l].classList.contains('lrs')) {
 										s[l].style.color="#7d7d7d";
+									} else if (s[l].style.color == "rgb(117, 134, 151)" || s[l].classList.contains('sb') || s[l].classList.contains('sb1') || s[l].classList.contains('sb2')) {
+										s[l].style.color="#505861";
 									}
 								}
 							}
@@ -1886,9 +2089,20 @@ function bcMode()
 					}
 					var d = iframeChild[j].contentWindow.document.getElementsByTagName('div');
 					for (var k=0; k<d.length; k++) {
-						if (d[k].style.backgroundColor == "rgb(255, 253, 221)") {
+						if (d[k].style.backgroundColor == "rgb(255, 253, 221)" || d[j].classList.contains('gbg') || d[j].classList.contains('obg') || d[j].classList.contains('ebg') || d[j].classList.contains('mbg')) {
 							d[k].style.backgroundColor="#C3BC9A";
 							d[k].style.color="#000000"
+							var p = d[k].getElementsByTagName('p');
+							for (var l=0; l<p.length; l++) {
+								if (p[l].classList.contains('gbg') || p[l].classList.contains('abg') || p[l].classList.contains('bbg') || p[l].classList.contains('mbg') || p[l].classList.contains('ybg')) {
+									p[l].style.color="#000000";
+									p[l].style.backgroundColor="transparent";
+								} else if (p[l].classList.contains('trs') || p[l].classList.contains('mrs') || p[l].classList.contains('rs')) {
+									p[l].style.color="#606000";
+								} else if (p[l].classList.contains('lrs')) {
+									p[l].style.color="#7d7d7d";
+								}
+							}
 							var s = d[k].getElementsByTagName('span');
 							for (var l=0; l<s.length; l++) {
 								if (s[l].classList.contains('gbg') || s[l].classList.contains('abg') || s[l].classList.contains('bbg') || s[l].classList.contains('mbg') || s[l].classList.contains('ybg')) {
@@ -1898,6 +2112,8 @@ function bcMode()
 									s[l].style.color="#606000";
 								} else if (s[l].classList.contains('lrs')) {
 									s[l].style.color="#7d7d7d";
+								} else if (s[l].style.color == "rgb(117, 134, 151)" || s[l].classList.contains('sb') || s[l].classList.contains('sb1') || s[l].classList.contains('sb2')) {
+									s[l].style.color="#505861";
 								}
 							}
 						}
