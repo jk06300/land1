@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
+<style type="text/css">
+.mt {margin-top:-5px}
+#layer{display:none}
+</style>
+<script type="text/JavaScript" src="../../function.js"></script>
+<script type="text/JavaScript" src="../../jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+var ID = "";
+function idValue(n) {ID = n;}
+</script>
+</head>
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
+  <div class="post_ct" id="viewTypeSelector">
+<p><span id="snum"></span><span id="tag"></span></p>
+<p><b>甲은 시장가치 5억원의 부동산을 인수하고자 한다. 해당 부동산의 부채감당률<span class="mrs">(DCR)</span>은?</b> <span class="qrs">(단, 모든 현금유출입은 연말에만 발생하며, 주어진 조건에 한함)</span></p>
+<br>
+<p class="mb15"><span class="sb dp">■</span><span class="dp1">담보인정비율 <span class="mrs">(LTV)</span></span></p>
+<table class="tb f16 mb10" cellspacing="0">
+<tr><td class="td obg">시장가치의 50%</td>
+</tr>
+</table>
+<p class="mt"><br></p>
+<p class="mb15"><span class="sb dp">■</span><span class="dp1">연간 저당상수</span></p>
+<table class="tb f16 mb10" cellspacing="0">
+<tr><td class="td obg">0.12</td>
+</tr>
+</table>
+<p class="mt"><br></p>
+<p class="mb15"><span class="sb dp">■</span><span class="dp1">가능총소득 <span class="mrs">(PGI)</span></span></p>
+<table class="tb f16 mb10" cellspacing="0">
+<tr><td class="td obg">5,000만원</td>
+</tr>
+</table>
+<p class="mt"><br></p>
+<p class="mb15"><span class="sb dp">■</span><span class="dp1">공실손실상당액 및 대손충당금</span></p>
+<table class="tb f16 mb10" cellspacing="0">
+<tr><td class="td obg">가능총소득의 10%</td>
+</tr>
+</table>
+<p class="mt"><br></p>
+<p class="mb15"><span class="sb dp">■</span><span class="dp1">영업경비비율</span></p>
+<table class="tb f16 mb10" cellspacing="0">
+<tr><td class="td obg">유효총소득의 28%</td>
+</tr>
+</table>
+<br>
+<br>
+<p id="ip1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span> 1.08<span onMouseDown="memoEdit();" id="mi1"></span></p>
+<br>
+<p id="ip2"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span> 1.20<span onMouseDown="memoEdit();" id="mi2"></span></p>
+<br>
+<p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span> 1.50<span onMouseDown="memoEdit();" id="mi3"></span></p>
+<br>
+<p id="ip4"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span> 1.67<span onMouseDown="memoEdit();" id="mi4"></span></p>
+<br>
+<p id="ip5"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span> 1.80<span onMouseDown="memoEdit();" id="mi5"></span></p>
+<br>
+</div>
+<div id="layer" onClick="PopLayer.Close();">
+<table class="tb" cellspacing="0" style="background-color:#fffddd; font-size:18px">
+<tr><td class="td" onMouseDown="marking(ID,'Ｏ');">&nbsp;Ｏ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｘ');">&nbsp;Ｘ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｖ');">&nbsp;Ｖ&nbsp;</td><td class="td" style="color:#339900" onMouseDown="marking(ID,'？');">&nbsp;？&nbsp;</td><td class="td" style="color:#0099FF"  onMouseDown="marking(ID,'☆');">&nbsp;☆&nbsp;</td><td class="td" onMouseDown="marking(ID,'');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="td" style="color:#6c54d5" onMouseDown="memoBox(ID);">&nbsp;Ｔ&nbsp;</td></tr>
+</table>
+</div>
+<iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
+</body>
+</html>
