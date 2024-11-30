@@ -10,48 +10,93 @@
 </head>
 <body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
 <div class="post_ct " id="viewTypeSelector">
-<p>④</p>
-<p class="mb10">대출비율에 의해 산출한 융자가능금액과</p>
-<p class="mb10">총부채상환비율에 의해 산출한 융자가능금액 중</p>
-<p class="mb10">작은 값을 선택하여 월저당상수를 곱하면</p>
-<p>원리금균등분할 상환방식의 첫 회 월불입액을 구할 수 있다.</p>
-<br>
-<p><span class="gbg">대출비율에 의한 융자가능금액</span></p>
-<p>= 1억원 × 50% = 5,000만원</p>
-<br>
+<p class="mb15">④</p>
 <table class="tb f16" cellspacing="0">
-<tr><td class="td obg">
-<p>총부채상환비율</p>
-<p>= (대출가능금액 × 연간저당상수</p>
-<p>　+ 기타 부채상환액) / 연간소득</p>
+<tr><td class="td bc">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">LTV 대출가능금액과</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">DTI 대출가능금액 중에서</span></p>
 </td></tr>
 </table>
 <br>
-<p>총부채상환비율 30%</p>
-<p>월저당상수 0.006443</p>
-<p class="mb10">기타 부채상환액은 없으므로 0</p>
-<p>대출가능금액은 모르니까 χ로 하면</p>
-<br>
-<p>30% = χ × (0.006443 × 12개월)</p>
-<p>　　　+ 0 / 1,000</p>
-<br>
-<p>30% × 1,000만원</p>
-<p>= χ × (0.006443 × 12) + 0 </p>
-<br>
-<p>χ = (30% × 1,000만원)</p>
-<p class="mb10">　　 / 0.006443 × 12</p>
-<p>　 = 38,801,800원</p>
-<p>                           </p>
-<p class="mb15">따라서, 원리금균등분할 상환방식에 의한</p>
+<p class="mb15">작은 값을 선택하여 월저당상수를 곱하면</p>
 <table class="tb f16" cellspacing="0">
 <tr><td class="td obg">
-<p>월 첫불입액</p>
-<p>= 대출총액 × 월저당상수</p>
+원리금균등분할 상환방식의 첫회 월불입액을 구할 수 있다.
 </td></tr>
 </table>
 <br>
-<p>= 38,801,800원 × 0.006443</p>
-<p>= <span class="rgbg">250,000원</span></p>
+<br>
+<p class="mb15"><span class="sb dp">■</span><span class="dp1">담보인정비율<span class="mrs mrl3">(LTV)</span>에 의한 대출가능금액</span></p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td ebg">
+<p class="mb5">= 주택 가격 × LTV</p>
+<p>= 1억원 × 50% = <span class="blue">5천만원</span></p>
+</td></tr>
+</table>
+<br>
+<p class="mb15"><span class="sb dp">■</span><span class="dp1">총부채상환비율<span class="mrs mrl3">(DTI)</span>에 의한 대출가능금액</span></p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td ebg">
+<p class="mb5">= (연소득 × DTI) / 저당상수</p>
+<p class="mb5">= (연소득 × DTI) / (월저당상수 × 12)</p>
+<p class="mb5">= (1천만원 × 30%) / 0.077316</p>
+<p>= <span class="blue">38,801,800.4원</span></p>
+</td></tr>
+</td></tr>
+</table>
+<br>
+<p class="mb15">DTI 기준 대출가능금액 더 작으므로</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td tcolor">
+<p class="mb5">첫회 월불입액
+<p class="mb5">= 38,801,800.4원 × 월저당상수 0.006443</p>
+<p>= <span class="c99">250,000원</span></p></p>
+</td></tr>
+</table>
+<br>
+<br>
+<p class="mb15"><span class="c88">※</span> 다른 계산방법</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td bc">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">LTV 대출가능금액과</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">DTI 대출가능금액에</span></p>
+</td></tr>
+</table>
+<br>
+<p class="mb15">월저당상수를 곱해</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+작은 값을 선택한다.
+</td></tr>
+</table>
+<br>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td ebg">
+<p class="mb5">LTV 기준 매월 불입액</p>
+<p class="mb5"><span class="dp">=</span><span class="dp1">LTV에 의한 대출가능금액 × 월저당상수</span></p>
+<p class="mb5"><span class="dp">=</span><span class="dp1">주택 가격 × LTV × 0.006443</span></p>
+<p class="mb5"><span class="dp">=</span><span class="dp1">1억원 × 50% × 0.006443</span></p>
+<p><span class="dp">=</span><span class="dp1"><span class="blue">32,215만원</span></span></p>
+</td></tr>
+</table>
+<br>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td ebg">
+<p class="mb5">DTI 기준 매월 불입액</p>
+<p class="mb5"><span class="dp">=</span><span class="dp1">DTI에 의한 대출가능금액 × 월저당상수</span></p>
+<p class="mb5"><span class="dp">=</span><span class="dp1">(연소득 × DTI) × 월저당상수 / 저당상수</span></p>
+<p class="mb5"><span class="dp">=</span><span class="dp1">(연소득 × DTI) × 월저당상수 / (월저당상수 × 12개월)</span></p>
+<p><span class="dp">=</span><span class="dp1">(1천만원 × 30%) / 12 = <span class="blue">25만원</span></span></p>
+</td></tr>
+</table>
+<br>
+<p class="mb15">DTI 기준 매월 불입액이 더 작으므로</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td tcolor">
+첫회 월불입액은 <span class="c99">25만원</span>
+</td></tr>
+</table>
+<br>
 <br>
 </div>
 <iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>

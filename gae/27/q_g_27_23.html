@@ -7,9 +7,6 @@
 <meta name="robots" content="noindex,nofollow"/>
 <link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
 <style type="text/css">
-.w1 {width:35%}
-.w2 {width:29%}
-.w3 {width:27%;text-align:center}
 #layer{display:none}
 </style>
 <script type="text/JavaScript" src="../../function.js"></script>
@@ -21,24 +18,25 @@ function idValue(n) {ID = n;}
 </head>
 <body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
 <div class="post_ct " id="viewTypeSelector"><p><span id="snum"></span><span id="tag"></span></p>
-<p><b>다음과 같이 부동산에 20억원을 투자한 A의 1년간 세후 자기자본수익률은?</b> <span class="qrs">(단, 감각상각은 고려하지 않으며 주어진 조건에 한함)</span></p>
+<p><b>다음과 같이 부동산에 20억원을 투자한 A의 1년간 세후 자기자본수익률은?</b> <span class="qrs">(단, 주어진 조건에 한함)</span></p>
 <br>
-<table class="tb f15" cellspacing="0" style="text-align:center">
-<tr><td class="td obg w1">부동산가격</td><td class="td"><p>20억원</p><span class="rs">(토지 12억원, 건물 8억원)</span></td></tr>
+<table class="tb f16 wb" cellspacing="0" style="text-align:center">
+<tr><td width="35%" class="td obg w1">부동산가격</td><td class="td"><p>20억원</p><span class="mrs">(토지 12억원, 건물 8억원)</span></td></tr>
 </table>
 <br>
 <p class="mb15"><span class="sb">■</span> 대출조건</p>
-<table class="tb f15" cellspacing="0" style="text-align:center">
-<tr><td class="td obg w2">대출비율</td><td class="td">부동산가격의 60%</td></tr>
-<tr><td class="td obg w2">대출금리</td><td class="td">연 5%</td></tr>
-<tr><td class="td obg w2">대출기간</td><td class="td">20년</td></tr>
-<tr><td class="td" colspan="2">원금 만기일시상환 방식 <span class="rs">(매년 말 연단위 이자 지급)</span></td></tr>
+<table class="tb f16 wb" cellspacing="0" style="text-align:center">
+<tr><td width="35%" class="td obg w2">대출비율</td><td class="td">부동산가격의 60%</td></tr>
+<tr><td class="td obg">대출금리</td><td class="td">연 5%</td></tr>
+<tr><td class="td obg">대출기간</td><td class="td">20년</td></tr>
+<tr><td class="td" colspan="2">원금 만기일시상환 방식 <span class="mrs">(매년 말 연단위 이자 지급)</span></td></tr>
 </table>
 <br>
-<table class="tb f15" cellspacing="0">
-<tr><td class="td obg">순영업소득</td><td class="td w3">연 2억원</td></tr>
-<tr><td class="td obg">영업소득세율</td><td class="td w3">20%</td></tr>
-<tr><td class="td obg">1년간 부동산가격 상승률</td><td class="td w3">0%</td></tr>
+<table class="tb f16 wb" cellspacing="0" style="text-align:center">
+<tr><td width="55%" class="td obg">순영업소득</td><td class="td">연 2억원</td></tr>
+<tr><td class="td obg" rowspan="2">건물의 총 내용연수</td><td class="td">20년</td></tr>
+<tr><td class="td">잔존가치는 없고, 감가상각은 정액법을 적용함</td></tr>
+<tr><td class="td obg">영업소득세율</td><td class="td">20%</td></tr>
 </table>
 <br>
 <br>
@@ -46,7 +44,7 @@ function idValue(n) {ID = n;}
 <br>
 <p id="ip2"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span> 12%<span onMouseDown="memoEdit();" id="mi2"></span></p>
 <br>
-<p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span> 14%<span onMouseDown="memoEdit();" id="mi3"></span></p>
+<p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span> 15%<span onMouseDown="memoEdit();" id="mi3"></span></p>
 <br>
 <p id="ip4"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span> 17%<span onMouseDown="memoEdit();" id="mi4"></span></p>
 <br>

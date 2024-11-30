@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
+<style type="text/css">
+#layer{display:none}
+</style>
+<script type="text/JavaScript" src="../../function.js"></script>
+<script type="text/JavaScript" src="../../jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+var ID = "";
+function idValue(n) {ID = n;}
+</script>
+</head>
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
+<div class="post_ct" id="viewTypeSelector">
+<p><span id="snum"></span><span id="tag"></span></p>
+<p><b>다음 설명에 모두 해당하는 것은?</b></p>
+<br>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">토지의 비옥도가 동일하더라도 중심도시와의 접근성 차이에 의해 지대가 차별적으로 나타난다.</span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">한계지대곡선은 작물의 종류나 농업의 유형에 따라 그 기울기가 달라질 수 있으며, 이 곡선의 기울기에 따라 집약적 농업과 조방적 농업으로 구분된다.</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">가장 높은 지대를 지불하는 농업적 토지이용에 토지가 할당된다.</span></p>
+</td></tr>
+</table>
+<br>
+<br>
+<p id="ip1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span> 마샬<span class="mrs">(A. Marshall)</span>의 준지대설<span onMouseDown="memoEdit();" id="mi1"></span></p>
+<p> </p>
+<p id="ip2"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span> 헤이그<span class="mrs">(R. Haig)</span>의 마찰비용이론<span onMouseDown="memoEdit();" id="mi2"></span></p>
+<p> </p>
+<p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span> 튀넨<span class="mrs">(J. H. von Thiinen)</span>의 위치지대설<span onMouseDown="memoEdit();" id="mi3"></span></p>
+<p> </p>
+<p id="ip4"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span> 마르크스<span class="mrs">(K. Marx)</span>의 절대지대설<span onMouseDown="memoEdit();" id="mi4"></span></p>
+<br>
+<p id="ip5"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span> 파레토<span class="mrs">(V. Pareto)</span>의 경제지대론<span onMouseDown="memoEdit();" id="mi5"></span></p>
+<br></div>
+<div id="layer" onClick="PopLayer.Close();">
+<table class="tb" cellspacing="0" style="background-color:#fffddd; font-size:18px">
+<tr><td class="td" onMouseDown="marking(ID,'Ｏ');">&nbsp;Ｏ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｘ');">&nbsp;Ｘ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｖ');">&nbsp;Ｖ&nbsp;</td><td class="td" style="color:#339900" onMouseDown="marking(ID,'？');">&nbsp;？&nbsp;</td><td class="td" style="color:#0099FF"  onMouseDown="marking(ID,'☆');">&nbsp;☆&nbsp;</td><td class="td" onMouseDown="marking(ID,'');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="td" style="color:#6c54d5" onMouseDown="memoBox(ID);">&nbsp;Ｔ&nbsp;</td></tr>
+</table>
+</div>
+<iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
+</body>
+
+</html>

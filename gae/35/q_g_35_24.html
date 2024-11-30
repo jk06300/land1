@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
+<style type="text/css">
+.w1 {width: 24%;}
+.w2 {width: 13%;}
+#layer{display:none}
+</style>
+<script type="text/JavaScript" src="../../function.js"></script>
+<script type="text/JavaScript" src="../../jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+var ID = "";
+function idValue(n) {ID = n;}
+</script>
+</head>
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
+<div class="post_ct " id="viewTypeSelector"><p><span id="snum"></span><span id="tag"></span></p>
+<p><b>다음은 시장전망에 따른 자산의 투자수익률을 합리적으로 예상한 결과이다. 이에 관한 설명으로 틀린 것은?</b> <span class="qrs">(단, 주어진 조건에 한함)</span></p>
+<br>
+<table class="tb f15" cellspacing="0" style="text-align: center">
+<tr><td class="td bc w1" rowspan="2">시장전망</td><td class="td bc" rowspan="2">발생확률<br><span class="trs">(%)</span></td><td class="td bc" colspan="4">예상수익률 <span class="trs">(%)</span></td></tr>
+<tr><td class="td obg w2">A</td><td class="td obg w2">B</td><td class="td obg w2">C</td><td class="td obg w2">D</td></tr>
+<tr><td class="td obg">낙관적</td><td class="td">25</td><td class="td">6</td><td class="td">10</td><td class="td">9</td><td class="td">14</td></tr>
+<tr><td class="td obg">정상적</td><td class="td">50</td><td class="td">4</td><td class="td">4</td><td class="td">8</td><td class="td">8</td></tr>
+<tr><td class="td obg">비관적</td><td class="td">25</td><td class="td">2</td><td class="td">-2</td><td class="td">7</td><td class="td">2</td></tr>
+<tr><td class="td bc" colspan="2">평균 <span class="trs">(기대값)</span></td><td class="td">4.0</td><td class="td">4.0</td><td class="td">8.0</td><td class="td">8.0</td></tr>
+<tr><td class="td bc" colspan="2">표준편차</td><td class="td">1.41</td><td class="td">4.24</td><td class="td">0.71</td><td class="td">4.24</td></tr>
+</table>
+<br>
+<br>
+<p id="ip1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span> 자산 A와 자산 B는 동일한 기대수익률을 가진다.<span onMouseDown="memoEdit();" id="mi1"></span></p>
+<br>
+<p id="ip2"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span> 낙관적 시장전망에서는 자산 D의 수익률이 가장 높다.<span onMouseDown="memoEdit();" id="mi2"></span></p>
+<br>
+<p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span> 자산 C와 자산 D는 동일한 투자위험을 가진다.<span onMouseDown="memoEdit();" id="mi3"></span></p>
+<br>
+<p id="ip4"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span> 평균ㆍ분산 지배원리에 따르면 자산 C는 자산 A보다 선호된다.<span onMouseDown="memoEdit();" id="mi4"></span></p>
+<br>
+<p id="ip5"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span> 자산 A,  B,  C,  D로 구성한 포트폴리오의 수익과 위험은 각 자산의 투자비중에 따라 달라진다.<span onMouseDown="memoEdit();" id="mi5"></span></p>
+<br></div>
+<div id="layer" onClick="PopLayer.Close();">
+<table class="tb" cellspacing="0" style="background-color:#fffddd; font-size:18px">
+<tr><td class="td" onMouseDown="marking(ID,'Ｏ');">&nbsp;Ｏ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｘ');">&nbsp;Ｘ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｖ');">&nbsp;Ｖ&nbsp;</td><td class="td" style="color:#339900" onMouseDown="marking(ID,'？');">&nbsp;？&nbsp;</td><td class="td" style="color:#0099FF"  onMouseDown="marking(ID,'☆');">&nbsp;☆&nbsp;</td><td class="td" onMouseDown="marking(ID,'');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="td" style="color:#6c54d5" onMouseDown="memoBox(ID);">&nbsp;Ｔ&nbsp;</td></tr>
+</table>
+</div>
+<iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
+</body>
+
+</html>

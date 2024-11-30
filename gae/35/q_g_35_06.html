@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
+<style type="text/css">
+#layer{display:none}
+</style>
+<script type="text/JavaScript" src="../../function.js"></script>
+<script type="text/JavaScript" src="../../jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+var ID = "";
+function idValue(n) {ID = n;}
+</script>
+</head>
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
+<div class="post_ct" id="viewTypeSelector">
+<p><span id="snum"></span><span id="tag"></span></p>
+<p><b>부동산개발사업에 관한 설명으로 틀린 것은?</b></p>
+<p> </p>
+<p id="ip1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span> 부동산개발의 타당성분석 과정에서 시장분석을 수행하기 위해서는 먼저 시장지역을 설정하여야 한다.<span onMouseDown="memoEdit();" id="mi1"></span></p>
+<p> </p>
+<p id="ip2"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span> 부동산개발업의 관리 및 육성에 관한 법령상 건축물을 리모델링 또는 용도변경하는 행위<span class="mrs">(다만, 시공을 담당하는 행위는 제외한다)</span>는 부동산개발에 포함된다.<span onMouseDown="memoEdit();" id="mi2"></span></p>
+<p> </p>
+<p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span> 민간투자사업에 있어 민간사업자가 자금을 조달하여 시설을 건설하고 일정기간 소유 및 운영을 한 후 국가 또는 지방자치단체에게 시설의 소유권을 이전하는 방식은 BOT<span class="mrs">(build-operate-transfer)</span> 방식이다.<span onMouseDown="memoEdit();" id="mi3"></span></p>
+<p> </p>
+<p id="ip4"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span> 부동산개발의 유형을 신개발방식과 재개발방식으로 구분하는 경우,  도시 및 주거환경정비법령상 재건축사업은 재개발방식에 속한다.<span onMouseDown="memoEdit();" id="mi4"></span></p>
+<br>
+<p id="ip5"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span> 개발사업의 방식 중 사업위탁방식과 신탁개발방식의 공통점은 토지소유자가 개발사업의 전문성이 있는 제3자에게 토지소유권을 이전하고 사업을 위탁하는 점이다.<span onMouseDown="memoEdit();" id="mi5"></span></p>
+<br></div>
+<div id="layer" onClick="PopLayer.Close();">
+<table class="tb" cellspacing="0" style="background-color:#fffddd; font-size:18px">
+<tr><td class="td" onMouseDown="marking(ID,'Ｏ');">&nbsp;Ｏ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｘ');">&nbsp;Ｘ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｖ');">&nbsp;Ｖ&nbsp;</td><td class="td" style="color:#339900" onMouseDown="marking(ID,'？');">&nbsp;？&nbsp;</td><td class="td" style="color:#0099FF"  onMouseDown="marking(ID,'☆');">&nbsp;☆&nbsp;</td><td class="td" onMouseDown="marking(ID,'');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="td" style="color:#6c54d5" onMouseDown="memoBox(ID);">&nbsp;Ｔ&nbsp;</td></tr>
+</table>
+</div>
+<iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
+</body>
+
+</html>
