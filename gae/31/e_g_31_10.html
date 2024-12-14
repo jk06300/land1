@@ -11,15 +11,24 @@
 <body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false" onLoad="setReSize()" onResize="setReSize()">
 
 <div class="post_ct" id="viewTypeSelector">
-<p class="mb20">③</p>
-<table class="tb f16 mb10" cellspacing="0">
-<tr><td class="td obg">
-<p class="mb5">분양수입</p>
-<p class="mb5">= 분양수요함수 × 분양가격</p>
-<p>= (600 - 3/2P) × P</p>
+<p class="mb15">③</p>
+<p class="mb15">분양수입</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td bc">
+<p class="mb5">= 수요량 × 분양가격</p>
+<p class="mb5">= Qd × P</p>
+<p class="mb5">= (600 - 3/2P) × P</p>
 <p>= (600 - 1.5P) × P</p>
 </td></tr>
 </table>
+<br>
+<p class="mb15">위 함수 P에 지문 ①~⑤ 값을 대입해</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+가장 큰 값이 나오는 번호를 찾는다.
+</td></tr>
+</table>
+<br>
 <br>
 <p class="mb15">①</p>
 <table class="tb f16" cellspacing="0">
@@ -66,7 +75,68 @@
 </td></tr>
 </table>
 <br>
-
+<br>
+<p class="mb15"><span class="c88">※</span> 간편 풀이법</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">분양수요함수에서</span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">수요량이 0이 되게 하는 P값의 절반값이</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">분양수입을 극대화 하는 가격이다.</span></p>
+</td></tr>
+</table>
+<br>
+<p class="mb15">이를 주어진 분양함수로 풀어보면</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td ebg">
+<p class="mb5">0 = 600 - 3/2P</p>
+<p class="mb5">3/2P = 600</p>
+<p class="mb5">P = 600 × 2/3</p>
+<p class="mb5">P = 400</p>
+<p>P의 절반값 = <span class="c99">200</span> --- <span class="c88">③</span></p>
+</td></tr>
+</table>
+<br>
+<p class="mb15"><span class="sb dp"><span class="ncolor">■</span></span><span class="dp1">부연설명</span></p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">가격이 상승할수록 수요량이 감소해서</span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">어느 가격 이상이 되면 너무 비싸서 아무도 안사게 되므로</span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">수요량은 0이 되게 된다.</span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">이를 수식으로 표현하면</span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">0 = 600 - 3/2P</span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">3/2P = 600</span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">P = 600 × 2/3</span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">P = 400</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">즉, 가격이 400 이상이 되면 아무도 안사기 때문에 분양수입은 0이 된다.</span></p>
+</td></tr>
+<tr><td class="td">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">반대로 가격이 하락할수록 수요량이 증가해서</span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">가격이 0원까지 하락해 공짜가 되면 서로 사려고 해서</span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">수요량은 최대가 된다.</span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">이를 수식으로 표현하면</span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">Qd = 600 - 3/2(0)</span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">Qd = 600</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">즉, 가격이 0이 되면 수요량은 600으로 증가하지만 공짜기 때문에 분양수입은 0이 된다.</span></p>
+</td></tr>
+</table>
+<br>
+<p class="mb15">따라서, 분양수입은</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+분양가격이 최고값에 가까워져도 감소하고, 0에 가까워져도 감소하므로
+</td></tr>
+</table>
+<br>
+<p class="mb15">분양가격은</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td tcolor">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">0원과 최고가격의 중간지점인 절반가격일 때</span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">즉, 수요량이 0이 되게 하는 가격의 절반가격일 때</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">분양수입을 가장 극대화 시킨다.</span></p>
+</td></tr>
+</table>
+<br>
+<br>
 </div>
 
 <iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
