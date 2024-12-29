@@ -8,60 +8,121 @@
 <link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
 <script type="text/JavaScript" src="../../function.js"></script>
 </head>
-<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false" onLoad="setReSize()" onResize="setReSize()">
 <div class="post_ct " id="viewTypeSelector">
-<iframe name="if3" src="../ref/입지계수.html" frameborder="0" width="100%" height="0px" onload="ins('if3','t','③'); hide('if3','pb2'); autoResize(this)" scrolling="no"></iframe>
+<p>③</p>
+<p class="mb15"><a href="#" onClick="i('③<br>'); t(); p(); MM_showHideLayers('Layer1','../ref/입지계수.html','show'); return false;">입지계수</a>가 상대적으로 크면</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+상대적으로 특화된 산업이다.
+</td></tr>
+</table>
+<br>
+<p class="mb15">따라서, 각 산업별로</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td bc">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">A 도시와 B 도시의 입지계수를 구해</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">A 도시의 입지계수가 B 도시보다 큰 산업을 찾는다.</span></p>
+</td></tr>
+</table>
+<br>
 <br>
 <p class="mb15"><span class="sb">■</span> 제조업</p>
 <table class="tb f16" cellspacing="0">
-<tr><td class="td ebg">
-<p><span class="blue">A 도시</span></p>
-<p>= (300/1000) / (4000/10000)</p>
-<p class="mb15">= 3/4 = <span class="c99">0.75</span></p>
-<p><span class="blue">B 도시</span></p>
-<p>= (1200/3000) / (4000/10000)</p>
-<p>= 0.4/0.4 = <span class="c99">1</span></p>
+<tr><td width="6%" class="td ebg" align="center">A</td>
+<td class="td">
+<p class="mb5">= (300/1000) / (4000/10000)</p>
+<p>= 0.3/0.4 = <span class="rgbg">0.75</span></p>
+</td></tr>
+<tr><td class="td ebg" align="center">B</td><td class="td">
+<p class="mb5">= (1200/3000) / (4000/10000)</p>
+<p>= 0.4/0.4 = <span class="rgbg">1</span></p>
 </td></tr>
 </table>
 <br>
 <p class="mb15"><span class="sb">■</span> 금융업</p>
 <table class="tb f16" cellspacing="0">
-<tr><td class="td ebg">
-<p><span class="blue">A 도시</span></p>
-<p>= (500/1000) / (5000/10000)</p>
-<p class="mb15">= 0.5/0.5 = <span class="c99">1</span></p>
-<p><span class="blue">B 도시</span></p>
-<p>= (1500/3000) / (5000/10000)</p>
-<p>= 0.5/0.5 = <span class="c99">1</span></p>
+<tr><td width="6%" class="td ebg" align="center">A</td>
+<td class="td">
+<p class="mb5">= (500/1000) / (5000/10000)</p>
+<p>= 0.5/0.5 = <span class="rgbg">1</span></p>
+</td></tr>
+<tr><td class="td ebg" align="center">B</td><td class="td">
+<p class="mb5">= (1500/3000) / (5000/10000)</p>
+<p>= 0.5/0.5 = <span class="rgbg">1</span></p>
 </td></tr>
 </table>
 <br>
-<p class="mb15"><span class="sb">■</span> 부동산업</p>
+<p class="mb15"><span class="sb"><span class="ncolor">■</span></span> 부동산업</p>
 <table class="tb f16" cellspacing="0">
-<tr><td class="td ebg">
-<p><span class="blue">A 도시</span></p>
-<p>= (200/1000) / (1000/10000)</p>
-<p class="mb15">= 0.2/0.1 = <span class="c99">2</span></p>
-<p><span class="blue">B 도시</span></p>
-<p>= (300/3000) / (1000/10000)</p>
-<p>= 0.1/0.1 = <span class="c99">1</span></p>
+<tr><td width="6%" class="td ebg" align="center">A</td>
+<td class="td tcolor">
+<p class="mb5">= (200/1000) / (1000/10000)</p>
+<p>= 0.2/0.1 = <span class="rgbg">2</span> &nbsp;<span class="blue">(B 보다 큼)</span></p>
+</td></tr>
+<tr><td class="td ebg" align="center">B</td><td class="td">
+<p class="mb5">= (300/3000) / (1000/10000)</p>
+<p>= 0.1/0.1 = <span class="rgbg">1</span></p>
 </td></tr>
 </table>
 <br>
+<br>
+<p class="mb15"><span class="c88">※</span> 다른 풀이 방법</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td bc">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">위에 계산식을 살펴보면</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">A와 B 둘 다 분모가 같으므로</span></p>
+</td></tr>
+</table>
+<br>
+<p class="mb15">두 도시의 분자 크기만 비교해도</p>
 <table class="tb f16" cellspacing="0">
 <tr><td class="td obg">
-<p><span class="blue">부동산업의</span></p>
-<p>A 도시 입지계수는 <span class="c99">2</span></p>
-<p>B 도시 입지계수는 <span class="c99">1</span></p>
+A 도시가 B 도시에 비해 특화되어 있는 산업이 어떤 건지 찾을 수 있다.
 </td></tr>
 </table>
 <br>
-<p>입지계수가 상대적으로 크면</p>
-<p class="mb10">상대적으로 특화된 산업이므로</p>
-<p><span class="gbg">A 도시의 부동산업이</span></p>
-<p><span class="gbg">B 도시의 부동산업보다 특화되어 있다.</span></p>
+<p class="mb15"><span class="sb">■</span> 제조업</p>
+<table class="tb f16" cellspacing="0">
+<tr><td width="6%" class="td ebg" align="center">A</td>
+<td class="td">
+300 / 1000 = <span class="rgbg">0.3</span>
+</td></tr>
+<tr><td class="td ebg" align="center">B</td><td class="td">
+1200 / 3000 = <span class="rgbg">0.4</span>
+</td></tr>
+</table>
+<br>
+<p class="mb15"><span class="sb">■</span> 금융업</p>
+<table class="tb f16" cellspacing="0">
+<tr><td width="6%" class="td ebg" align="center">A</td>
+<td class="td">
+500 / 1000 = <span class="rgbg">0.5</span>
+</td></tr>
+<tr><td class="td ebg" align="center">B</td><td class="td">
+1500 / 3000 = <span class="rgbg">0.5</span>
+</td></tr>
+</table>
+<br>
+<p class="mb15"><span class="sb"><span class="ncolor">■</span></span> 부동산업</p>
+<table class="tb f16" cellspacing="0">
+<tr><td width="6%" class="td ebg" align="center">A</td>
+<td class="td tcolor">
+200 / 1000 = <span class="rgbg">0.2</span> &nbsp;<span class="blue">(B 보다 큼)</span>
+</td></tr>
+<tr><td class="td ebg" align="center">B</td><td class="td">
+300 / 3000 = <span class="rgbg">0.1</span>
+</td></tr>
+</table>
+<br>
 <br>
 </div>
+		  
+<div id="Layer1">
+<div><iframe name="layer1" id="layer1" src='' frameborder="0" scrolling="yes" class="if_pd" onload="ins('layer1','t',ia); tcolor('layer1',ta); pcolor('layer1',pa); bcMode()"></iframe></div>
+<div class="div_style"><a href="#" onClick="MM_showHideLayers('Layer1','','hide'); return false;" style="text-decoration:none"><span style="color:#009688">×</span></a></div>
+</div>
+
 <iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
 </body>
 

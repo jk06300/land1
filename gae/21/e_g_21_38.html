@@ -8,36 +8,82 @@
 <link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
 <script type="text/JavaScript" src="../../function.js"></script>
 </head>
-<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false" onLoad="setReSize()" onResize="setReSize()">
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
 
 <div class="post_ct" id="viewTypeSelector">
-<p class="mb15">⑤</p>
+<p>⑤</p>
+<p class="mb15">대부비율<span class="mrs ml3">(자산가치)</span> 기준</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td ebg">
+<p class="mb5">= 부동산 가격 × 대부비율<span class="mrs ml3">(LTV)</span></p>
+<p>= 20억원 × 0.6 = <span class="blue">12억원</span></p>
+</td></tr>
+</table>
+<br>
+<p class="mb15">부채감당률<span class="mrs ml3">(현금수지)</span> 기준</p>
+<table class="tb f16 wb" cellspacing="0">
+<tr><td class="td ebg">
+<p class="mb5">= 순영업소득 / (부채감당률 × 저당상수)</p>
+<p>= 1.2억원 / (1.5 × 0.1) = <span class="blue">8억원</span></p>
+</td></tr>
+</table>
+<br>
+<br>
+<p class="mb15"><span class="c88">※</span> 다른 풀이 방법</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td bc">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">위 공식을 모를 경우</span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">대부비율과 부채감당률 공식을 이용해</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">다음과 같이 풀 수 있다.</span></p>
+</td></tr>
+</table>
+<br>
+<p class="mb15"><span class="sb dp"><span class="ncolor">■</span></span><span class="dp1">대부비율<span class="mrs ml3">(LTV)</span></span></p>
 <table class="tb f16" cellspacing="0">
 <tr><td class="td obg">
-<p>자산가치기준 최대대출가능금액</p>
-<p>= 부동산가치 × 대부비율</p>
+= 대부액 / 부동산 가격
 </td></tr>
 </table>
 <br>
-<p>= 20억원 × 0.6 = <span class="rgbg">12억원</span></p>
-<br><table class="tb f16" cellspacing="0">
+<table class="tb f16" cellspacing="0">
+<tr><td class="td bc">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">대부비율이 60%</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">부동산 자산가치가 20억원 이므로</span></p>
+</td></tr>
+</table>
+<br>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td ebg">
+<p class="mb5">0.6 = 대부액 / 20억원</p>
+<p>대부액 = 20억원 × 0.6 = <span class="blue">12억원</span></p>
+</td></tr>
+</table>
+<br>
+<p class="mb15"><span class="sb dp"><span class="ncolor">■</span></span><span class="dp1">부채감당률<span class="mrs ml3">(DCR)</span></span></p>
+<table class="tb f16" cellspacing="0">
 <tr><td class="td obg">
-<p>현금수지기준 최대대출가능금액</p>
-<p>= 수익가격 × 대부비율</p>
-<p>= (순수익 / <a href="#" onClick="MM_showHideLayers('Layer1','../ref/환원이율 계산법.html','show'); return false;">환원이율</a>) × 대부비율</p>
-<p>= (순수익 / <span class="blue">부채감당율</span> × <span class="blue">대부비율</span> × <span class="blue">저당상수</span>) × 대부비율</p>
+<p class="mb5">= 순영업소득 / 부채서비스액</p>
+<p>= 순영업소득 / (대부액 × 저당상수)</p>
 </td></tr>
 </table>
 <br>
-<p>= (1.2억원 / 1.5 × 0.6 × 0.1) × 0.6</p>
-<p>= <span class="rgbg">8억원</span></p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td bc">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">부채감당률이 1.5</span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">순영업소득이 1.2억원</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">저당상수가 0.1 이므로</span></p>
+</td></tr>
+</table>
+<br>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td ebg">
+<p class="mb5">1.5 = 1.2억원 / (대부액 × 0.1)</p>
+<p class="mb5">대부액 × 0.1= 1.2억원 / 1.5</p>
+<p>대부액 = 8천만원 / 0.1 = <span class="blue">8억원</span></p>
+</td></tr>
+</table>
 <br>
 <br>
-</div>
-		  
-<div id="Layer1">
-<div><iframe name="layer1" id="layer1" src="../ref/환원이율 계산법.html" frameborder="0" scrolling="yes" class="if_pd" onload="ins('layer1','t','⑤'); tcolor('layer1', 'tr4'); pcolor('layer1', 'pr6'); tmove('layer1','t1',6,1); bcMode()"></iframe></div>
-<div class="div_style"><a href="#" onClick="MM_showHideLayers('Layer1','','hide'); return false;" style="text-decoration:none"><span style="color:#009688">×</span></a></div>
 </div>
 
 <iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>

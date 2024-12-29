@@ -11,66 +11,123 @@
 .pd {padding-left:2px;padding-right:2px}
 </style>
 </head>
-<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false" onLoad="setReSize()" onResize="setReSize()">
 <div class="post_ct " id="viewTypeSelector">
-<p class="mb15">⑤</p>
+<p>⑤</p>
+<p class="mb15">위험 1단위당 기대수익률</p>
 <table class="tb f16" cellspacing="0">
 <tr><td class="td obg">
-<p>위험 1단위당 기대수익률</p>
-<p>= 기대수익률 / 위험도</p>
+<p>= 기대수익률 / 위험도</p>
 </td></tr>
 </table>
 <br>
-<p class="mb10"><span class="gbg">A 빌딩</span> =  6% / 4% = <span class="rgbg">1.5</span></p>
-<p class="mb10"><span class="gbg">B 빌딩</span> = 10% / 7% = <span class="rgbg">1.43</span></p>
-<p class="mb10"><span class="gbg">C 빌딩</span> = 12% / 10% = <span class="rgbg">1.2</span></p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td ebg">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">A 빌딩 = 6/4 = <span class="blue">1.5</span></span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">B 빌딩 = 10/7 = 1.43</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">C 빌딩 = 12/10 = 1.2</span></p>
+</td></tr>
+</table>
 <br>
-<p>따라서,</p>
-<p><span class="gbg">위험 1단위당 기대수익률은</span></p>
-<p><span class="gbg">A 빌딩이 가장 크다.</span></p>
+<p class="mb15">따라서, 위험 1단위당 기대수익률은</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td tcolor">
+A 빌딩이 가장 크다.
+</td></tr>
+</table>
 <br>
 <br>
 <p>①</p>
-<p><span class="gbg">기대수익률</span></p>
-<p>= (6<span class="pd">×</span>100) + (10<span class="pd">×</span>300) + (12<span class="pd">×</span>600)</p>
-<p>/ 1,000</p>
-<p>= <span class="rgbg">10.8%</span></p>
+<p class="mb15">부동산펀드 기대수익률</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+<p><span class="dp">=</span>
+<span class="dp1">(A 매입가 × 기대수익률
+<span class="bk" style="margin-top: 5px">+ B 매입가 × 기대수익률</span>
+<span class="bk" style="margin-top: 5px">+ C 매입가 × 기대수익률)</span>
+<span class="bk" style="margin-top: 5px">/ (A 매입가 + B 매입가 + C 매입가)</span>
+</span></p>
+</td></tr>
+</table>
+<br>
+<p class="mb15">따라서,</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td tcolor">
+<p class="mb5">[ (6 × 100) + (10 × 300) + (12 × 600) ] / 1,000</p>
+<p class="mb5">[ (6 × 1) + (10 × 3) + (12 × 6) ] / 10</p>
+<p class="mb5">(6 + 30 + 72) / 10</p>
+<p>108 / 10 = <span class="c99">10.8</span></p>
+</td></tr>
+</table>
 <br>
 <br>
-<p>②</p>
-<p>빌딩 A의 위험도는 4% 이고,</p>
-<p>빌딩 C는 10% 이므로</p>
-<p>A가 C 보다 위험도 낮음</p>
+<p class="mb15">②</p>
+<table class="tb f16" cellspacing="0" style="text-align: center">
+<tr class="bc"><td class="td"></td><td class="td">빌딩 A</td><td class="td">빌딩 C</td></tr>
+<tr><td width="46%" class="td ebg">위험</td><td width="27%" class="td">4%</td><td class="td">10%</td></tr>
+<tr><td class="td ebg">기대수익률</td><td class="td">6%</td><td class="td">12%</td></tr>
+</table>
 <br>
-<p>빌딩 A의 기대수익률은 6% 이고,</p>
-<p>빌딩 C는 12% 이므로</p>
-<p>A가 C 보다 기대수익률 낮음</p>
+<p class="mb15">빌딩 A는</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+빌딩 C보다 위험도 낮고 기대수익률도 낮으므로 
+</td></tr>
+</table>
 <br>
-<p>따라서,</p>
-<p><span class="gbg">빌딩 A는 빌딩 C보다</span></p>
-<p><span class="gbg"><span class="c99">저위험ㆍ저수익의</span> 투자 부동산이다.</span></p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td tcolor">
+<span class="c99">저위험ㆍ저수익의</span> 투자 부동산이다.
+</td></tr>
+</table>
 <br>
 <br>
 <p class="mb15">③</p>
 <table class="tb f16" cellspacing="0">
-<tr><td class="td obg">
-<p>기대수익률 10.8 <span class="c99"><b>＞</b></span> 요구수익률 10</p>
+<tr><td class="td bc">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">요구수익률 10</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">기대수익률 <span class="blue">10.8</span></span></p>
 </td></tr>
 </table>
 <br>
-<p>기대수익률이 요구수익률 보다 크므로</p>
-<p><span class="gbg">이 투자자는 부동산 펀드에 <span class="c99">투자할 것이다</span>.</span></p>
+<p class="mb15">기대수익률이</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+요구수익률 보다 크므로
+</td></tr>
+</table>
+<br>
+<p class="mb15">이 투자자는</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td tcolor">
+부동산 펀드에 <span class="c99">투자할 것이다</span>.
+</td></tr>
+</table>
 <br>
 <br>
 <p>④</p>
-<p>체계적 위험은 피할 수 없는 위험이고,</p>
-<p>비체계적 위험은 피할 수 있는 위험으로써</p>
-<p class="mb15">비체계적 위험은 분산투자를 통해 줄이거나 피할 수 있다.</p>
-<p>따라서,</p>
-<p><span class="gbg">부동산펀드에 빌딩을 추가로 편입시켜 분산투자를 할 경우</span></p>
-<p><span class="gbg"><span class="c99">비체계적 위험을</span> 줄일 수 있다.</spna>
+<p class="mb15">부동산펀드에</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+빌딩을 추가시켜
+</td></tr>
+</table>
+<br>
+<p class="mb15">분산투자할 경우</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td tcolor">
+이 펀드의 <a href="#" onClick="i('④'); t('tr7'); p('pr2'); MM_showHideLayers('Layer1','../ref/체계적 위험 vs 비체계적 위험.html','show'); return false;"><span class="c99">비체계적 위험</span></a>이 줄어들 것이다.
+</td></tr>
+</table>
+<br>
 <br>
 </div>
+		  
+<div id="Layer1">
+<div><iframe name="layer1" id="layer1" src='' frameborder="0" scrolling="yes" class="if_pd" onload="ins('layer1','t',ia); tcolor('layer1',ta); ncolor('layer1',pa); bcMode()"></iframe></div>
+<div class="div_style"><a href="#" onClick="MM_showHideLayers('Layer1','','hide'); return false;" style="text-decoration:none"><span style="color:#009688">×</span></a></div>
+</div>
+
 <iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
 </body>
 

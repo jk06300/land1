@@ -10,30 +10,98 @@
 </head>
 <body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
 <div class="post_ct " id="viewTypeSelector">
-<p>②</p>
-<p class="mb10">부채감당률에 의해 산출한 융자가능금액과</p>
-<p class="mb10">대부비율에 의해 산출한 융자가능금액 중에서</p>
-<p>작은 값으로 정하면 된다.</p>
-<br>
+<p class="mb15">②</p>
 <table class="tb f16" cellspacing="0">
-<tr><td class="td obg">
-<p>부채감당률에 의한 융자가능금액</p>
-<p>= 순영업소득</p>
-<p>　/ (부채감당률 × 저당상수)</p>
+<tr><td class="td bc">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">대부비율<span class="mrs ml3">(LTV)</span> 기준 대출가능금액과</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">부채감당률 기준 대출가능금액 중에서</span></p>
 </td></tr>
 </table>
 <br>
-<p>= 1.5억원 / (1.2 × 0.1)</p>
-<p>= <span class="rgbg">12.5억원</span></p>
-<br>
 <table class="tb f16" cellspacing="0">
 <tr><td class="td obg">
-<p>융자비율에 의한 융자가능금액</p>
-<p>= 부동산 평가가격 × 대부비율</p>
+작은 금액을 선택하면 된다.
 </td></tr>
 </table>
 <br>
-<p>= 15억원 × 0.8 = <span class="rgbg">12억원</span></p>
+<p class="mb15"><span class="sb dp"><span class="ncolor">■</span></span><span class="dp1">대부비율<span class="mrs ml3">(LTV)</span> 기준 대출가능금액</span></p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td ebg">
+<p class="mb5">= 부동산 가격 × 대부비율<span class="mrs ml3">(LTV)</span></p>
+<p>= 15억원 × 0.8 = <span class="blue">12억원</span></p>
+</td></tr>
+</table>
+<br>
+<p class="mb15"><span class="sb dp"><span class="ncolor">■</span></span><span class="dp1">부채감당률<span class="mrs ml3">(DCR)</span> 기준 대출가능금액</span></p>
+<table class="tb f16 wb" cellspacing="0">
+<tr><td class="td ebg">
+<p class="mb5">= 순영업소득 / (부채감당률 × 저당상수)</p>
+<p>= 1.5억원 / (1.2 × 0.1) = <span class="blue">12.5억원</span></p>
+</td></tr>
+</table>
+<br>
+<p class="mb15">대부비율 금액이 더 작으므로</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td tcolor">
+대출가능 최대 금액은 <span class="c99">12억원</span>
+</td></tr>
+</table>
+<br>
+<br>
+<p class="mb15"><span class="c88">※</span> 다른 풀이 방법</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td bc">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">위 공식을 모를 경우</span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">대부비율과 부채감당률 공식을 이용해</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">다음과 같이 풀 수 있다.</span></p>
+</td></tr>
+</table>
+<br>
+<p class="mb15"><span class="sb dp"><span class="ncolor">■</span></span><span class="dp1">대부비율<span class="mrs ml3">(LTV)</span></span></p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+= 대부액 / 부동산 가격
+</td></tr>
+</table>
+<br>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td bc">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">대부비율이 0.8 이하</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">부동산 평가가격이 15억원 이므로</span></p>
+</td></tr>
+</table>
+<br>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td ebg">
+<p class="mb5">0.8 = 대부액 / 15억원</p>
+<p>대부액 = 15억원 × 0.8 = <span class="blue">12억원</span></p>
+</td></tr>
+</table>
+<br>
+<p class="mb15"><span class="sb dp"><span class="ncolor">■</span></span><span class="dp1">부채감당률<span class="mrs ml3">(DCR)</span></span></p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+<p class="mb5">= 순영업소득 / 부채서비스액</p>
+<p>= 순영업소득 / (대부액 × 저당상수)</p>
+</td></tr>
+</table>
+<br>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td bc">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">부채감당률이 1.2 이상</span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">순영업소득이 1.5억원</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">저당상수가 0.1 이므로</span></p>
+</td></tr>
+</table>
+<br>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td ebg">
+<p class="mb5">1.2 = 1.5억원 / (대부액 × 0.1)</p>
+<p class="mb5">대부액 × 0.1= 1.5억원 / 1.2</p>
+<p>대부액 = 1.25억원 / 0.1 = <span class="blue">12.5억원</span></p>
+</td></tr>
+</table>
+<br>
 <br>
 </div>
 <iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>

@@ -11,49 +11,66 @@
 <body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false" onLoad="setReSize()" onResize="setReSize()">
 
 <div class="post_ct" id="viewTypeSelector">
-<p>④</p>
-<p class="mb15">시산가액</p>
+<p class="mb10">④</p>
+<p class="mb15">원가법에 의한 대상물건의 적산가액</p>
 <table class="tb f16 wb" cellspacing="0">
-<tr><td class="td ebg">
+<tr><td class="td obg">
 재조달원가 - 감가수정액
 </td></tr>
 </table>
 <br>
-<p class="mb15"><span class="sb">■</span> 재조달원가</p>
+<p class="mb15">㉠ 기준시점 재조달원가</p>
 <table class="tb f16 wb" cellspacing="0">
-<tr><td class="td obg">
-<p class="mb5">신축공사비 × 건축비 지수</p>
-<p class="mb5">= 신축공사비 × (기준시점 건축비지수 / 준공시점 건축비지수)</p>
-<p class="mb5">= 6천만원 × (110 / 100)</p>
-<p>= <span class="blue">6,600만원</span></p>
+<tr><td class="td ebg">
+<p class="mb5"><span class="dp">=</span><span class="dp1">신축공사비 × 건축비지수</span></p>
+<p class="mb5"><span class="dp">=</span><span class="dp1">신축공사비 × (기준시점 건축비지수 / 준공시점 건축비지수)</span></p>
+<p class="mb5"><span class="dp">=</span><span class="dp1">6,000 × (110 / 100)</span></p>
+<p><span class="dp">=</span><span class="dp1"><span class="blue">6,600만원</span></span></p>
 </td></tr>
 </table>
 <br>
-<p class="mb15"><span class="sb">■</span> 잔가</p>
+<p class="mb15">㉡ 기준시점 감가수정액</p>
 <table class="tb f16 wb" cellspacing="0">
-<tr><td class="td obg">
-<p class="mb5">재조달원가 × 잔가율</p>
-<p class="mb5">= 6,600만원 × 10%</p>
-<p>= <span class="blue">660만원</span></p>
-</td></tr>
-</table>
-<br>
-<p class="mb15"><span class="sb">■</span> 감가수정액</p>
-<table class="tb f16 wb" cellspacing="0">
-<tr><td class="td obg">
-<p class="mb5">[(재조달원가 - 잔가) / 내용연수] × 경과연수</p>
-<p class="mb5">= [(6,600만원 - 660만원) / 40년] × 2년</p>
-<p class="mb5">= (5940 / 40) × 2</p>
-<p>= <span class="blue">297만원</span>
+<tr><td class="td ebg">
+<p class="mb5"><span class="dp">=</span><span class="dp1">[ (재조달원가 - 잔존가치) / 내용연수 ] × 경과연수</span></p>
+<p class="mb5"><span class="dp">=</span><span class="dp1">[ ( 6,600 - (6,600 × 잔가율 10%) ) / 40 ] × 2</span></p>
+<p class="mb5"><span class="dp">=</span><span class="dp1">[ (6,600 - 660) / 40 ] × 2</span></p>
+<p class="mb5"><span class="dp">=</span><span class="dp1">(5940 / 40) × 2</span></p>
+<p><span class="dp">=</span><span class="dp1"><span class="blue">297만원</span></span></p>
 </td></tr>
 </table>
 <br>
 <p class="mb15">따라서, 적산가액은</p>
 <table class="tb f16 wb" cellspacing="0">
 <tr><td class="td tcolor">
-<p class="mb5">재조달원가 - 감가수정액</p>
 <p class="mb5">= 6,600만원 - 297만원</p>
 <p>= <span class="c99">6,303만원</span></p>
+</td></tr>
+</table>
+<br>
+<br>
+<p class="mb15"><span class="c88">※</span> 다른 풀이 방법</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td bc">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">원가법에 의한 적산가액은</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">다음 공식을 이용해 구할 수도 있다.</span></p>
+</td></tr>
+</table>
+<br>
+<p class="mb15">감가수정액</p>
+<table class="tb f16 wb" cellspacing="0">
+<tr><td class="td obg">
+<p class="mb5"><span class="dp">=</span><span class="dp1">[ 1 - (총감가율 / 전체 내용연수) × 경과연수 ] × 재조달원가</span></p>
+<p class="mb5"><span class="dp">=</span><span class="dp1">[ 1 - ( (1 - 잔가율) / 전체 내용연수) × 경과연수 ] × 재조달원가</span></p>
+</td></tr>
+</table>
+<br>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td tcolor">
+<p class="mb5"><span class="dp">=</span><span class="dp1">[ 1 - ( (1 - 0.1) / 40) × 2 ] × 6,000 × (110/100)</span></p>
+<p class="mb5"><span class="dp">=</span><span class="dp1">[ 1 - (0.9/40) × 2 ] × 6,600</span></p>
+<p class="mb5"><span class="dp">=</span><span class="dp1">0.955 × 6,600</span></p>
+<p><span class="dp">=</span><span class="dp1"><span class="c99">6,303</span></span></p>
 </td></tr>
 </table>
 <br>

@@ -11,19 +11,58 @@
 <body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
 <div class="post_ct " id="viewTypeSelector">
 <p>②</p>
-<p>완경사 부분만 감가요인이 있으므로</p>
-<p>완경사 부분이 차지하는 비율에다 감가요인을 반영하여</p>
-<p>개별요인 비교치를 구하면 된다.</p>
+<p class="mb15">대상물건 전체에 감가요인이 있는 경우에는</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+<p class="mb5">－ 요인이면 &nbsp;1 － 요인</p>
+<p>＋ 요인이면 &nbsp;1 ＋ 요인</p>
+</td></tr>
+</table>
 <br>
-<p>즉,</p>
-<p>완사경사 부분이 차지하는 비율은 600㎡/1000㎡ 이고</p>
-<p>감가요인은 20% 이므로</p>
+<p class="mb15">대상물건 전체가 아닌 일부에 감가요인이 있는 경우에는</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+<p class="mb5">－ 요인이면 &nbsp;1 － (요인 × 일부/전체)</p>
+<p>＋ 요인이면 &nbsp;1 ＋ (요인 × 일부/전체)</p>
+</td></tr>
+</table>
 <br>
-<p>개별요인 비교치</p>
-<p>= 1 - (600/1000) × 0.2</p>
-<p>= <span class="rgbg">0.88</span></p>
+<p class="mb15">위 문제에서는</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td bc">
+1,000㎡ 중 완경사 부분 600㎡에만 20% 감가요인이 있으므로
+</td></tr>
+</table>
+<br>
+<p class="mb15">개별요인 비교치는</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td tcolor">
+<p class="mb5">= 1 - (0.2 × 600/1,000)</p>
+<p>= <span class="c99">0.88</span></p>
+</td></tr>
+</table>
+<br>
+<br>
+<p class="mb15"><span class="c88">※</span> 다른 풀이 방법</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td bc">
+<p class="mb5">대상토지 1,000㎡ 중</p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">완경사 600㎡는 20% 감가요인이 있고</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">평지 400㎡는 감가요인이 없으므로</span></p>
+</td></tr>
+</table>
+<br>
+<table class="tb f16 wb" cellspacing="0">
+<tr><td class="td tcolor">
+<p class="mb5"><span class="dp">=</span><span class="dp1">600/1,000 × (1 - 0.2) + 400/1,000 × (1 - 0)</span></p>
+<p class="mb5"><span class="dp">=</span><span class="dp1">0.6 × 0.8 + 0.4 × 1</span></p>
+<p><span class="dp">=</span><span class="dp1">0.48 + 0.4 = <span class="c99">0.88</span></span></p>
+</td></tr>
+</table>
+<br>
 <br>
 </div>
+
 <iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
 </body>
 

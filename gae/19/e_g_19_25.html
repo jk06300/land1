@@ -10,51 +10,70 @@
 </head>
 <body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
 <div class="post_ct " id="viewTypeSelector">
-<p>①</p>
-<p class="mb10">담보인정비율에 의해 산출한 대출 가능금액과</p>
-<p class="mb10">총부채상환비율에 의해 산출한 대출 가능금액 중에서</p>
-<p>작은 값으로 정하면 된다.</p>
-<br>
+<p class="mb15">①</p>
 <table class="tb f16" cellspacing="0">
-<tr><td class="td obg">
-<p>담보인정비율에 의한 대출가능금액</p>
-<p>= 주택 담보평가가격 × 담보인정비율</p>
+<tr><td class="td bc">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">LTV 대출가능금액과</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">DTI 대출가능금액 중에서</span></p>
 </td></tr>
 </table>
 <br>
-<p>= 5억원 × 60% = <span class="rgbg">3억원</span></p>
+<p class="mb15">작은 값이 대출가능 금액이므로</p>
+<table class="tb f16 wb" cellspacing="0">
+<tr><td class="td obg">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">작은 값에서 이미 대출받은 7천만원을 빼면</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">추가로 대출가능한 금액이 된다.</span></p>
+</td></tr>
+</table>
 <br>
+<br>
+<p class="mb15"><span class="sb dp"><span class="ncolor">■</span></span><span class="dp1">LTV 기준 대출가능금액</span></p>
 <table class="tb f16" cellspacing="0">
 <tr><td class="td ebg">
-<p>소득대비 부채비율</p>
-<p>= 연간부채상환액 / 연간소득</p>
+<p class="mb5">= 주택 가격 × LTV</p>
+<p>= 5억원 × 60% = <span class="blue">3억원</span></p>
 </td></tr>
 </table>
 <br>
-<p>A는 현재 사업자금대출 1,200만원이 있는 상태에서 주택 담보대출을 받고자 하는 것이므로</p>
 <br>
+<p class="mb15"><span class="sb dp"><span class="ncolor">■</span></span><span class="dp1">DTI 기준 대출가능금액</span></p>
 <table class="tb f16" cellspacing="0">
 <tr><td class="td obg">
-<p>연간부채상환액</p>
-<p>= 주택담보대출 부채상환액</p>
-<p>　+ 사업자금대출 부채상환액</p>
+= (연소득 × DTI) / 저당상수
 </td></tr>
 </table>
 <br>
-<p>= χ + 1,200만원</p>
-<br>
-<p class="mb10">소득대비 부채비율이 40%라고 했으므로</p>
-<p class="mb10">0.4 = (χ + 1,200만원) / 6천만원</p>
-<p>χ = <span class="rgbg">1,200만원</span></p>
-<br>
+<p class="mb15">그런데 A는</p>
 <table class="tb f16" cellspacing="0">
-<tr><td class="td obg">
-<p>총부채상환비율에 의한 대출가능금액</p>
-<p>= 주택담보대출 부채상환액 / 저당상수</p>
+<tr><td class="td bc">
+기존 사업자금대출이 있으므로
 </td></tr>
 </table>
 <br>
-<p>= 1,200만원 / 0.12 = <span class="rgbg">1억원</span></p>
+<p class="mb15">이런 경우에는</p>
+<table class="tb f16 wb" cellspacing="0">
+<tr><td class="td obg">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">연간 부채서비스액 한도인 연소득 × DTI 에서</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">기존 부채서비스액을 빼주어야 한다.</span></p>
+</td></tr>
+</table>
+<br>
+<p class="mb15">따라서, DTI 기준 대출가능금액은</p>
+<table class="tb f16 wb" cellspacing="0">
+<tr><td class="td ebg">
+<p class="mb5">= [ (연소득 × DTI) - 기존 부채서비스액 ] / 저당상수</p>
+<p class="mb5">= [ (6,000 × 40%) - 1,200 ] / 0.12 </p>
+<p>= 1,200 / 0.12 = <span class="blue">1억원</span></p>
+</td></tr>
+</table>
+<br>
+<p class="mb15">DTI 기준 금액이 더 작으므로</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td tcolor">
+대출가능 금액은 <span class="c99">1억원</span>
+</td></tr>
+</table>
+<br>
 <br>
 </div>
 <iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>

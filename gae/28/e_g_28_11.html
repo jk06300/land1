@@ -12,40 +12,73 @@
 
 <div class="post_ct" id="viewTypeSelector">
 <p>①</p>
-<p class="mb10">5억원을 20년 만기로 대출받았으므로</p>
-<p><span class="gbg">매년 균등하게 상환해야 하는 원금은</span></p>
-<p>대출금 / 대출기간 = 5억 / 20년</p>
-<p>= 2,500만원</p>
-<br>
-<p class="mb15">원금균등상환방식의 회차별 납부 이자 계산식은</p>
+<p class="mb15">원금균등상환방식에서</p>
 <table class="tb f16" cellspacing="0">
-<tr><td class="td obg">
-<p>{대출금 - [(대출금 / 대출기간)</p>
-<p>× (회차 - 1)]} × 대출금리</p></td></tr>
+<tr><td class="td bc">
+n회차 이자와 원리금은 다음 순서에 따라 구한다.
+</td></tr>
 </table>
 <br>
-<p class="mb10">따라서,</p>
-<p><span class="gbg">9회차에 납부해야 하는 이자는</span></p>
-<p>= {5억 - [(5억 / 20년) × (9 - 1)]}</p>
-<p>　× 0.05</p>
-<p>= {5억 - (2,500만원 × 8)} × 0.05</p>
-<p>= (5억 - 2억) × 0.05</p>
-<p>= 3억원 × 0.05 = 1,500만원</p>
+<p class="mb15"><span class="dp">㉠</span><span class="dp1">원금균등액</span></p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+<p class="mb5">= 대출액 / 대출기간</p>
+<p>= 5억원 / 20년 = <span class="gbg">2,500만원</span></p>
+</td></tr>
+</table>
 <br>
-<p>매년 균등하게 상환해야 하는 원금이</p>
-<p class="mb10">2,500만원이고</p>
-<p>9회차에 납부해야 하는 이자가</p>
-<p>1,500만원이므로</p>
+<p class="mb15"><span class="dp">㉡</span><span class="dp1">1회차 이자</span></p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+<p class="mb5">= 대출액 × 대출금리</p>
+<p>= 5억원 × 0.05 = <span class="gbg">2,500만원</span></p>
+</td></tr>
+</table>
 <br>
-<p><span class="gbg">9회차에 상환할 원리금상환액은</span></p>
-<p>2,500만원 + 1,500만원 = 4,000만원</p>
+<p class="mb15"><span class="dp">㉢</span><span class="dp1">매기간 이자감소액</span></p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+<p class="mb5">= 1회차 이자 / 대출기간</p>
+<p>= 2,500만원 / 20년 = <span class="gbg">125만원</span></p>
+</td></tr>
+</table>
 <br>
-<p><span class="gbg">13회차에 납부해야 하는 이자는</span></p>
-<p>= {5억 - [(5억 / 20년) × (13 - 1)]}</p>
-<p>　× 0.05</p>
-<p>= {5억 - (2,500만원 × 12)} × 0.05</p>
-<p>= (5억 - 3억) × 0.05</p>
-<p>= 2억 × 0.05 = <span class="rgbg">1,000만원</span></p>
+<p class="mb15"><span class="dp">㉣</span><span class="dp1">n회차 이자</span></p>
+<table class="tb f16 wb" cellspacing="0">
+<tr><td class="td obg">
+<p><span class="dp">=</span><span class="dp1">1회차 이자 - 매기간 이자감소액 × (n - 1)</span></p>
+</td></tr>
+<tr><td class="td">
+<span class="trs">1회차에는 이자가 감소하지 않으므로 (n - 1)을 곱한다.</span>
+</td></tr>
+</table>
+<br>
+<p class="mb15"><span class="dp">㉤</span><span class="dp1">n회차 원리금</span></p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+= 원금균등액 + n회차 이자
+</td></tr>
+</table>
+<br>
+<br>
+<p class="mb15"><span class="sb dp"><span class="ncolor">■</span></span><span class="dp1">9회차 원리금</span></p>
+<table class="tb f16 wb" cellspacing="0">
+<tr><td class="td tcolor">
+<p class="mb5"><span class="dp">=</span><span class="dp1">원금균등액 + 9회차 이자</span></p>
+<p class="mb5"><span class="dp">=</span><span class="dp1">원금균등액 + 1회차 이자 - 매기간 이자감소액 × (9 - 1)</span></p>
+<p class="mb5"><span class="dp">=</span><span class="dp1">2,500만원 + 2,500만원 - 125만원 × 8</span></p>
+<p><span class="dp">=</span><span class="dp1"><span class="c99">4,000만원</span></span></p>
+</td></tr>
+</table>
+<br>
+<p class="mb15"><span class="sb dp"><span class="ncolor">■</span></span><span class="dp1">13회차 이자</span></p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td tcolor">
+<p class="mb5"><span class="dp">=</span><span class="dp1">1회차 이자 - 매기간 이자감소액 × (13 - 1)</span></p>
+<p class="mb5"><span class="dp">=</span><span class="dp1">2,500만원 - 125만원 × 12</span></p>
+<p><span class="dp">=</span><span class="dp1"><span class="c99">1,000만원</span></span></p>
+</td></tr>
+</table>
 <br>
 <br>
 </div>

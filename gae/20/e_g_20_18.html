@@ -12,43 +12,45 @@
 
 <div class="post_ct" id="viewTypeSelector">
 <p>⑤</p>
-<iframe name="if5" src="../ref/평균-분산 지배원리.html" frameborder="0" width="100%" height="0px" onload="hide('if5','s'); autoResize(this); tcolor('if5','tr2'); tcolor('if5','tr3'); pcolor('if5', 'tr2p1'); pcolor('if5', 'tr3p1')" scrolling="no"></iframe>
+<iframe name="if5" src="../ref/평균-분산 지배원리.html" frameborder="0" width="100%" height="0px" onload="hide('if5','s'); autoResize(this); obg('if5','tr2'); obg('if5','tr3'); rgbg('if5', 'tr2p1'); rgbg('if5', 'tr3p1')" scrolling="no"></iframe>
 <br>
-<p class="mb5">아래 계산된 값을 비교해 보면</p>
-<p class="mb5">상가는 아파트 보다 기대수익률도 크고 위험<span class="mrs">(편차)</span>도 크기 때문에</p>
-<p>상가와 아파트 사이에는 <span class="gbg">평균분산지배원리가 <span class="c99">적용되지 않는다</span>.</span></p>
-<br>
-<br>
-<p>③</p>
-<p class="mb5">투자안의 위험의 크기는</p>
-<p class="mb5">기대수익률의 분포,</p>
-<p>즉 분산이나 표준편차로 측정할 수 있다.</p>
-<br>
-<p>먼저, 각 투자안의 기대수익률을 계산하면</p>
-<br>
-<p class="mb15"><span class="sb dp">■</span><span class="dp1">상가의 평균 기대수익률</span></p>
+<p class="mb15">아래 계산된 값을 비교해 보면</p>
 <table class="tb f16" cellspacing="0">
-<tr><td class="td obg">
-= 16% × 0.5 + 6% × 0.5 = <span class="c99">11%</span>
+<tr><td class="td bc">
+상가는 아파트 보다 기대수익률도 크고 위험<span class="mrs">(편차)</span>도 크기 때문에
 </td></tr>
 </table>
 <br>
-<p class="mb15"><span class="sb dp">■</span><span class="dp1">오피스텔의 평균 기대수익률</span></p>
+<p class="mb15">상가와 아파트 사이에는</p>
 <table class="tb f16" cellspacing="0">
-<tr><td class="td obg">
-= 12% × 0.5 + 4% × 0.5 = <span class="c99">8%</span>
-</td></tr>
-</table>
-<br>
-<p class="mb15"><span class="sb dp">■</span><span class="dp1">아파트의 평균 기대수익률</span></p>
-<table class="tb f16" cellspacing="0">
-<tr><td class="td obg">
-= 8% × 0.5 + 2% × 0.5 = <span class="c99">5%</span>
+<tr><td class="td tcolor">
+평균분산지배원리가 <span class="c99">적용되지 않는다</span>.
 </td></tr>
 </table>
 <br>
 <br>
 <p>②</p>
+<p class="mb15">상가의 평균기대수익률</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+16% × 0.5 + 6% × 0.5 = <span class="c99">11%</span>
+</td></tr>
+</table>
+<br>
+<p class="mb15">오피스텔의 평균기대수익률</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+12% × 0.5 + 4% × 0.5 = <span class="c99">8%</span>
+</td></tr>
+</table>
+<br>
+<p class="mb15">아파트의 평균기대수익률</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+8% × 0.5 + 2% × 0.5 = <span class="c99">5%</span>
+</td></tr>
+</table>
+<br>
 <p class="mb15">따라서, 기대수익률 크기는</p>
 <table class="tb f16" cellspacing="0">
 <tr><td class="td tcolor">
@@ -56,59 +58,82 @@
 </td></tr>
 </table>
 <br>
-<p>각 투자안의 분산과 표준편차를 계산하면</p>
+<br>
+<p class="mb5">③④</p>
+<p class="mb15">투자위험은</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td tcolor">
+기대수익률의 분포, 즉 분산이나 표준편차로 측정할 수 있다. <span class="trs">(값이 클수록 위험)</span>
+</td></tr>
+</table>
+<br>
+<p class="mb15">분산</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+<p><span class="dp">=</span>
+<span class="dp1">(호황 수익률 - 평균기대수익률)² × 확률
+<span class="bk" style="margin-top: 5px">+ (불황 수익률 - 평균기대수익률)² × 확률</span>
+</span></p>
+</td></tr>
+</table>
+<br>
+<p class="mb15">표준편차</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td ebg">
+= √분산
+</td></tr>
+</table>
+<br>
 <br>
 <p class="mb15"><span class="sb dp">■</span><span class="dp1">상가의 기대수익률 분산</span></p>
 <table class="tb f16" cellspacing="0">
 <tr><td class="td obg">
-<p>= (0.16 - 0.11)² × 0.5</p>
-<p>+ (0.06 - 0.11)² × 0.5</p>
+<p class="mb5">(0.16 - 0.11)² × 0.5 + (0.06 - 0.11)² × 0.5</p>
 <p>= <span class="c99">0.0025</span></p>
 </td></tr>
 </table>
 <br>
 <p class="mb15"><span class="sb dp">■</span><span class="dp1">상가의 표준편차</span></p>
 <table class="tb f16" cellspacing="0">
-<tr><td class="td obg">
-= √0.0025 = 0.05 = <span class="c99">5%</span>
+<tr><td class="td ebg">
+√0.0025 = 0.05 = <span class="c99">5%</span>
 </td></tr>
 </table>
+<br>
 <br>
 <p class="mb15"><span class="sb dp">■</span><span class="dp1">오피스텔의 기대수익률 분산</span></p>
 <table class="tb f16" cellspacing="0">
 <tr><td class="td obg">
-<p>= (0.12 - 0.08)² × 0.5</p>
-<p>+ (0.04 - 0.08)² × 0.5</p>
+<p class="mb5">(0.12 - 0.08)² × 0.5 + (0.04 - 0.08)² × 0.5</p>
 <p>= <span class="c99">0.0016</span></p>
 </td></tr>
 </table>
 <br>
 <p class="mb15"><span class="sb dp">■</span><span class="dp1">오피스텔의 표준편차</span></p>
 <table class="tb f16" cellspacing="0">
-<tr><td class="td obg">
-=  √0.0016 = 0.04 = <span class="c99">4%</span>
+<tr><td class="td ebg">
+√0.0016 = 0.04 = <span class="c99">4%</span>
 </td></tr>
 </table>
+<br>
 <br>
 <p class="mb15"><span class="sb dp">■</span><span class="dp1">아파트의 기대수익률 분산</span></p>
 <table class="tb f16" cellspacing="0">
 <tr><td class="td obg">
-<p>= (0.08 - 0.05)² × 0.5</p>
-<p>+ (0.02 - 0.05)² × 0.5</p>
+<p class="mb5">(0.08 - 0.05)² × 0.5 + (0.02 - 0.05)² × 0.5</p>
 <p>= <span class="c99">0.0009</span></p>
 </td></tr>
 </table>
 <br>
 <p class="mb15"><span class="sb dp">■</span><span class="dp1">아파트의 표준편차</span></p>
 <table class="tb f16" cellspacing="0">
-<tr><td class="td obg">
-=  √0.0009 = 0.03 = <span class="c99">3%</span>
+<tr><td class="td ebg">
+√0.0009 = 0.03 = <span class="c99">3%</span>
 </td></tr>
 </table>
 <br>
 <br>
-<p>④</p>
-<p class="mb15">분산 또는 표준편차에 따른 각 투자안의 위험도 크기는</p>
+<p class="mb15">따라서, 각 투자안의 위험도 크기는</p>
 <table class="tb f16" cellspacing="0">
 <tr><td class="td tcolor">
 상가 > 오피스텔 > 아파트
