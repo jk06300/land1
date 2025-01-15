@@ -8,8 +8,9 @@
 <link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
 <style type="text/css">
 .w {width:100%}
-.w1 {padding-right:15px;padding-top:20px;vertical-align:top}
-.w2 {padding-left:5px;padding-top:20px;width:44%;vertical-align:top}
+.w1 {padding-right:5px;padding-top:20px;vertical-align:top}
+.w2 {padding-left:5px;padding-top:20px;width:44%;vertical-align:top;text-align:center}
+.pb {padding-bottom:10px;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#464646}
 #layer, #layer1{display:none}
 .lpd {padding:5px}
 </style>
@@ -26,59 +27,65 @@ t1 = n1; t2 = n2; t3 = n3; t4 = n4; t5 = n5; t6 = n6; m = n7;
 </head>
 <body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
 <div class="post_ct " id="viewTypeSelector"><p><span id="snum"></span><span id="tag"></span></p>
-<p><b>최근 부동산시장에서 소형아파트의 임대료가 10% 상승함에 따라 소형아파트의 임대수요량은 5% 감소한 반면 오피스텔의 임대수요는 7% 증가했다. (  )에 들어갈 내용으로 옳은 것은?</b> <span class="qrs">(단, 다른 조건은 불변임)</span></p>
+<p><b>최근 부동산시장에서 소형아파트의 임대료가 10% 상승함에 따라 소형아파트의 임대수요량은 5% 감소한 반면 오피스텔의 임대수요는 7% 증가했다. ( &nbsp; )에 들어갈 내용으로 옳은 것은?</b> <span class="qrs">(단, 다른 조건은 불변임)</span></p>
 <br>
 <table class="tb" cellspacing="0" style="font-size:15.5px">
-<tr><td class="td">
+<tr><td class="td obg">
 <p class="mb15">소형아파트 수요의 가격탄력성 <span class="ei trs" onMouseDown="PopLayer.Action(this,'layer1'); idValue('e1'); txt('탄력적','단위탄력적','비탄력적',' ? ','','','&nbsp; ㄱ &nbsp;'); example(t1, t2, t3, t4, t5, t6, ID);">(<span class="ei" id="e1">&nbsp; ㄱ &nbsp;</span>)</span><span onMouseDown="memoEdit();" id="me1"></span></p>
 <p>소형아파트와 오피스텔의 관계 <span class="ei trs" onMouseDown="PopLayer.Action(this,'layer1'); idValue('e2'); txt('보완재','대체재',' ? ','','','','&nbsp; ㄴ &nbsp;'); example(t1, t2, t3, t4, t5, t6, ID);">(<span class="ei" id="e2">&nbsp; ㄴ &nbsp;</span>)</span><span onMouseDown="memoEdit();" id="me2"></span></p>
 </td></tr>
 </table>
 <br>
 <table class="w f16" cellspacing="0">
+<tr>
+  <td class="w1">&nbsp;&nbsp;&nbsp;</td>
+  <td class="w2 pb">ㄱ</td>
+  <td class="w1">&nbsp;</td>
+  <td class="w2 pb">ㄴ</td>
+</tr>
 </table>
 <table id="ip1" class="w f16" cellspacing="0">
 <tr>
   <td class="w1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span></td>
-  <td class="w2"><span class="trs">㈀</span> 탄력적</td>
+  <td class="w2">탄력적</td>
   <td class="w1">&nbsp;</td>
-  <td class="w2"><span class="trs">㈁</span> 보완재</td>
+  <td class="w2">보완재</td>
 </tr>
 <tr><td colspan="4"><span onMouseDown="memoEdit();" id="mi1"></span></td></tr>
 </table>
 <table id="ip2" class="w f16" cellspacing="0">
 <tr>
   <td class="w1"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span></td>
-  <td class="w2"><span class="trs">㈀</span> 비탄력적</td>
+  <td class="w2">비탄력적</td>
   <td class="w1">&nbsp;</td>
-  <td class="w2"><span class="trs">㈁</span> 보완재</td>
+  <td class="w2">보완재</td>
 </tr>
 <tr><td colspan="4"><span onMouseDown="memoEdit();" id="mi2"></span></td></tr>
 </table>
 <table id="ip3" class="w f16" cellspacing="0">
 <tr>
   <td class="w1"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span></td>
-  <td class="w2"><span class="trs">㈀</span> 단위탄력적</td>
+  <td class="w2">단위탄력적</td>
   <td class="w1">&nbsp;</td>
-  <td class="w2"><span class="trs">㈁</span> 대체재</td>
+  <td class="w2">대체재</td>
 </tr>
 <tr><td colspan="4"><span onMouseDown="memoEdit();" id="mi3"></span></td></tr>
 </table>
 <table id="ip4" class="w f16" cellspacing="0">
 <tr>
   <td class="w1"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span></td>
-  <td class="w2"><span class="trs">㈀</span> 탄력적</td>
+  <td class="w2">탄력적</td>
   <td class="w1">&nbsp;</td>
-  <td class="w2"><span class="trs">㈁</span> 대체재</td>
+  <td class="w2">대체재</td>
 </tr>
 <tr><td colspan="4"><span onMouseDown="memoEdit();" id="mi4"></span></td></tr>
 </table>
 <table id="ip5" class="w f16" cellspacing="0">
 <tr>
 <td class="w1"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span></td>
-<td class="w2"><span class="trs">㈀</span> 비탄력적</td>
+<td class="w2">비탄력적</td>
 <td class="w1">&nbsp;</td>
-<td class="w2"><span class="trs">㈁</span> 대체재</td>
+<td class="w2">대체재</td>
 </tr>
 <tr><td colspan="4"><span onMouseDown="memoEdit();" id="mi5"></span></td></tr>
 </table>

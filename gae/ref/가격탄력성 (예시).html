@@ -7,49 +7,74 @@
 <link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
 </head>
 <body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
-<p id="t">가격이 1,000원일 때</p>
-<p class="mb10">수요량이 1,000개이고</p>
-<p>가격이 100원 상승할 때</p>
-<p class="mb10">수요량이 100개 감소하고</p>
-<p>가격이 100원 하락할 때</p>
-<p class="mb10">수요량이 100개 증가하는</p>
-<p>수요곡선이 있을 경우</p>
-<br>
-<p class="mb10">이 수요곡선의 어떤 점에서 측정하든</p>
-<p>기울기는 <span class="bc75">수요량 / 가격 = 1</span> 이 된다.</p>
-<br>
-<p class="mb10">그런데, 수요의 가격탄력성은</p>
-<p class="mb10"><span class="bc75">수요량 / 가격</span> 이 아니라</p>
-<p class="mb10"><span class="bc75">수요량변화율 / 가격변화율</span> 이므로</p>
-<p>측정하는 점의 위치에 따라 값이 달라지게 된다.</p>
-<br>
-<p class="mb10">예를 들어,</p>
-<p>가격이 1,000원에서 200원 오르면</p>
-<p class="mb15">수요량은 1,000개에서 200개 감소하므로</p>
+<p id="t" class="mb15">다음과 같은 수요곡선이 있을 경우</p>
 <table class="tb f16" cellspacing="0">
-<tr><td class="td obg">
-<p>가격변화율 = 200 / 1,000 = 0.2</p>
-<p>수요량변화율 = 200 / 1,000 = 0.2</p>
-<p>가격탄력성 = 0.2 / 0.2 = 1</p>
+<tr><td id="tr1" class="td bc">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">가격이 1,000원일 때 수요량 1,000개</span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">가격이 100원 상승할 때 수요량 100개 감소</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">가격이 100원 하락할 때 수요량 100개 증가</span></p>
 </td></tr>
 </table>
 <br>
-<p>오른 가격 1,200원에서</p>
-<p class="mb10">다시 600원이 더 오르면</p>
-<p>감소한 수요량 800개에서</p>
-<p class="mb15">다시 600개가 감소하므로</p>
+<p class="mb15">이 수요곡선의 어떤 점에서 측정하든</p>
 <table class="tb f16" cellspacing="0">
-<tr><td class="td obg">
-<p>가격변화율 = 600 / 1,200 = 0.5</p>
-<p>수요량변화율 = 600 / 800 = 0.75</p>
-<p>가격탄력성 = 0.75 / 0.5 = 1.5</p>
+<tr><td id="tr2" class="td obg">
+기울기 = 수요량 / 가격 = 1<span class="ml3">이</span> 된다.
 </td></tr>
 </table>
 <br>
-<p>따라서,</p>
-<p class="mb10">우하향하는 선분으로 주어진 수요곡선의 경우,</p>
-<p>수요곡선상의 측정지점에 따라<p>
-<p>가격탄력성은 다르게 나타난다.</p>
+<p class="mb15">그런데, 수요의 가격탄력성은</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">수요량 / 가격<span class="ml3">이</span> 아니라</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">수요량변화율 / 가격변화율 이므로</span></p>
+</td></tr>
+</table>
 <br>
+<p class="mb15">측정하는 점의 위치에 따라</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td tcolor">
+값이 달라지게 된다.
+</td></tr>
+</table>
+<br>
+<br>
+<p class="mb15">예를 들어, 가격이 1,000원에서 200원 오르면</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+수요량은 1,000개에서 200개 감소하므로
+</td></tr>
+</table>
+<br>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td ebg">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">가격변화율 = 200 / 1,000 = 0.2</span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">수요량변화율 = 200 / 1,000 = 0.2</span></p>
+<p><span class="sb1 dp"><span class="ncolor">●</span></span><span class="dp1">가격탄력성 = 0.2 / 0.2 = 1</span></p>
+</td></tr>
+</table>
+<br>
+<p class="mb15">오른 가격 1,200원에서 다시 600원이 더 오르면</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td ebg">
+감소한 수요량 800개에서 다시 600개가 감소하므로
+</td></tr>
+</table>
+<br>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td ebg">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">가격변화율 = 600 / 1,200 = 0.5</span></p>
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">수요량변화율 = 600 / 800 = 0.75</span></p>
+<p><span class="sb1 dp"><span class="ncolor">●</span></span><span class="dp1">가격탄력성 = 0.75 / 0.5 = 1.5</span></p>
+</td></tr>
+</table>
+<br>
+<p class="mb15">따라서, 우하향하는 선분으로 주어진 수요곡선의 경우</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td tcolor">
+수요곡선상의 측정지점에 따라 가격탄력성은 다르게 나타난다.
+</td></tr>
+</table>
+<span id="br"><br></span>
 </body>
 </html>

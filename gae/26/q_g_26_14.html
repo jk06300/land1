@@ -7,6 +7,11 @@
 <meta name="robots" content="noindex,nofollow"/>
 <link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
 <style type="text/css">
+.w {width:100%}
+.w1 {padding-right:5px;padding-top:20px;vertical-align:top}
+.w2 {padding-left:5px;padding-top:20px;width:35%;vertical-align:top;text-align:center}
+.w3 {padding-left:5px;padding-top:20px;width:55%;vertical-align:top;text-align:center}
+.pb {padding-bottom:10px;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#464646}
 #layer{display:none}
 </style>
 <script type="text/JavaScript" src="../../function.js"></script>
@@ -20,17 +25,63 @@ function idValue(n) {ID = n;}
 <div class="post_ct " id="viewTypeSelector">
   <p><span id="snum"></span><span id="tag"></span></p>
 <p><b>X지역의 오피스텔 임대료가 10% 상승하고 오피스텔 임차수요가 15% 감소하자, 이 지역의 소형아파트 임차수요가 5% 증가하였다. X지역의 "소형아파트 임차수요의 교차탄력성"</b> <span class="trs">(A)</span> <b>및 "소형아파트와 오피스텔의 관계"</b> <span class="trs">(B)</span><b>로 옳은 것은?</b> <span class="qrs">(단, 다른 조건은 일정하다고 가정함)</span></p>
-  <br>
-<p id="ip1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span>&nbsp; <span class="trs">(A)</span>&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; <span class="trs">(B)</span>&nbsp; 보완재<span onMouseDown="memoEdit();" id="mi1"></span></p>
 <br>
-<p id="ip2"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span>&nbsp; <span class="trs">(A)</span>&nbsp; 2.0&nbsp;&nbsp;&nbsp;&nbsp; <span class="trs">(B)</span>&nbsp; 대체재<span onMouseDown="memoEdit();" id="mi2"></span></p>
+<table class="w f16" cellspacing="0">
+<tr>
+  <td class="w1">&nbsp;&nbsp;&nbsp;</td>
+  <td class="w2 pb">A</td>
+  <td class="w1">&nbsp;</td>
+  <td class="w3 pb">B</td>
+</tr>
+</table>
+<table id="ip1" class="w f16" cellspacing="0">
+<tr>
+  <td class="w1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span></td>
+  <td class="w2">2.0</td>
+  <td class="w1">&nbsp;</td>
+  <td class="w3">보완재</td>
+</tr>
+<tr><td colspan="4"><span onMouseDown="memoEdit();" id="mi1"></span></td></tr>
+</table>
+<table id="ip2" class="w f16" cellspacing="0">
+<tr>
+  <td class="w1"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span></td>
+  <td class="w2">2.0</td>
+  <td class="w1">&nbsp;</td>
+  <td class="w3">대체재</td>
+</tr>
+<tr><td colspan="4"><span onMouseDown="memoEdit();" id="mi2"></span></td></tr>
+</table>
+<table id="ip3" class="w f16" cellspacing="0">
+<tr>
+  <td class="w1"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span></td>
+  <td class="w2">0.5</td>
+  <td class="w1">&nbsp;</td>
+  <td class="w3">보완재</td>
+</tr>
+<tr><td colspan="4"><span onMouseDown="memoEdit();" id="mi3"></span></td></tr>
+</table>
+<table id="ip4" class="w f16" cellspacing="0">
+<tr>
+  <td class="w1"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span></td>
+  <td class="w2">0.5</td>
+  <td class="w1">&nbsp;</td>
+  <td class="w3">대체재</td>
+</tr>
+<tr><td colspan="4"><span onMouseDown="memoEdit();" id="mi4"></span></td></tr>
+</table>
+<table id="ip5" class="w f16" cellspacing="0">
+<tr>
+<td class="w1"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span></td>
+<td class="w2">0.3</td>
+<td class="w1">&nbsp;</td>
+<td class="w3">정상재</td>
+</tr>
+<tr><td colspan="4"><span onMouseDown="memoEdit();" id="mi5"></span></td></tr>
+</table>
 <br>
-<p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span>&nbsp; <span class="trs">(A)</span>&nbsp; 0.5&nbsp;&nbsp;&nbsp;&nbsp; <span class="trs">(B)</span>&nbsp; 보완재<span onMouseDown="memoEdit();" id="mi3"></span></p>
 <br>
-<p id="ip4"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span>&nbsp; <span class="trs">(A)</span>&nbsp; 0.5&nbsp;&nbsp;&nbsp;&nbsp; <span class="trs">(B)</span>&nbsp; 대체재<span onMouseDown="memoEdit();" id="mi4"></span></p>
-<br>
-<p id="ip5"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span>&nbsp; <span class="trs">(A)</span>&nbsp; 0.3&nbsp;&nbsp;&nbsp;&nbsp; <span class="trs">(B)</span>&nbsp; 정상재<span onMouseDown="memoEdit();" id="mi5"></span></p>
-<br></div>
+</div>
 <div id="layer" onClick="PopLayer.Close();">
 <table class="tb" cellspacing="0" style="background-color:#fffddd; font-size:18px">
 <tr><td class="td" onMouseDown="marking(ID,'Ｏ');">&nbsp;Ｏ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｘ');">&nbsp;Ｘ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｖ');">&nbsp;Ｖ&nbsp;</td><td class="td" style="color:#339900" onMouseDown="marking(ID,'？');">&nbsp;？&nbsp;</td><td class="td" style="color:#0099FF"  onMouseDown="marking(ID,'☆');">&nbsp;☆&nbsp;</td><td class="td" onMouseDown="marking(ID,'');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="td" style="color:#6c54d5" onMouseDown="memoBox(ID);">&nbsp;Ｔ&nbsp;</td></tr>
