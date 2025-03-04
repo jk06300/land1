@@ -18,7 +18,8 @@
 </style>
 </head>
 <body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
-<p id="t" class="mb10">원리금균등분할 <span class="trs">vs</span> 원금균등분할</p><br>
+<p id="t">원리금균등분할 <span class="trs">vs</span> 원금균등분할</p>
+<p class="mb5"><br></p>
 <table width="100%" cellspacing="0">
 <tr>
   <td colspan="2" class="td w1 bl bb"><span class="rs">원리금</span></td><td class="td w1 bl bb">&nbsp;</td><td class="td w1 bl bb">&nbsp;</td><td class="td w1 bl bb">&nbsp;</td><td class="td w1 bl bb">&nbsp;</td>
@@ -81,37 +82,36 @@
 </tr>
 </table>
 <p class="mb10"><br></p>
-<table id="tb2" class="tb f15" cellspacing="0">
-<tr id="tr7"><td class="td">대출기간 초기에는 원금균등분할상환방식의 원리금이 원리금균등분할상환방식의 원리금보다 많다.</td></tr>
-<tr><td class="td">원리금균등분할상환방식은 원금균등분할상환방식보다 대출 초기에 원금을 적게 내기 때문에 원금균등분할상환방식에 비해 초기 원리금에서 이자가 차지하는 비중이 크다.</td></tr>
-<tr id="tr9">
-  <td class="td">매기간 대출잔액은 원금균등상환방식이 원리금균등상환방식보다 항상 적다.</td>
-</tr>
-<tr><td class="td">원금균등분할상환방식이 원리금균등분할상환방식보다 대출 초기에 원리금을 더 많이 회수할 수 있기 때문에 대출자 입장에서는 차입자에게 원리금균등분할상환방식보다 원금균등분할상환방식으로 대출해주는 것이 원금회수측면에서 보다 안전하다.</td></tr>
-<tr><td class="td">반대로 소득이 낮은 차입자 입장에서는 초기에 원리금을 많이 내는 원금균등분할상환방식보다는 매기간 일정하게 나눠서 내는 원리금균등분할상환방식이 유리하다.</td></tr>
+<table id="tb2" class="tb f16" cellspacing="0">
+<tr><td id="tr1" class="td">
+대출기간 초기에는 원금균등분할상환방식의 원리금이 원리금균등분할상환방식의 원리금보다 많다.
+</td></tr>
+<tr><td id="tr2" class="td">
+원리금균등분할상환방식은 원금균등분할상환방식보다 대출 초기에 원금을 적게 내기 때문에 원금균등분할상환방식에 비해 초기 원리금에서 이자가 차지하는 비중이 크다.
+</td></tr>
+<tr><td id="tr3" class="td">
+매기간 대출잔액은 원금균등상환방식이 원리금균등상환방식보다 항상 적다.
+</td></tr>
+<tr><td id="tr4" class="td">
+원금균등분할상환방식이 원리금균등분할상환방식보다 대출 초기에 원리금을 더 많이 회수할 수 있기 때문에 대출자 입장에서는 차입자에게 원리금균등분할상환방식보다 원금균등분할상환방식으로 대출해주는 것이 원금회수측면에서 보다 안전하다.
+</td></tr>
+<tr><td id="tr5" class="td">
+반대로 소득이 낮은 차입자 입장에서는 초기에 원리금을 많이 내는 원금균등분할상환방식보다는 매기간 일정하게 나눠서 내는 원리금균등분할상환방식이 유리하다.
+</td></tr>
 </table>
 <br>
-<table class="tb" cellspacing="0">
-<tr style="text-align:center">
-  <td class="td bc w3">계산식</td>
-  <td class="td bc w4">원금균등상환</td>
-  <td class="td bc w4">원리금균등상환</td>
-</tr>
-<tr>
-  <td class="td w3">원금</td>
-  <td class="td w4">대부금<br>/ 대부기간</td>
-  <td class="td w4">원리금 - 이자</td>
-</tr>
-<tr>
-  <td class="td w3">이자</td>
-  <td class="td w4">잔금 × 이자율</td>
-  <td class="td w4">잔금 × 이자율</td>
-</tr>
-<tr>
-  <td class="td w3">원리금</td>
-  <td class="td w4">원금 + 이자</td>
-  <td id="tr4td3" class="td w4">대부금<br>× 저당상수</td>
-</tr>
+<p class="ml5 mb15"><span id="st1" class="sb dp">■</span><span class="dp1">원금균등상환</span></p>
+<table class="tb f16" cellspacing="0">
+<tr><td width="25%" class="td bc" align="center">원금</td><td class="td">대부금 / 대부기간</td></tr>
+<tr><td class="td bc" align="center">이자</td><td class="td">잔금 × 이자율</td></tr>
+<tr><td class="td bc" align="center">원리금</td><td class="td">원금 + 이자</td></tr>
+</table>
+<br>
+<p class="ml5 mb15"><span id="st2" class="sb dp">■</span><span class="dp1">원리금균등상환</span></p>
+<table class="tb f16" cellspacing="0">
+<tr><td width="25%" class="td bc" align="center">원금</td><td class="td">원리금 - 이자</td></tr>
+<tr><td class="td bc" align="center">이자</td><td class="td">잔금 × 이자율</td></tr>
+<tr><td class="td bc" align="center">원리금</td><td id="tr11td2" class="td">대부금 × 저당상수</td></tr>
 </table>
 <br>
 </body>

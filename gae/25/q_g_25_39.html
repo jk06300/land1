@@ -19,17 +19,16 @@ function idValue(n) {ID = n;}
 </head>
 <body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
 <div class="post_ct " id="viewTypeSelector"><p><span id="snum"></span><span id="tag"></span></p>
-<p><b>다음 건물의 ㎡당 재조달원가는?</b></p>
-<p><span class="qrs">(단, 주어진 조건에 한함)</span></p>
+<p><b>다음 건물의 ㎡당 재조달원가는?</b> <span class="qrs">(단, 주어진 조건에 한함)</span></p>
 <br>
-<p class="mb15"><span class="sb">■</span> 20년 전 준공된 5층 건물</p>
+<p class="ml5 mb15"><span class="sb dp">■</span><span class="dp1">20년 전 준공된 5층 건물</span></p>
 <table class="tb f16" cellspacing="0">
 <tr><td class="td obg">
 대지면적 500㎡ , 연면적 1,450㎡
 </td></tr>
 </table>
 <br>
-<p class="mb15"><span class="sb">■</span> 준공 당시의 공사비내역</p>
+<p class="ml5 mb15"><span class="sb dp">■</span><span class="dp1">준공 당시의 공사비내역</span></p>
 <table class="tb f16" cellspacing="0" style="text-align:center">
 <tr><td class="td w1">직접공사비</td>
 <td class="td">300,000,000</td>
@@ -37,8 +36,8 @@ function idValue(n) {ID = n;}
 <tr><td class="td">간접공사비</td>
 <td class="td">30,000,000</td>
 </tr>
-<tr><td class="td obg">공사비계</td>
-<td class="td obg">330,000,000</td>
+<tr><td class="td bc">공사비계</td>
+<td class="td bc">330,000,000</td>
 </tr>
 <tr><td class="td">개발업자의 이윤</td>
 <td class="td">70,000,000</td>
@@ -49,8 +48,12 @@ function idValue(n) {ID = n;}
 </table>
 <table class="tb_2" cellspacing="0"><tr><td class="td_2"><span class="rs">(단위 : 원)</span></td></tr></table>
 <br>
-<p class="mb15"><span class="sb">■</span> 20년 전 건축비지수 100</p>
-<p><span class="sb">■</span> 기준시점 건축비지수 145</p>
+<table class="tb f16" cellspacing="0">
+<tr><td class="td obg">
+<p class="mb5"><span class="sb1 dp">●</span><span class="dp1">20년 전 건축비지수 100</span></p>
+<p><span class="sb1 dp">●</span><span class="dp1">기준시점 건축비지수 145</span></p>
+</td></tr>
+</table>
 <br>
 <br>
 <p id="ip1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span> 250,000원<span onMouseDown="memoEdit();" id="mi1"></span></p>
