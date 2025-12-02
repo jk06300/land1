@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
+<style type="text/css">
+#layer{display:none}
+</style>
+<script type="text/JavaScript" src="../../function.js"></script>
+<script type="text/JavaScript" src="../../jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+var ID = "";
+function idValue(n) {ID = n;}
+</script>
+</head>
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
+<div class="post_ct " id="viewTypeSelector">
+<p><span id="snum"></span><span id="tag"></span></p>
+<p><b>부동산 대출에 관한 설명으로 옳은 것은?</b> <span class="qrs">(단, 다른 조건은 동일함)</span></p>
+<br>
+<p id="ip1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span> 담보인정비율<span class="mrs mrl3">(LTV)</span>은 담보물의 자산가치에 대한 융자비율로 LTV가 올라갈수록 차입자의 자기자본비율도 증가한다.<span onMouseDown="memoEdit();" id="mi1"></span></p>
+<br>
+<p id="ip2"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span> 총부채상환비율<span class="mrs mrl3">(DTI)</span>은 상업용 부동산의 순수입에 대한 연간채무부담액을 의미하므로 DTI가 올라가면 부채서비스액도 증가한다.<span onMouseDown="memoEdit();" id="mi2"></span></p>
+<br>
+<p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span> 고정금리대출은 이자율 변동으로 인한 위험을 차입자에게 전가하는 방식이므로 금융기관<span class="mrs mrl3">(대출자)</span>은 금리가 변동해도 위험이 없다.<span onMouseDown="memoEdit();" id="mi3"></span></p>
+<br>
+<p id="ip4"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span> 총부채원리금상환비율<span class="mrs mrl3">(DSR)</span>은 차입자의 총 금융부채 상환부담을 판단하기 위하여 산정하는 차입자의 연간 소득 대비 연간 금융부채 원리금 상환액 비율을 말한다.<span onMouseDown="memoEdit();" id="mi4"></span></p>
+<br>
+<p id="ip5"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span> 부동산담보대출의 금리가 인상되어 차입자가 원리금에 대한 채무상환을 정해진 시기에 이행하지 못하는 것을 조기상환위험이라고 한다.<span onMouseDown="memoEdit();" id="mi5"></span></p>
+<br>
+</div>
+<div id="layer" onClick="PopLayer.Close();">
+<table class="tb" cellspacing="0" style="background-color:#fffddd; font-size:18px">
+<tr><td class="td" onMouseDown="marking(ID,'Ｏ');">&nbsp;Ｏ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｘ');">&nbsp;Ｘ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｖ');">&nbsp;Ｖ&nbsp;</td><td class="td" style="color:#339900" onMouseDown="marking(ID,'？');">&nbsp;？&nbsp;</td><td class="td" style="color:#0099FF"  onMouseDown="marking(ID,'☆');">&nbsp;☆&nbsp;</td><td class="td" onMouseDown="marking(ID,'');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="td" style="color:#6c54d5" onMouseDown="memoBox(ID);">&nbsp;Ｔ&nbsp;</td></tr>
+</table>
+</div>
+<iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
+</body>
+
+</html>

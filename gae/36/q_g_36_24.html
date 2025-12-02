@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
+<style type="text/css">
+#layer{display:none}
+</style>
+<script type="text/JavaScript" src="../../function.js"></script>
+<script type="text/JavaScript" src="../../jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+var ID = "";
+function idValue(n) {ID = n;}
+</script>
+</head>
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
+<div class="post_ct " id="viewTypeSelector">
+<p><span id="snum"></span><span id="tag"></span></p>
+<p><b>주거정책에 관한 설명으로 틀린 것은?</b> <span class="qrs">(단, 다른 조건은 동일함)</span></p>
+<br>
+<p id="ip1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span> 공공임대주택의 공급은 소득재분배 효과를 기대할 수 있다.<span onMouseDown="memoEdit();" id="mi1"></span></p>
+<br>
+<p id="ip2"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span> 주택임대료를 시장가격 미만으로 규제하면 주택임대시장에서는 이중가격이 형성될 수 있다.<span onMouseDown="memoEdit();" id="mi2"></span></p>
+<br>
+<p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span> 공공주택 특별법령상 통합공공임대주택이란 국가나 지방자치단체의 재정이나 주택도시기금의 자금을 지원받아 최저소득 계층, 저소득 서민, 젊은 층 및 장애인ㆍ국가유공자 등 사회 취약계층 등의 주거안정을 목적으로 공급하는 공공임대주택을 말한다.<span onMouseDown="memoEdit();" id="mi3"></span></p>
+<br>
+<p id="ip4"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span> 임대료 보조정책은 저소득층의 실질소득을 증가시킬 수 있다.<span onMouseDown="memoEdit();" id="mi4"></span></p>
+<br>
+<p id="ip5"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span> 주거급여법령상 주택을 소유한 모든 사람은 주거급여의 수급권자가 될 수 없다.<span onMouseDown="memoEdit();" id="mi5"></span></p>
+<br>
+</div>
+<div id="layer" onClick="PopLayer.Close();">
+<table class="tb" cellspacing="0" style="background-color:#fffddd; font-size:18px">
+<tr><td class="td" onMouseDown="marking(ID,'Ｏ');">&nbsp;Ｏ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｘ');">&nbsp;Ｘ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｖ');">&nbsp;Ｖ&nbsp;</td><td class="td" style="color:#339900" onMouseDown="marking(ID,'？');">&nbsp;？&nbsp;</td><td class="td" style="color:#0099FF"  onMouseDown="marking(ID,'☆');">&nbsp;☆&nbsp;</td><td class="td" onMouseDown="marking(ID,'');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="td" style="color:#6c54d5" onMouseDown="memoBox(ID);">&nbsp;Ｔ&nbsp;</td></tr>
+</table>
+</div>
+<iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
+</body>
+
+</html>

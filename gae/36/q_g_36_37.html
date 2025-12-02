@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
+<style type="text/css">
+#layer{display:none}
+</style>
+<script type="text/JavaScript" src="../../function.js"></script>
+<script type="text/JavaScript" src="../../jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+var ID = "";
+function idValue(n) {ID = n;}
+</script>
+</head>
+<body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
+  <div class="post_ct" id="viewTypeSelector">
+<p><span id="snum"></span><span id="tag"></span></p>
+<p><b>다음 자료를 활용하여 공시지가기준법으로 산정한 대상토지의 단위면적</b><span class="mrs mrl3">(㎡)</span><b>당 시산가액은?</b> <span class="qrs">(단, 주어진 조건에 한함)</span></p>
+<br>
+<p class="ml5 mb15"><span class="sb dp">■</span><span class="dp1">대상토지 현황</span></p>
+<table class="tb f16 mb10" cellspacing="0" style="text-align: center">
+<tr><td width="30%" class="td obg">소재지</td><td class="td">A시 B구 C동 123번지</td></tr>
+<tr><td class="td obg">용도지역</td><td class="td">제2종일반주거지역</td></tr>
+<tr><td class="td obg">이용상황</td><td class="td">상업용</td></tr>
+</table>
+<br>
+<p class="ml5 mb15"><span class="sb dp">■</span><span class="dp1">기준시점</span></p>
+<table class="tb f16 mb10" cellspacing="0">
+<tr><td class="td obg">
+2025. 10. 25.
+</td>
+</tr>
+</table>
+<br>
+<p class="ml5 mb15"><span class="sb dp">■</span><span class="dp1">비교표준지</span></p>
+<table class="tb f16 mb10" cellspacing="0" style="text-align: center">
+<tr><td width="30%" class="td obg">소재지</td><td class="td">A시 B구 C동 135번지</td></tr>
+<tr><td class="td obg">용도지역</td><td class="td">제2종일반주거지역</td></tr>
+<tr><td class="td obg">이용상황</td><td class="td">상업용</td></tr>
+<tr><td class="td obg">공시지가</td><td class="td"><p>5,000,000원/㎡</p><span class="mrs">(2025. 01. 01. 기준)</span></td></tr>
+</table>
+<br>
+<p class="ml5 mb15"><span class="sb dp">■</span><span class="dp1">지가변동률 (A시 B구, 2025. 01. 01. ~ 2025. 10. 25.)</span></p>
+<table class="tb f16 mb10" cellspacing="0" style="text-align: center">
+<tr><td width="50%" class="td obg">주거지역</td><td class="td">5% 상승</td></tr>
+<tr><td class="td obg">상업지역</td><td class="td">10% 상승</td></tr>
+</table>
+<br>
+<p class="ml5 mb15"><span class="sb dp">■</span><span class="dp1">지역요인</span></p>
+<table class="tb f16 mb10" cellspacing="0">
+<tr><td class="td obg">
+비교표준지와 대상토지는 인근지역에 위치하여 지역요인 동일함
+</td>
+</tr>
+</table>
+<br>
+<p class="ml5 mb15"><span class="sb dp">■</span><span class="dp1">개별요인</span></p>
+<table class="tb f16 mb10" cellspacing="0">
+<tr><td class="td obg">
+대상토지는 비교표준지에 비해 가로조건 5% 열세하고, 획지조건 8% 우세하며, 다른 조건은 동일함
+</td>
+</tr>
+</table>
+<br>
+<p class="ml5 mb15"><span class="sb dp">■</span><span class="dp1">그 밖의 요인 보정</span></p>
+<table class="tb f16 mb10" cellspacing="0">
+<tr><td class="td obg">
+대상토지 인근지역의 가치형성요인이 유사한 정상적인 거래사례 및 평가사례 등을 고려하여 그 밖의 요인으로 60% 증액 보정함
+</td>
+</tr>
+</table>
+<br>
+<p class="ml5"><span class="sb dp">■</span><span class="dp1">상승식으로 계산할 것</span></p>
+<br>
+<br>
+<p id="ip1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span> 5,386,500원<span onMouseDown="memoEdit();" id="mi1"></span></p>
+<br>
+<p id="ip2"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span> 5,643,000원<span onMouseDown="memoEdit();" id="mi2"></span></p>
+<br>
+<p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span> 8,400,000원<span onMouseDown="memoEdit();" id="mi3"></span></p>
+<br>
+<p id="ip4"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span> 8,618,400원<span onMouseDown="memoEdit();" id="mi4"></span></p>
+<br>
+<p id="ip5"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span> 9,028,800원<span onMouseDown="memoEdit();" id="mi5"></span></p>
+<br>
+</div>
+<div id="layer" onClick="PopLayer.Close();">
+<table class="tb" cellspacing="0" style="background-color:#fffddd; font-size:18px">
+<tr><td class="td" onMouseDown="marking(ID,'Ｏ');">&nbsp;Ｏ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｘ');">&nbsp;Ｘ&nbsp;</td><td class="td" onMouseDown="marking(ID,'Ｖ');">&nbsp;Ｖ&nbsp;</td><td class="td" style="color:#339900" onMouseDown="marking(ID,'？');">&nbsp;？&nbsp;</td><td class="td" style="color:#0099FF"  onMouseDown="marking(ID,'☆');">&nbsp;☆&nbsp;</td><td class="td" onMouseDown="marking(ID,'');">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="td" style="color:#6c54d5" onMouseDown="memoBox(ID);">&nbsp;Ｔ&nbsp;</td></tr>
+</table>
+</div>
+<iframe src="../../index.html" frameborder="0" width="0px" height="0px" onload="autoResize(this)" scrolling="no"></iframe>
+</body>
+</html>
