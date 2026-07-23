@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,target-densitydpi=medium-dpi">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
 <meta name="robots" content="noindex,nofollow"/>
 <link rel="stylesheet" type="text/css" href="../../style.css" charset="UTF-8" />
 <style type="text/css">
@@ -11,8 +11,11 @@
 .w2 {width:20%}
 #layer{display:none}
 </style>
+<link rel="stylesheet" href="../../drawing_note.css">
 <script type="text/JavaScript" src="../../function.js"></script>
 <script type="text/JavaScript" src="../../jquery-3.4.1.min.js"></script>
+<script type="text/JavaScript" src="../../signature_pad.umd.min.js"></script>
+<script type="text/JavaScript" src="../../drawing_note.js"></script>
 <script type="text/javascript">
 var ID = "";
 function idValue(n) {ID = n;}
@@ -21,7 +24,7 @@ function idValue(n) {ID = n;}
 <body onContextmenu = "return false" ondragstart = "return false" onSelectstart = "return false">
 <div class="post_ct " id="viewTypeSelector"><p><span id="snum"></span><span id="tag"></span></p>
 <p><b>허프</b><span class="mrs mrl3">(D. Huff)</span><b>모형으로 다음 자료를 활용하여 산출한 2022년 점포 A의 월 매출액은 4억원이었다. 다른 조건은 동일하지만, 점포 A의 경우 증축을 통해 2024년 매장면적이 2,500㎡가 되었다. 허프모형을 활용한 2024년 점포 A의 월 매출액은?</b> <span class="qrs">(단, 주어진 조건에 한함)</span></p>
-<br>
+<p style="margin-bottom:-10px;"><br></p>
 <table class="tb f16" cellspacing="0">
 <tr><td class="td wb">X지역에는 점포 A, 점포 B, 점포 C만 존재함</td></tr>
 <tr><td class="td wb">X지역의 주민은 모두 구매자이고, 점포<span class="mrs mrl3">(A, B, C)</span>에서만 구매함</td></tr>
@@ -44,15 +47,14 @@ function idValue(n) {ID = n;}
 <tr><td class="td">X로부터 거리<br><span class="trs">(㎞)</span></td><td class="td">5</td><td class="td">10</td><td class="td">5</td></tr>
 </table>
 <br>
-<br>
 <p id="ip1"><font id="i1"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i1');">①</span> 6억원<span onMouseDown="memoEdit();" id="mi1"></span></p>
-<br>
+<p style="margin-bottom:-15px;"><br></p>
 <p id="ip2"><font id="i2"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i2');">②</span> 10억원<span onMouseDown="memoEdit();" id="mi2"></span></p>
-<br>
+<p style="margin-bottom:-15px;"><br></p>
 <p id="ip3"><font id="i3"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i3');">③</span> 16억원<span onMouseDown="memoEdit();" id="mi3"></span></p>
-<br>
+<p style="margin-bottom:-15px;"><br></p>
 <p id="ip4"><font id="i4"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i4');">④</span> 20억원<span onMouseDown="memoEdit();" id="mi4"></span></p>
-<br>
+<p style="margin-bottom:-15px;"><br></p>
 <p id="ip5"><font id="i5"></font><span class="ei" onMouseDown="PopLayer.Action(this,'layer'); idValue('i5');">⑤</span> 26억원<span onMouseDown="memoEdit();" id="mi5"></span></p>
 <br>
 </div>

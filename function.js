@@ -1,4 +1,4 @@
-﻿var bcm, dHeight, fColor, fName, pValue, tdColor, trColor;
+﻿var bcm, dHeight, fColor, fName, pValue, tdColor, trColor, layerVisble;
 var qNum = "";
 var objVisible = 0;
 var preName = "";
@@ -61,6 +61,19 @@ function MM_showHideLayers() {
 			document.documentElement.style.overflowX = 'hidden';
 			document.documentElement.style.overflowY = 'hidden';
 			document.body.scroll = "no";
+			window.android.setMessage('', 'layerVisible', 't'); // layerVisible = true
+			layerVisble = "t"; //레이어에서 두 손가락 스크롤 시 그림 이탈 방지를 위해 그림 제거하도록 drawing_note.js에 전역변수 전달
+
+      		// args[i]는 부모창의 레이어 ID인 'Layer1', 'Layer2' 등입니다.
+      		// 이를 소문자로 변환('layer1', 'layer2')하여 자식창의 ID 형식과 매칭해 줍니다.
+      		if (typeof setCurrentLayer === 'function') {
+        		setCurrentLayer(args[i].toLowerCase());
+      		}
+    		// 부모창 전역에 노출된 signaturePad를 찾아 직접 클리어 명령을 내립니다.
+    		// if (window.signaturePad && typeof window.signaturePad.clear === 'function') {
+        	// 	window.signaturePad.clear();
+    		// }
+			window.destroyAllPenFunctions();
 			break;
 		case "hide":
 			objVisible--;
@@ -79,6 +92,8 @@ function MM_showHideLayers() {
 			document.documentElement.style.overflowX = 'hidden';
 			document.documentElement.style.overflowY = 'auto';
 			document.body.scroll = "auto";
+			window.android.setMessage('', 'layerVisible', 'f'); // layerVisible = false
+			layerVisble = "f";
 			break;
 	}
 	if (objVisible > 0) {
@@ -115,26 +130,101 @@ function autoResize(i) {
 	}
 }
 function lineSpaceReduce() {
-	if(document.body.innerHTML.indexOf('id="e1"') >= 0) {
-		document.body.innerHTML = document.body.innerHTML.replace(/<\/span><\/p>\n<br>\n<br>\n<p/g, "</span></p>\n<br>\n<br>\n<br>\n<p");
-		document.body.innerHTML = document.body.innerHTML.replace(/<\/span><\/p>\n<br><br>\n<p/g, "</span></p>\n<br>\n<br>\n<br>\n<p");
-		document.body.innerHTML = document.body.innerHTML.replace(/<\/span><\/p><br><br><p/g, "</span></p>\n<br>\n<br>\n<br>\n<p");
-		document.body.innerHTML = document.body.innerHTML.replace(/<br>\n<p/g, "<p");
-		document.body.innerHTML = document.body.innerHTML.replace(/<br><p/g, "<p");
-		document.body.innerHTML = document.body.innerHTML.replace(/p>\n<br>/g, "p>");
-		document.body.innerHTML = document.body.innerHTML.replace(/p><br>/g, "p>");
-		document.body.innerHTML = document.body.innerHTML.replace(/mb15/g, "mb5");
-		document.body.innerHTML = document.body.innerHTML.replace(/<p><b>/g, "<p class='mb10'><b>");
-		document.body.innerHTML = document.body.innerHTML.replace(/<p id/g, "<p class='mb5' id");
-		document.body.innerHTML = document.body.innerHTML.replace(/<table class="tb f16 mb10"/g, '<table class="tb f16 mb10" style="margin-top:10px"');
-		document.body.innerHTML = document.body.innerHTML.replace(/class="mt"/g, "style='margin-top:-15px'");
-		document.getElementById("viewTypeSelector").style.lineHeight = 1;
-		var p = document.getElementsByTagName('p');
-		for (var i=0; i<p.length; i++) {
-			p[i].style.lineHeight = 1.5;
-		}
-	}
+    // ⚠️ HTML 전체를 무식하게 뒤흔들던 DOM 파괴 조건을 안전한 ID 체크로 변경
+    if (!document.getElementById('e1')) return;
+
+    // 1. 불필요한 공백을 유발하던 <br> 태그들만 골라서 안전하게 삭제
+    // innerHTML = ... 대신 element.remove()를 사용해야 캔버스가 손상되지 않습니다.
+    const brTags = document.querySelectorAll('p + br, p ~ br, br + p, br ~ p');
+    brTags.forEach(br => {
+        // 기존 <br> 태그의 앞뒤 구조를 파악하여 불필요한 줄바꿈 요소를 화면에서 완전히 제거합니다.
+        if (br.nextSibling && (br.nextSibling.nodeName === 'P' || br.previousSibling.nodeName === 'P')) {
+            br.remove();
+        }
+    });
+
+    // 2. 클래스명 및 인라인 스타일 변경 (DOM을 파괴하지 않고 클래스리스트와 style 속성만 타깃팅)
+    const allParagraphs = document.getElementsByTagName('p');
+    for (let i = 0; i < allParagraphs.length; i++) {
+        let p = allParagraphs[i];
+
+        // p 태그의 행간격을 1.5로 부드럽게 고정
+        p.style.lineHeight = "1.5";
+
+        // 기존 mb15(마진 바텀 15) 클래스가 있다면 mb5로 안전하게 교체
+        if (p.classList.contains('mb15')) {
+            p.classList.remove('mb15');
+            p.classList.add('mb5');
+        }
+
+        // <p><b> 구조인 타이틀인 경우 마진 조절
+        if (p.firstElementChild && p.firstElementChild.nodeName === 'B') {
+            p.classList.add('mb10');
+        }
+
+        // 아이디 속성을 가진 문제 지문용 p 태그인 경우 마진 축소 적용
+        if (p.id) {
+            p.classList.add('mb5');
+        }
+    }
+
+    // 3. 특정 테이블 및 커스텀 스타일 요소 정밀 교정
+    const tables = document.querySelectorAll('table.tb.f16.mb10');
+    tables.forEach(table => {
+        table.style.marginTop = "10px";
+    });
+
+    const mtElements = document.querySelectorAll('.mt');
+    mtElements.forEach(el => {
+        el.style.marginTop = "-15px";
+    });
+
+    // margin-bottom 조절이 필요한 특정 인라인 스타일 요소들 보정
+    const allElements = document.getElementsByTagName('*');
+    for (let i = 0; i < allElements.length; i++) {
+        if (allElements[i].style.marginBottom === "-15px") {
+            allElements[i].style.marginBottom = "-25px";
+        }
+        if (allElements[i].style.marginBottom === "-10px") {
+            allElements[i].style.marginBottom = "-20px";
+        }
+    }
+
+    // 4. 최상위 뷰 선택자 영역 행간 격하 처리
+    const selector = document.getElementById("viewTypeSelector");
+    if (selector) {
+        selector.style.lineHeight = "1";
+    }
+
+    // 5. ⚠️ 가장 중요: 모든 텍스트 정렬 및 가독성 패치가 끝난 후, 
+    // 늘어나거나 줄어든 최종 본문 스크롤 높이에 맞춰 투명 캔버스 영역을 새로 동기화해 줍니다.
+    if (typeof resizeCanvas === 'function') {
+        resizeCanvas(selector);
+    }
 }
+//이전 lineSpaceReduce() --> 펜기능 방해로 삭제
+// function lineSpaceReduce() {
+// 	if(document.body.innerHTML.indexOf('id="e1"') >= 0) {
+// 		document.body.innerHTML = document.body.innerHTML.replace(/<\/span><\/p>\n<br>\n<br>\n<p/g, "</span></p>\n<br>\n<br>\n<br>\n<p");
+// 		document.body.innerHTML = document.body.innerHTML.replace(/<\/span><\/p>\n<br><br>\n<p/g, "</span></p>\n<br>\n<br>\n<br>\n<p");
+// 		document.body.innerHTML = document.body.innerHTML.replace(/<\/span><\/p><br><br><p/g, "</span></p>\n<br>\n<br>\n<br>\n<p");
+// 		// document.body.innerHTML = document.body.innerHTML.replace(/<br>\n<p/g, "<p");
+// 		document.body.innerHTML = document.body.innerHTML.replace(/<br><p/g, "<p");
+// 		document.body.innerHTML = document.body.innerHTML.replace(/p>\n<br>/g, "p>");
+// 		document.body.innerHTML = document.body.innerHTML.replace(/p><br>/g, "p>");
+// 		document.body.innerHTML = document.body.innerHTML.replace(/mb15/g, "mb5");
+// 		document.body.innerHTML = document.body.innerHTML.replace(/<p><b>/g, "<p class='mb10'><b>");
+// 		document.body.innerHTML = document.body.innerHTML.replace(/<p id/g, "<p class='mb5' id");
+// 		document.body.innerHTML = document.body.innerHTML.replace(/<table class="tb f16 mb10"/g, '<table class="tb f16 mb10" style="margin-top:10px"');
+// 		document.body.innerHTML = document.body.innerHTML.replace(/class="mt"/g, "style='margin-top:-15px'");
+// 		document.body.innerHTML = document.body.innerHTML.replace(/style="margin-bottom:-15px;"/g, "style='margin-bottom:-25px;'");
+// 		document.getElementById("viewTypeSelector").style.lineHeight = 1;
+// 		var p = document.getElementsByTagName('p');
+// 		for (var i=0; i<p.length; i++) {
+// 			p[i].style.lineHeight = 1.5;
+// 		}
+// 	}
+// }
 function bc(i, t) {
 	try{
 		var frameName=window.frames[i];
@@ -721,15 +811,110 @@ function setMessage(i, t, m) {
 	window.android.setMessage(i, t, '');
 }
 function markShow(i, m) {
+	if (document.getElementById(i)) {
 	if (m == "v") {
 		if (bcm == "dark") {
 			document.getElementById(i).style.backgroundColor="#938E75";
 		} else {
 			document.getElementById(i).style.backgroundColor="#FFFDDD";
 		}
- } else {
+ 	} else {
 		document.getElementById(i).style.backgroundColor="transparent";
 	}
+	}
+}
+// window.addEventListener('DOMContentLoaded', function(){
+// 	document.body.style.visibility = "hidden";
+// 	setTimeout(() => document.body.style.visibility = "visible", 200);
+// });
+function rndNumShow(a, b, c, d, e) {
+	document.body.style.visibility = "hidden";
+	var docBody = document.body.innerHTML;
+	var i1, i2, i3, i4, i5;
+	if (document.getElementById('ip1')) {i1 = document.getElementById('ip1').innerHTML;}
+	if (document.getElementById('ip2')) {i2 = document.getElementById('ip2').innerHTML;}
+	if (document.getElementById('ip3')) {i3 = document.getElementById('ip3').innerHTML;}
+	if (document.getElementById('ip4')) {i4 = document.getElementById('ip4').innerHTML;}
+	if (document.getElementById('ip5')) {i5 = document.getElementById('ip5').innerHTML;}
+	var vAry = [a, b, c, d, e];
+	var iAry = [i1, i2, i3, i4, i5];
+	var nAry = ["①", "②", "③", "④", "⑤"];
+	var xAry = ["⑪", "⑫", "⑬", "⑭", "⑮"]
+	if (document.getElementById('ip1')) {
+		for (var i=0; i<vAry.length; i++) {
+			switch (vAry[i]) {
+				case 1:
+					docBody = docBody.replace(iAry[i], "⑪");
+					break;
+				case 2:
+					docBody = docBody.replace(iAry[i], "⑫");
+					break;
+				case 3:
+					docBody = docBody.replace(iAry[i], "⑬");
+					break;
+				case 4:
+					docBody = docBody.replace(iAry[i], "⑭");
+					break;
+				case 5:
+					docBody = docBody.replace(iAry[i], "⑮");
+					break;
+			}
+		}
+		for (var i=0; i<vAry.length; i++) {
+			switch (vAry[i]) {
+				case 1:
+					iAry[0] = iAry[0].replace("①", nAry[i])
+					break;
+				case 2:
+					iAry[1] = iAry[1].replace("②", nAry[i])
+					break;
+				case 3:
+					iAry[2] = iAry[2].replace("③", nAry[i])
+					break;
+				case 4:
+					iAry[3] = iAry[3].replace("④", nAry[i])
+					break;
+				case 5:
+					iAry[4] = iAry[4].replace("⑤", nAry[i])
+					break;
+			}
+		}
+		for (var i=0; i<xAry.length; i++) {
+			docBody = docBody.replace(xAry[i], iAry[i]);
+		}
+	} else {
+		for (var i=0; i<vAry.length; i++) {
+			switch (vAry[i]) {
+				case 1:
+					docBody = docBody.replaceAll("①", xAry[i]);
+					break;
+				case 2:
+					docBody = docBody.replaceAll("②", xAry[i]);
+					break;
+				case 3:
+					docBody = docBody.replaceAll("③", xAry[i]);
+					break;
+				case 4:
+					docBody = docBody.replaceAll("④", xAry[i]);
+					break;
+				case 5:
+					docBody = docBody.replaceAll("⑤", xAry[i]);
+					break;
+			}
+		}
+		for (var i=0; i<xAry.length; i++) {
+			docBody = docBody.replaceAll(xAry[i], nAry[i]);
+		}
+	}
+	document.body.innerHTML = docBody;
+	if (bcm == "dark") {
+		setTimeout(() => backgroundColorMode(), 100);
+	}
+	setTimeout(() => {
+		document.body.style.visibility = "visible";
+		window.android.setMessage('','webViewShow','');
+	}, 200);
+	//setTimeout(() => window.android.setMessage('','webViewShow',''), 200);
 }
 function example(t1, t2, t3, t4, t5, t6, i) {
 	var ID = "m" + i;
@@ -1130,9 +1315,22 @@ function backgroundColorMode() {
 					}
 					var d = iframe[i].contentWindow.document.getElementsByTagName('div');
 					for (var j=0; j<d.length; j++) {
-						if (d[j].style.backgroundColor == "rgb(255, 253, 221)") {
+						if (d[j].style.backgroundColor == "rgb(255, 253, 221)" || d[j].classList.contains('gbg') || d[j].classList.contains('obg') || d[j].classList.contains('ebg') || d[j].classList.contains('mbg')) {
 							d[j].style.backgroundColor="#C3BC9A";
 							d[j].style.color="#000000"
+							var p = d[j].getElementsByTagName('p');
+							for (var k=0; k<p.length; k++) {
+								if (p[k].classList.contains('gbg') || p[k].classList.contains('abg') || p[k].classList.contains('bbg') || p[k].classList.contains('mbg') || p[k].classList.contains('ybg')) {
+									p[k].style.color="#000000";
+									p[k].style.backgroundColor="transparent";
+								} else if (p[k].classList.contains('trs') || p[k].classList.contains('mrs') || p[k].classList.contains('rs')) {
+									p[k].style.color="#606000";
+								} else if (p[k].style.color == "rgb(197, 199, 254)" || p[k].classList.contains('blue') || p[k].classList.contains('bbbg')) {
+									p[k].style.color="#0000BF"
+								} else if (p[k].classList.contains('lrs')) {
+									p[k].style.color="#7d7d7d";
+								}
+							}
 							var s = d[j].getElementsByTagName('span');
 							for (var k=0; k<s.length; k++) {
 								if (s[k].classList.contains('gbg') || s[k].classList.contains('abg') || s[k].classList.contains('bbg') || s[k].classList.contains('mbg') || s[k].classList.contains('ybg')) {
@@ -1144,6 +1342,8 @@ function backgroundColorMode() {
 									s[k].style.color="#0000BF"
 								} else if (s[k].classList.contains('lrs')) {
 									s[k].style.color="#7d7d7d";
+								} else if (s[k].style.color == "rgb(117, 134, 151)" || s[k].classList.contains('sb') || s[k].classList.contains('sb1') || s[k].classList.contains('sb2')) {
+									s[k].style.color="#505861";
 								}
 							}
 						}
@@ -1360,9 +1560,20 @@ function backgroundColorMode() {
 						}
 						var d = iframeChild[j].contentWindow.document.getElementsByTagName('div');
 						for (var k=0; k<d.length; k++) {
-							if (d[k].style.backgroundColor == "rgb(255, 253, 221)") {
+							if (d[k].style.backgroundColor == "rgb(255, 253, 221)" || d[j].classList.contains('gbg') || d[j].classList.contains('obg') || d[j].classList.contains('ebg') || d[j].classList.contains('mbg')) {
 								d[k].style.backgroundColor="#C3BC9A";
 								d[k].style.color="#000000"
+								var p = d[k].getElementsByTagName('p');
+								for (var l=0; l<p.length; l++) {
+									if (p[l].classList.contains('gbg') || p[l].classList.contains('abg') || p[l].classList.contains('bbg') || p[l].classList.contains('mbg') || p[l].classList.contains('ybg')) {
+										p[l].style.color="#000000";
+										p[l].style.backgroundColor="transparent";
+									} else if (p[l].classList.contains('trs') || p[l].classList.contains('mrs') || p[l].classList.contains('rs')) {
+										p[l].style.color="#606000";
+									} else if (p[l].classList.contains('lrs')) {
+										p[l].style.color="#7d7d7d";
+									}
+								}
 								var s = d[k].getElementsByTagName('span');
 								for (var l=0; l<s.length; l++) {
 									if (s[l].classList.contains('gbg') || s[l].classList.contains('abg') || s[l].classList.contains('bbg') || s[l].classList.contains('mbg') || s[l].classList.contains('ybg')) {
@@ -1372,6 +1583,8 @@ function backgroundColorMode() {
 										s[l].style.color="#606000";
 									} else if (s[l].classList.contains('lrs')) {
 										s[l].style.color="#7d7d7d";
+									} else if (s[l].style.color == "rgb(117, 134, 151)" || s[l].classList.contains('sb') || s[l].classList.contains('sb1') || s[l].classList.contains('sb2')) {
+										s[l].style.color="#505861";
 									}
 								}
 							}
@@ -1530,7 +1743,7 @@ function bcMode()
 			for (var i=0; i<s.length; i++) {
 				if (s[i].style.color == "rgb(255, 85, 85)" || s[i].classList.contains('ncolor')) {
 					s[i].style.color="#FF9999";
-				} else if (s[i].classList.contains('sb') || s[i].classList.contains('sb1') || s[i].classList.contains('sb2') || s[i].classList.contains('hcolor')) {
+				} else if (s[i].classList.contains('sb') || s[i].classList.contains('sb1') || s[i].classList.contains('sb2') || s[i].style.color == "rgb(0, 90, 132)" || s[i].classList.contains('hcolor')) {
 					s[i].style.color="#95C5DB";
 				} else if (s[i].classList.contains('trs') || s[i].classList.contains('mrs') || s[i].classList.contains('rs') ) {
 					s[i].style.color="#DDD5AE";
@@ -1886,9 +2099,20 @@ function bcMode()
 					}
 					var d = iframeChild[j].contentWindow.document.getElementsByTagName('div');
 					for (var k=0; k<d.length; k++) {
-						if (d[k].style.backgroundColor == "rgb(255, 253, 221)") {
+						if (d[k].style.backgroundColor == "rgb(255, 253, 221)" || d[j].classList.contains('gbg') || d[j].classList.contains('obg') || d[j].classList.contains('ebg') || d[j].classList.contains('mbg')) {
 							d[k].style.backgroundColor="#C3BC9A";
 							d[k].style.color="#000000"
+							var p = d[k].getElementsByTagName('p');
+							for (var l=0; l<p.length; l++) {
+								if (p[l].classList.contains('gbg') || p[l].classList.contains('abg') || p[l].classList.contains('bbg') || p[l].classList.contains('mbg') || p[l].classList.contains('ybg')) {
+									p[l].style.color="#000000";
+									p[l].style.backgroundColor="transparent";
+								} else if (p[l].classList.contains('trs') || p[l].classList.contains('mrs') || p[l].classList.contains('rs')) {
+									p[l].style.color="#606000";
+								} else if (p[l].classList.contains('lrs')) {
+									p[l].style.color="#7d7d7d";
+								}
+							}
 							var s = d[k].getElementsByTagName('span');
 							for (var l=0; l<s.length; l++) {
 								if (s[l].classList.contains('gbg') || s[l].classList.contains('abg') || s[l].classList.contains('bbg') || s[l].classList.contains('mbg') || s[l].classList.contains('ybg')) {
@@ -1898,6 +2122,8 @@ function bcMode()
 									s[l].style.color="#606000";
 								} else if (s[l].classList.contains('lrs')) {
 									s[l].style.color="#7d7d7d";
+								} else if (s[l].style.color == "rgb(117, 134, 151)" || s[l].classList.contains('sb') || s[l].classList.contains('sb1') || s[l].classList.contains('sb2')) {
+									s[l].style.color="#505861";
 								}
 							}
 						}
