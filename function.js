@@ -69,11 +69,10 @@ function MM_showHideLayers() {
       		if (typeof setCurrentLayer === 'function') {
         		setCurrentLayer(args[i].toLowerCase());
       		}
-    		// 부모창 전역에 노출된 signaturePad를 찾아 직접 클리어 명령을 내립니다.
-    		// if (window.signaturePad && typeof window.signaturePad.clear === 'function') {
-        	// 	window.signaturePad.clear();
-    		// }
-			window.destroyAllPenFunctions();
+			// window 객체에 해당 함수가 정의되어 있고, '함수 타입'이 맞는지 체크 후 호출
+			if (window.destroyAllPenFunctions && typeof window.destroyAllPenFunctions === 'function') {
+    			window.destroyAllPenFunctions();
+			}
 			break;
 		case "hide":
 			objVisible--;
@@ -94,6 +93,10 @@ function MM_showHideLayers() {
 			document.body.scroll = "auto";
 			window.android.setMessage('', 'layerVisible', 'f'); // layerVisible = false
 			layerVisble = "f";
+			// window 객체에 해당 함수가 정의되어 있고, '함수 타입'이 맞는지 체크 후 호출
+			if (window.destroyAllPenFunctions && typeof window.destroyAllPenFunctions === 'function') {
+    			window.destroyAllPenFunctions();
+			}
 			break;
 	}
 	if (objVisible > 0) {
@@ -910,11 +913,16 @@ function rndNumShow(a, b, c, d, e) {
 	if (bcm == "dark") {
 		setTimeout(() => backgroundColorMode(), 100);
 	}
+
 	setTimeout(() => {
-		document.body.style.visibility = "visible";
-		window.android.setMessage('','webViewShow','');
+    	// ★ [핵심 추가]: 파괴된 DOM 위에 캔버스를 새로 복구하고 이벤트를 재등록합니다.
+    	if (typeof window.reinitPenCanvas === "function") {
+        	window.reinitPenCanvas();
+    	}
+    
+    	document.body.style.visibility = "visible";
+    	window.android.setMessage('','webViewShow','');
 	}, 200);
-	//setTimeout(() => window.android.setMessage('','webViewShow',''), 200);
 }
 function example(t1, t2, t3, t4, t5, t6, i) {
 	var ID = "m" + i;
