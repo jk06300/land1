@@ -175,13 +175,14 @@ function bindPointerEvents(targetCanvas) {
     activePointersMap.set(event.pointerId, event.clientY);
 
     if (activePointersMap.size >= 2) {
+      // [기존 유지] 두 손가락 스크롤 로직
       isTwoFingerScrolling = true;
       targetCanvas.style.pointerEvents = 'none';
       if (signaturePad) try { signaturePad.off(); } catch (e) { }
       let sumY = 0;
       activePointersMap.forEach(function (y) { sumY += y; });
       lastScrollY = sumY / activePointersMap.size;
-      removeLastStroke(); // 두 번째 손가락 의도치 않은 획만 제거
+      removeLastStroke(); 
       clearTimeout(longClickTimer);
       longClickTimer = null;
       isLongClickDetected = false;
@@ -192,35 +193,40 @@ function bindPointerEvents(targetCanvas) {
       targetCanvas.style.pointerEvents = 'auto';
       if (signaturePad) try { signaturePad.on(); } catch (e) { }
       isLongClickDetected = false;
+      
+      // 1. 터치 시작 위치 저장
       touchStartPos = { x: event.clientX, y: event.clientY };
-      // 화면 롱프레스: 그림 유지 + 펜 모드만 OFF (롱클릭으로 생긴 점만 제거)
+      
+      // 2. 롱클릭 타이머 시작
       longClickTimer = setTimeout(function () {
         isLongClickDetected = true;
-        // 1) 먼저 그리기 중단
         if (signaturePad) {
           try { signaturePad.off(); } catch (e) { }
         }
-        // 2) 이번 롱프레스로 생긴 점/획만 1회 제거 (기존 그림 유지)
+        
+        // ✨ [해결] 정말 움직임이 없었을 때만 롱클릭으로 인정하고 점을 지웁니다.
         removeLastStroke();
-        // 3) 펜 모드 OFF (그림 데이터는 유지)
-        // isPenMode = false;
-        // currentModeNum = 0;
-        // window.currentModeNum = 0;
-        // if (canvas) {
-        //   canvas.classList.remove('active');
-        //   canvas.style.pointerEvents = 'none';
-        //   canvas.style.setProperty('pointer-events', 'none', 'important');
-        // }
-        // activePointersMap.clear();
-        // isTwoFingerScrolling = false;
-        // console.log('[pen] 화면 롱클릭 → 펜 모드 OFF (그림 유지)');
-        // // 4) 네이티브 펜 아이콘 투명(mode 0)으로 맞추도록 알림
-        // try {
-        //   if (window.android && typeof window.android.setMessage === 'function') {
-        //     window.android.setMessage('', 'penMode', '0');
-        //   }
-        // } catch (e) { }
-      }, 300);
+        
+        // 기존에 주석 처리해두셨던 펜모드 OFF 및 네이티브 알림 주석을 해제합니다.
+        isPenMode = false;
+        currentModeNum = 0;
+        window.currentModeNum = 0;
+        if (canvas) {
+          canvas.classList.remove('active');
+          canvas.style.pointerEvents = 'none';
+          canvas.style.setProperty('pointer-events', 'none', 'important');
+        }
+        activePointersMap.clear();
+        isTwoFingerScrolling = false;
+        console.log('[pen] 화면 롱클릭 → 펜 모드 OFF 및 점 제거 완료');
+        
+        try {
+          if (window.android && typeof window.android.setMessage === 'function') {
+            window.android.setMessage('', 'penMode', '0');
+          }
+        } catch (e) { }
+        
+      }, 500); // 0.3초가 너무 타이트하면 350ms(0.35초) 정도로 조절하셔도 좋습니다.
     }
   }, { capture: true });
 
@@ -229,19 +235,26 @@ function bindPointerEvents(targetCanvas) {
     if (activePointersMap.has(event.pointerId)) {
       activePointersMap.set(event.pointerId, event.clientY);
     }
+    
+    // ✨ [핵심 해결 구간] 글씨를 쓸 때 미세하게라도 움직이면 즉시 롱클릭 타이머를 취소합니다.
     if (longClickTimer && !isLongClickDetected) {
       const moveX = Math.abs(touchStartPos.x - event.clientX);
       const moveY = Math.abs(touchStartPos.y - event.clientY);
-      if (moveX > 10 || moveY > 10) {
+      
+      // 기준을 3~5픽셀로 낮춰서 글씨를 쓰기 시작하는 아주 작은 움직임도 즉시 감지합니다.
+      if (moveX > 4 || moveY > 4) {
         clearTimeout(longClickTimer);
         longClickTimer = null;
       }
     }
+    
     if (isLongClickDetected) {
       event.stopPropagation();
       event.stopImmediatePropagation();
       return;
     }
+    
+    // [기존 유지] 두 손가락 스크롤 이동 로직
     if (activePointersMap.size >= 2 || isTwoFingerScrolling) {
       event.preventDefault();
       event.stopPropagation();

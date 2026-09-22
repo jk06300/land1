@@ -2,12 +2,13 @@
 var qNum = "";
 var objVisible = 0;
 var preName = "";
+var divHide = false;
 
 function setReSize() { 
 var width = document.body.clientWidth;
 var height = document.body.clientHeight;
 var objWidth = width - 40;
-var objHeight = height - 60;
+var objHeight = height - 40;
 if (document.getElementById("layer1")) {
 document.getElementById("layer1").width = objWidth;
 document.getElementById("layer1").height = objHeight;
@@ -61,18 +62,39 @@ function MM_showHideLayers() {
 			document.documentElement.style.overflowX = 'hidden';
 			document.documentElement.style.overflowY = 'hidden';
 			document.body.scroll = "no";
-			window.android.setMessage('', 'layerVisible', 't'); // layerVisible = true
-			layerVisble = "t"; //레이어에서 두 손가락 스크롤 시 그림 이탈 방지를 위해 그림 제거하도록 drawing_note.js에 전역변수 전달
-
-      		// args[i]는 부모창의 레이어 ID인 'Layer1', 'Layer2' 등입니다.
-      		// 이를 소문자로 변환('layer1', 'layer2')하여 자식창의 ID 형식과 매칭해 줍니다.
+			window.android.setMessage('', 'layerVisible', 't');
+			layerVisble = "t";
       		if (typeof setCurrentLayer === 'function') {
         		setCurrentLayer(args[i].toLowerCase());
       		}
-			// window 객체에 해당 함수가 정의되어 있고, '함수 타입'이 맞는지 체크 후 호출
 			if (window.destroyAllPenFunctions && typeof window.destroyAllPenFunctions === 'function') {
     			window.destroyAllPenFunctions();
 			}
+			if (typeof window.restoreParentPenAfterLayerClose === 'function') {
+				setTimeout(function() {
+					window.restoreParentPenAfterLayerClose();
+				}, 50);
+			} else if (typeof window.reinitPenCanvas === 'function') {
+				setTimeout(function() {
+					window.reinitPenCanvas();
+					if (typeof window.getCurrentPenMode === 'function') {
+						var mode = window.getCurrentPenMode();
+						if (mode > 0 && typeof window.setPenModeFromApp === 'function') {
+							window.setPenModeFromApp(mode);
+						}
+					}
+				}, 50);
+			}
+			// ★ 추가: divHide가 true이면 해당 레이어 안의 .div_style 숨김
+			if (typeof divHide !== 'undefined' && divHide === true) {
+        		var layerEl = obj;          // 아직 style로 바꾸기 전 원본 요소
+        		if (layerEl) {
+            		var closeBtns = layerEl.querySelectorAll('.div_style');
+            		for (var k = 0; k < closeBtns.length; k++) {
+                	closeBtns[k].style.display = 'none';   // 또는 visibility = 'hidden'
+            		}
+        		}
+    		}
 			break;
 		case "hide":
 			objVisible--;
@@ -87,15 +109,41 @@ function MM_showHideLayers() {
 						break;
 				}
 			}
-			document.documentElement.style.overflow = 'scroll';
-			document.documentElement.style.overflowX = 'hidden';
-			document.documentElement.style.overflowY = 'auto';
-			document.body.scroll = "auto";
-			window.android.setMessage('', 'layerVisible', 'f'); // layerVisible = false
-			layerVisble = "f";
-			// window 객체에 해당 함수가 정의되어 있고, '함수 타입'이 맞는지 체크 후 호출
 			if (window.destroyAllPenFunctions && typeof window.destroyAllPenFunctions === 'function') {
     			window.destroyAllPenFunctions();
+			}
+			if (objVisible > 0) {
+				// 중첩 레이어: 남은 레이어에 캔버스 재주입 (부모 복원 금지)
+				document.documentElement.style.overflow = 'scroll';
+				document.documentElement.style.overflowX = 'hidden';
+				document.documentElement.style.overflowY = 'hidden';
+				document.body.scroll = "no";
+				window.android.setMessage('', 'layerVisible', 't');
+				layerVisble = "t";
+				var remainId = fName;
+				if (typeof setCurrentLayer === 'function' && remainId) {
+					setCurrentLayer(remainId);
+				}
+				setTimeout(function() {
+					if (typeof window.reinitPenCanvasInLayer === 'function' && remainId) {
+						console.log('[pen] 중첩 hide 후 남은 레이어 재주입:', remainId);
+						window.reinitPenCanvasInLayer(remainId);
+					}
+				}, 50);
+			} else {
+				// 모든 레이어 닫힘 → 부모 펜 복원
+				document.documentElement.style.overflow = 'scroll';
+				document.documentElement.style.overflowX = 'hidden';
+				document.documentElement.style.overflowY = 'auto';
+				document.body.scroll = "auto";
+				window.android.setMessage('', 'layerVisible', 'f');
+				layerVisble = "f";
+				preName = "";
+				if (typeof window.restoreParentPenAfterLayerClose === 'function') {
+					setTimeout(function() {
+						window.restoreParentPenAfterLayerClose();
+					}, 50);
+				}
 			}
 			break;
 	}
@@ -107,17 +155,40 @@ function MM_showHideLayers() {
 				qNum = qNum + "_" + p.split("/")[2].split(".")[0];
 			}
 		} else {
-			if (qNum == "") {
-				qNum = "_" + document.getElementById(fName).getAttribute("src").split("/")[2].split(".")[0];
-			} else {
-				qNum = qNum + "_" + document.getElementById(fName).getAttribute("src").split("/")[2].split(".")[0];
-			}
+			try {
+    			var el = document.getElementById(fName);
+    			var srcAttr = el ? el.getAttribute("src") : null;
+
+    			if (srcAttr) {
+      				// 경로 깊이가 달라도 안전하게 파일명만 추출
+     				var parts = srcAttr.split("/");
+     				var fileName = parts[parts.length - 1] || "";
+      				var baseName = fileName.split(".")[0] || "";
+
+      				if (baseName) {
+        				if (qNum == "") {
+          					qNum = "_" + baseName;
+        				} else {
+          					qNum = qNum + "_" + baseName;
+        				}
+      				}
+    			}
+  			} catch (e) {
+    			console.warn("qNum 생성 중 오류:", e);
+  			}
 		}
 	}
 	if (obj.style) {obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v;}
 	obj.visibility=v;
 }
-	if (p != '') {document.getElementById("layer1").src = p;}
+	//if (p != '') {document.getElementById("layer1").src = p;}
+	if (p != '') {
+        var targetIframe = document.getElementById(fName);
+        if (targetIframe) {
+          targetIframe.src = p;
+        }
+    }
+
 	if (bcm == "dark") {
 		obj.backgroundColor="#575757";
 	} else {
@@ -1005,22 +1076,256 @@ function domHeight() {
 	dHeight = document.body.clientHeight;
 }
 function layerCapture() {
-	if (objVisible > 0) {
-		var frameName=window.frames[fName];
-		document.getElementById(fName).style.height = frameName.document.body.scrollHeight + "px";
-		document.getElementById("viewTypeSelector").style.display="none";
-		document.body.style.height = frameName.document.body.scrollHeight + 10 + "px";
-		if (qNum.indexOf('<br>') >= 0) {qNum = qNum.replace('<br>','');}
-	} else {
-		qNum = "";
-	}
-	setTimeout("window.android.setMessage('', 'capture', '" + qNum + "')", 200);
+  try {
+    window.__layerCaptureBackup = null;
+    if (objVisible > 0) {
+      var iframeEl = null;
+      var activeId = fName;
+      var layerDiv = null;
+
+      if (activeId) iframeEl = document.getElementById(activeId);
+
+      if (!iframeEl) {
+        var layerDivs = document.querySelectorAll('[id^="Layer"]');
+        for (var i = 0; i < layerDivs.length; i++) {
+          var div = layerDivs[i];
+          if (div.style && div.style.visibility === 'visible') {
+            var ifr = div.querySelector('iframe.if_pd, iframe[id^="layer"]');
+            if (ifr) {
+              iframeEl = ifr;
+              activeId = ifr.id || ifr.name;
+              fName = activeId;
+              layerDiv = div;
+              break;
+            }
+          }
+        }
+      }
+
+      if (iframeEl && !layerDiv) {
+        var n = iframeEl.parentElement;
+        while (n && n !== document.body) {
+          if (n.id && n.id.indexOf('Layer') === 0) { layerDiv = n; break; }
+          n = n.parentElement;
+        }
+      }
+
+      if (iframeEl) {
+        var frameWin = null;
+        try { frameWin = iframeEl.contentWindow; } catch (e) {}
+
+ 	    // ----------------------------------------------------
+	    // ★ [수정 단계 1] 캔버스 객체 미리 탐색 (백업 및 높이 계산에 동시 사용)
+	    // ----------------------------------------------------
+ 	    var cv = (frameWin && frameWin.document) ? frameWin.document.getElementById('drawingCanvas') : null;
+ 	    var canvasHeight = 0;
+
+	    // ----------------------------------------------------
+	    // ★ [수정 단계 2] 복원용 백업 (오리지널 캔버스 스타일과 height 속성 포함)
+ 	    // ----------------------------------------------------
+ 	    window.__layerCaptureBackup = {
+ 	      activeId: activeId,
+ 	      bodyHeight: document.body.style.height || '',
+	      htmlHeight: document.documentElement.style.height || '',
+ 	      iframeHeight: iframeEl.style.height || '',
+ 	      iframeMinHeight: iframeEl.style.minHeight || '',
+	      layerHeight: layerDiv ? (layerDiv.style.height || '') : '',
+	      layerMaxHeight: layerDiv ? (layerDiv.style.maxHeight || '') : '',
+	      layerOverflowY: layerDiv ? (layerDiv.style.overflowY || '') : '',
+	      // 복원 시 유령 여백을 지우기 위한 오리지널 캔버스 값 저장
+	      canvasStyleHeight: cv ? (cv.style.height || '') : '',
+ 	      canvasHeightAttr: cv ? (cv.getAttribute('height') || '') : ''
+	    };
+
+	    if (frameWin && frameWin.document && frameWin.document.body) {
+	      try {
+ 			window.scrollTo(0, 0);
+ 			frameWin.scrollTo(0, 0);
+	      } catch (e) {}
+
+	      // ----------------------------------------------------
+ 	      // ★ [수정 단계 3] 순수 텍스트 문서 높이와 캔버스 물리 높이 비교 연산
+ 	      // ----------------------------------------------------
+ 	      if (cv) {
+        	// 캔버스가 차지하는 속성상의 물리 높이를 추출합니다.
+    		canvasHeight = cv.height || cv.offsetHeight || 0;
+ 		  }
+
+ 	      // 기존 방식대로 순수 텍스트 문서 스크롤 높이를 측정합니다. (캔버스를 숨기지 않음)
+ 	      var scrollH = Math.max(
+          	frameWin.document.body.scrollHeight || 0,
+          	frameWin.document.documentElement.scrollHeight || 0
+ 	      );
+
+ 	      // 문서 내부의 순수 텍스트 높이보다 캔버스의 높이가 더 크다면 그 값을 최종 높이로 채택합니다.
+ 	      if (canvasHeight > scrollH) {
+          	scrollH = canvasHeight;
+ 	      }
+
+ 	      // 빨간 동그라미 선의 두께나 가장자리 흐려짐으로 인한 소실을 막기 위해 안전 버퍼 추가
+ 	      scrollH = scrollH + 60; 
+ 	      // ----------------------------------------------------
+
+          if (scrollH < 100) scrollH = 800;
+
+          iframeEl.style.height = scrollH + 'px';
+          iframeEl.style.minHeight = scrollH + 'px';
+          iframeEl.style.maxHeight = 'none';
+
+          if (layerDiv) {
+            layerDiv.style.height = scrollH + 'px';
+            layerDiv.style.maxHeight = 'none';
+            layerDiv.style.overflowY = 'visible';
+          }
+
+          var viewSel = document.getElementById('viewTypeSelector');
+          if (viewSel) viewSel.style.display = 'none';
+
+          document.body.style.height = (scrollH + 20) + 'px';
+          document.documentElement.style.height = (scrollH + 20) + 'px';
+        }
+      }
+
+      if (qNum && typeof qNum === 'string' && qNum.indexOf('<br>') >= 0) {
+        qNum = qNum.replace(/<br>/g, '');
+      }
+    } else {
+      qNum = '';
+    }
+  } catch (err) {
+    console.error('[layerCapture]', err);
+    qNum = '';
+  }
+
+  setTimeout(function() {
+    window.android.setMessage('', 'capture', (qNum || ''));
+  }, 250);
 }
-function layerRestroe() {
-	if (objVisible > 0) {
-		document.getElementById("viewTypeSelector").style.display="block";
-		document.body.style.height = dHeight + "px";
-		document.getElementById(fName).style.height = dHeight - 60 + "px";
+function restoreLayerScrollArea(iframeEl) {
+	if (!iframeEl) return;
+	try {
+		var fdoc = iframeEl.contentWindow && iframeEl.contentWindow.document;
+		if (!fdoc || !fdoc.body) return;
+
+		// 이전 페이지/캡처에서 남은 높이 완전히 초기화
+		iframeEl.style.minHeight = '';
+		iframeEl.style.maxHeight = 'none';
+		iframeEl.style.height = 'auto';
+		iframeEl.removeAttribute('height');
+
+		// ★ [핵심 추가] 캡처를 위해 임시로 늘렸던 캔버스 영역 원상 복구 처리
+		// ----------------------------------------------------
+		var cv = fdoc.getElementById('drawingCanvas');
+		if (cv && window.__layerCaptureBackup) {
+		    // 백업해 두었던 오리지널 스타일과 속성값으로 강제 회귀시킵니다.
+    		cv.style.height = window.__layerCaptureBackup.canvasStyleHeight;
+    		if (window.__layerCaptureBackup.canvasHeightAttr !== '') {
+        		cv.setAttribute('height', window.__layerCaptureBackup.canvasHeightAttr);
+    		} else {
+		        cv.removeAttribute('height');
+		    }
+		}
+		// ----------------------------------------------------
+
+		// 이전 spacer 제거 후 순수 높이 측정 → 200px 1회만
+		if (typeof removeBottomMargin === 'function') removeBottomMargin(fdoc);
+		var hid = [];
+		['drawingCanvas', 'nativeCaptureGlueImage'].forEach(function(id) {
+			var el = fdoc.getElementById(id);
+			if (el) {
+				hid.push({ el: el, d: el.style.display, v: el.style.visibility });
+				el.style.display = 'none';
+			}
+		});
+		try {
+			fdoc.body.style.height = 'auto';
+			fdoc.body.style.minHeight = '0';
+			fdoc.documentElement.style.height = 'auto';
+		} catch (e) {}
+		try { void fdoc.body.offsetHeight; } catch (e) {}
+
+		var scrollH = Math.max(
+			fdoc.body.scrollHeight || 0,
+			fdoc.documentElement.scrollHeight || 0,
+			fdoc.body.offsetHeight || 0
+		);
+		if (typeof applyBottomMargin === 'function') applyBottomMargin(fdoc);
+		scrollH = scrollH + (typeof BOTTOM_MARGIN_PX !== 'undefined' ? BOTTOM_MARGIN_PX : 200);
+		if (scrollH < 50) scrollH = 100;
+
+		for (var i = 0; i < hid.length; i++) {
+			hid[i].el.style.display = hid[i].d;
+			hid[i].el.style.visibility = hid[i].v;
+		}
+
+		// 현재 문서 높이만 반영 (이전 값과 max 하지 않음)
+		iframeEl.style.height = scrollH + 'px';
+		iframeEl.height = scrollH;
+		try {
+			iframeEl.setAttribute('scrolling', 'no');
+			iframeEl.scrolling = 'no';
+		} catch (e) {}
+
+		var layerDiv = null;
+		var n = iframeEl.parentElement;
+		while (n && n !== document.body) {
+			if (n.id && n.id.indexOf('Layer') === 0) { layerDiv = n; break; }
+			n = n.parentElement;
+		}
+		var wrap = iframeEl.parentElement;
+		while (wrap && wrap !== layerDiv) {
+			wrap.style.height = 'auto';
+			wrap.style.maxHeight = 'none';
+			wrap.style.overflow = 'visible';
+			wrap = wrap.parentElement;
+		}
+		if (layerDiv) {
+			var vh = window.innerHeight || document.documentElement.clientHeight || 600;
+			layerDiv.style.height = vh + 'px';
+			layerDiv.style.maxHeight = vh + 'px';
+			layerDiv.style.overflowX = 'hidden';
+			layerDiv.style.overflowY = 'auto';
+			layerDiv.style.webkitOverflowScrolling = 'touch';
+			layerDiv.scrollTop = 0;
+		}
+	} catch (e) {
+		console.warn('[restoreLayerScrollArea]', e);
+	}
+}
+function layerRestore() {
+	// 캡처 후: iframe=콘텐츠 전체 높이, Layer=화면 높이+스크롤
+	if (objVisible <= 0) {
+		window.__layerCaptureBackup = null;
+		return;
+	}
+	try {
+		var backup = window.__layerCaptureBackup;
+		var viewSel = document.getElementById('viewTypeSelector');
+		if (viewSel) viewSel.style.display = 'block';
+
+		if (backup) {
+			document.body.style.height = backup.bodyHeight || '';
+			document.documentElement.style.height = backup.htmlHeight || '';
+		} else if (typeof dHeight !== 'undefined' && dHeight) {
+			document.body.style.height = dHeight + 'px';
+		}
+
+		var activeId = (backup && backup.activeId) || fName;
+		var iframeEl = activeId ? document.getElementById(activeId) : null;
+		if (!iframeEl) {
+			window.__layerCaptureBackup = null;
+			return;
+		}
+
+		// 즉시 1회 + 레이아웃 안정 후 1회 (잘림 방지)
+		restoreLayerScrollArea(iframeEl);
+		setTimeout(function() { restoreLayerScrollArea(iframeEl); }, 100);
+		setTimeout(function() { restoreLayerScrollArea(iframeEl); }, 300);
+
+		window.__layerCaptureBackup = null;
+	} catch (e) {
+		console.warn('[layerRestore]', e);
+		window.__layerCaptureBackup = null;
 	}
 }
 function pageView(i, n, w) {
@@ -1298,7 +1603,7 @@ function backgroundColorMode() {
 							s[j].style.color="#DDD5AE";
 						} else if (s[j].style.color == "rgb(255, 85, 85)" || s[j].classList.contains('ncolor')) {
 							s[j].style.color="#FF9999";
-						} else if (s[j].classList.contains('sb') || s[j].classList.contains('sb1') || s[j].classList.contains('sb2') || s[j].classList.contains('hcolor')) {
+						} else if (s[j].classList.contains('sb') || s[j].classList.contains('sb1') || s[j].classList.contains('sb2') || s[j].classList.contains('hcolor') || s[j].style.color == "rgb(0, 90, 132)" || s[j].style.color == "#005A84") {
 							s[j].style.color="#95C5DB"; 
 						} else if (s[j].style.backgroundColor == "rgb(170, 0, 170)" || s[j].style.backgroundColor == "rgb(187, 0, 187)" || s[j].classList.contains('c88') || s[j].classList.contains('pink')) {
 							s[j].style.color="#FFD8FF";
@@ -1930,7 +2235,7 @@ function bcMode()
 						s[j].style.color="#DDD5AE";
 					} else if (s[i].style.color == "rgb(255, 85, 85)" || s[i].classList.contains('ncolor')) {
 						s[i].style.color="#FF9999";
-					} else if (s[j].style.color == "rgb(117, 134, 151)" || s[j].classList.contains('sb') || s[j].classList.contains('sb1') || s[j].classList.contains('sb2') || s[j].classList.contains('hcolor')) {
+					} else if (s[j].style.color == "rgb(117, 134, 151)" || s[j].classList.contains('sb') || s[j].classList.contains('sb1') || s[j].classList.contains('sb2') || s[j].classList.contains('hcolor') || s[j].style.color == "rgb(0, 90, 132)" || s[j].style.color == "#005A84") {
 						s[j].style.color="#95C5DB";
 					} else if (s[j].style.color == "rgb(207, 0, 0)" || s[j].style.color == "rgb(191, 0, 0)") {
 						s[j].style.color="#FFBBBB";
